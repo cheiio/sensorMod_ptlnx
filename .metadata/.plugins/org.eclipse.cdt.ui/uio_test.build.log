@@ -1,0 +1,26 @@
+23:06:35 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/xil_uio.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio.o" -MMD -MP -MF"src/xil_uio.d" -MT"src/xil_uio.o" -o "src/xil_uio.o" "../src/xil_uio.c"
+Finished building: ../src/xil_uio.c
+ 
+Building file: ../src/xil_uio_test.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio_test.o" -MMD -MP -MF"src/xil_uio_test.d" -MT"src/xil_uio_test.o" -o "src/xil_uio_test.o" "../src/xil_uio_test.c"
+Finished building: ../src/xil_uio_test.c
+ 
+Building target: uio_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "uio_test.elf"  ./src/xil_uio.o ./src/xil_uio_test.o   
+Finished building target: uio_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size uio_test.elf  |tee "uio_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2077	    316	      4	   2397	    95d	uio_test.elf
+Finished building: uio_test.elf.size
+ 
+
+23:06:36 Build Finished (took 1s.119ms)
+
