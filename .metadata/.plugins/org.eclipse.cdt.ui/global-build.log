@@ -48,3 +48,833 @@ arm-linux-gnueabihf-size uio_test.elf  |tee "uio_test.elf.size"
    2077	    316	      4	   2397	    95d	uio_test.elf
 Finished building: uio_test.elf.size
  
+22:24:48 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/xil_uio.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio.o" -MMD -MP -MF"src/xil_uio.d" -MT"src/xil_uio.o" -o "src/xil_uio.o" "../src/xil_uio.c"
+Finished building: ../src/xil_uio.c
+ 
+Building target: uio_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "uio_test.elf"  ./src/xil_uio.o ./src/xil_uio_test.o   
+Finished building target: uio_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size uio_test.elf  |tee "uio_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2077	    316	      4	   2397	    95d	uio_test.elf
+Finished building: uio_test.elf.size
+ 
+23:17:49 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:44:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t  filt_pos[Nmodules],
+  ^~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+../src/SensorMod.h:48:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t center_current;
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:49:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t dt, R, Q[3];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:50:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t ab[2];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:61:39: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+                                       ^~~~~~~~~~~~~~~~
+                                       sensorMod
+../src/SensorMod.h:64:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.h:65:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:64:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c:8:25: error: request for member ‘_uint32’ in something not a structure or union
+     self->center_current._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                         ^
+../src/SensorMod.c:10:13: error: request for member ‘_uint32’ in something not a structure or union
+     self->dt._uint32 = xil_uio__read32(self->sensorMod_handler, 
+             ^
+../src/SensorMod.c:12:12: error: request for member ‘_uint32’ in something not a structure or union
+     self->R._uint32 = xil_uio__read32(self->sensorMod_handler, 
+            ^
+../src/SensorMod.c:14:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:16:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:18:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[2]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:20:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c:22:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:47:39: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                       ^~~~~~~~~~~~~~~~
+                                       sensorMod
+../src/SensorMod.c:47:64: error: unknown type name ‘currIn’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                                                ^~~~~~
+../src/SensorMod.c:47:72: error: unknown type name ‘voltIn’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                                                        ^~~~~~
+../src/SensorMod.c:61:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:61:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:67:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.c:68:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:67:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:19:42 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:44:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t  filt_pos[Nmodules],
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:48:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t center_current;
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:49:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t dt, R, Q[3];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:50:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t ab[2];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:61:39: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+                                       ^~~~~~~~~~~~~~~~
+                                       sensorMod
+../src/SensorMod.h:64:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.h:65:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:64:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c:8:25: error: request for member ‘_uint32’ in something not a structure or union
+     self->center_current._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                         ^
+../src/SensorMod.c:10:13: error: request for member ‘_uint32’ in something not a structure or union
+     self->dt._uint32 = xil_uio__read32(self->sensorMod_handler, 
+             ^
+../src/SensorMod.c:12:12: error: request for member ‘_uint32’ in something not a structure or union
+     self->R._uint32 = xil_uio__read32(self->sensorMod_handler, 
+            ^
+../src/SensorMod.c:14:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:16:15: error: request for member ‘_uint32’ in something not a structure or union
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+     self->Q[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:18:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[2]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:20:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c:22:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:47:39: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                       ^~~~~~~~~~~~~~~~
+                                       sensorMod
+../src/SensorMod.c:47:64: error: unknown type name ‘currIn’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                                                ^~~~~~
+../src/SensorMod.c:47:72: error: unknown type name ‘voltIn’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                                                        ^~~~~~
+../src/SensorMod.c:61:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:61:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:69:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.c:70:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:69:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:20:45 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:44:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t  filt_pos[Nmodules],
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:48:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t center_current;
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:49:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t dt, R, Q[3];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:50:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t ab[2];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:61:39: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+                                       ^~~~~~~~~~~~~~~~
+                                       sensorMod
+../src/SensorMod.h:64:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.h:65:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:64:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c:8:25: error: request for member ‘_uint32’ in something not a structure or union
+     self->center_current._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                         ^
+../src/SensorMod.c:10:13: error: request for member ‘_uint32’ in something not a structure or union
+     self->dt._uint32 = xil_uio__read32(self->sensorMod_handler, 
+             ^
+../src/SensorMod.c:12:12: error: request for member ‘_uint32’ in something not a structure or union
+     self->R._uint32 = xil_uio__read32(self->sensorMod_handler, 
+            ^
+../src/SensorMod.c:14:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+../src/SensorMod.c:16:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:18:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[2]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:20:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c:22:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:48:3: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+   sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+   ^~~~~~~~~~~~~~~~
+   sensorMod
+../src/SensorMod.c:48:28: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+   sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+                            ^~~~~~~~~~~~~~~~
+                            sensorMod
+../src/SensorMod.c:48:54: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+   sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+                                                      ^~~~~~~~~~~~~~~~
+                                                      sensorMod
+../src/SensorMod.c:62:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:62:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:70:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:21:48 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:40:9: warning: useless storage class specifier in empty declaration
+         };
+         ^
+../src/SensorMod.h:45:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t  filt_pos[Nmodules],
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:49:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t center_current;
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:50:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t dt, R, Q[3];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:51:2: error: unknown type name ‘sensorMod_data_t’
+  sensorMod_data_t ab[2];
+  ^~~~~~~~~~~~~~~~
+../src/SensorMod.h:62:39: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+                                       ^~~~~~~~~~~~~~~~
+                                       sensorMod
+../src/SensorMod.h:65:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.h:66:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:65:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c:8:25: error: request for member ‘_uint32’ in something not a structure or union
+     self->center_current._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                         ^
+../src/SensorMod.c:10:13: error: request for member ‘_uint32’ in something not a structure or union
+     self->dt._uint32 = xil_uio__read32(self->sensorMod_handler, 
+             ^
+../src/SensorMod.c:12:12: error: request for member ‘_uint32’ in something not a structure or union
+     self->R._uint32 = xil_uio__read32(self->sensorMod_handler, 
+            ^
+../src/SensorMod.c:14:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:16:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:18:15: error: request for member ‘_uint32’ in something not a structure or union
+     self->Q[2]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+               ^
+../src/SensorMod.c:20:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c:22:16: error: request for member ‘_uint32’ in something not a structure or union
+     self->ab[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+                ^
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:48:3: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+   sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+   ^~~~~~~~~~~~~~~~
+   sensorMod
+../src/SensorMod.c:48:28: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+   sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+                            ^~~~~~~~~~~~~~~~
+                            sensorMod
+../src/SensorMod.c:48:54: error: unknown type name ‘sensorMod_data_t’; did you mean ‘sensorMod’?
+   sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+                                                      ^~~~~~~~~~~~~~~~
+                                                      sensorMod
+../src/SensorMod.c:62:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:62:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:70:1: error: unknown type name ‘sensorMod_data_t’; use ‘union’ keyword to refer to the type
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+ ^~~~~~~~~~~~~~~~
+ union 
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:22:28 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:63:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:66:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:65:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:47:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:52:3: warning: implicit declaration of function ‘xil_uio__write’; did you mean ‘xil_uio__write32’? [-Wimplicit-function-declaration]
+   xil_uio__write(self->sensorMod_handler->virtAddr,
+   ^~~~~~~~~~~~~~
+   xil_uio__write32
+../src/SensorMod.c:53:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:55:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c:57:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:62:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:62:65: error: unknown type name ‘voltIn_f’
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:22:57 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:63:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:66:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:65:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:47:64: error: unknown type name ‘currIn’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                                                ^~~~~~
+../src/SensorMod.c:47:72: error: unknown type name ‘voltIn’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, currIn, voltIn){
+                                                                        ^~~~~~
+../src/SensorMod.c:61:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:61:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:70:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:69:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:23:10 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:63:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:66:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:65:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:47:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+      ^~~~~~~~~~~~~~~
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:51:3: warning: implicit declaration of function ‘xil_uio__write’; did you mean ‘xil_uio__write32’? [-Wimplicit-function-declaration]
+   xil_uio__write(self->sensorMod_handler->virtAddr,
+   ^~~~~~~~~~~~~~
+   xil_uio__write32
+../src/SensorMod.c:52:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:54:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c:56:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:61:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:61:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:70:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:69:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:23:38 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:64:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:67:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:66:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:51:3: warning: implicit declaration of function ‘xil_uio__write’; did you mean ‘xil_uio__write32’? [-Wimplicit-function-declaration]
+   xil_uio__write(self->sensorMod_handler->virtAddr,
+   ^~~~~~~~~~~~~~
+   xil_uio__write32
+../src/SensorMod.c:52:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:54:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c:56:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:61:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:61:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:70:8: error: conflicting types for ‘sensorMod_get_filteredData’
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:69:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:24:01 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:64:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:67:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:66:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:52:3: warning: implicit declaration of function ‘xil_uio__write’; did you mean ‘xil_uio__write32’? [-Wimplicit-function-declaration]
+   xil_uio__write(self->sensorMod_handler->virtAddr,
+   ^~~~~~~~~~~~~~
+   xil_uio__write32
+../src/SensorMod.c:53:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:55:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+                                                                  ^~
+../src/SensorMod.c:57:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:62:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:62:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:24:19 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:64:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:67:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:66:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:53:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:55:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c:57:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:62:55: error: unknown type name ‘currIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                       ^~~~~~~~
+../src/SensorMod.c:62:65: error: unknown type name ‘voltIn_f’
+ void sensorMod_start(sensorMod* self, float* posIn_f, currIn_f, voltIn_f){
+                                                                 ^~~~~~~~
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
+23:25:37 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:64:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:67:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:66:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:53:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:55:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+                                                                  ^~
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+../src/SensorMod.c:57:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:62:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* posIn_f, float* currIn_f, float* voltIn_f){
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.c:47:6: note: previous definition of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:63:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+  sensorMod_data_t *posIn._float32 = *posIn_f;
+                         ^
+../src/SensorMod.c:63:25: error: expected expression before ‘.’ token
+../src/SensorMod.c:64:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+  sensorMod_data_t *currIn._float32 = *currIn_f;
+                          ^
+../src/SensorMod.c:64:26: error: expected expression before ‘.’ token
+../src/SensorMod.c:65:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+  sensorMod_data_t *voltIn._float32 = *voltIn_f;
+                          ^
+../src/SensorMod.c:65:26: error: expected expression before ‘.’ token
+../src/SensorMod.c:66:24: error: ‘posIn’ undeclared (first use in this function); did you mean ‘posIn_f’?
+  sensorMod_start(self, posIn, currIn, voltIn);
+                        ^~~~~
+                        posIn_f
+../src/SensorMod.c:66:31: error: ‘currIn’ undeclared (first use in this function); did you mean ‘currIn_f’?
+  sensorMod_start(self, posIn, currIn, voltIn);
+                               ^~~~~~
+                               currIn_f
+../src/SensorMod.c:66:39: error: ‘voltIn’ undeclared (first use in this function); did you mean ‘voltIn_f’?
+  sensorMod_start(self, posIn, currIn, voltIn);
+                                       ^~~~~~
+                                       voltIn_f
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1

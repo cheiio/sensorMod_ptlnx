@@ -34,11 +34,10 @@
 #define Nmodules		7
 
 /**************************** Type Definitions *****************************/
-typedef union sensorMod_union_t {
+union sensorMod_data_t {
 	        uint32_t 	_uint32;
 	        float 		_float32;
-        }sensorMod_data_t;
-
+        };
 typedef struct sensorMod_struct{
 	xil_uio *sensorMod_handler;
 
@@ -59,8 +58,7 @@ sensorMod* sensorMod__create(const char *_uio_dev,
 void sensorMod__destroy(sensorMod* self);
 
 //***********************************************  Calculating Functions
-void sensorMod_start(sensorMod* self,
-		sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn);
+void sensorMod_start(sensorMod* self, sensorMod_data_t* dataIn);
 void sensorMod_start(sensorMod* self, float* dataIn);
 uint32_t sensorMod_isReady(sensorMod* self);
 sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);

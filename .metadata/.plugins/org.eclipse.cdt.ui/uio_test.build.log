@@ -1,26 +1,82 @@
-23:06:35 **** Auto Build of configuration Debug for project uio_test ****
+23:25:37 **** Auto Build of configuration Debug for project uio_test ****
 make all 
-Building file: ../src/xil_uio.c
+Building file: ../src/SensorMod.c
 Invoking: ARM v7 Linux gcc compiler
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio.o" -MMD -MP -MF"src/xil_uio.d" -MT"src/xil_uio.o" -o "src/xil_uio.o" "../src/xil_uio.c"
-Finished building: ../src/xil_uio.c
- 
-Building file: ../src/xil_uio_test.c
-Invoking: ARM v7 Linux gcc compiler
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio_test.o" -MMD -MP -MF"src/xil_uio_test.d" -MT"src/xil_uio_test.o" -o "src/xil_uio_test.o" "../src/xil_uio_test.c"
-Finished building: ../src/xil_uio_test.c
- 
-Building target: uio_test.elf
-Invoking: ARM v7 Linux gcc linker
-arm-linux-gnueabihf-gcc  -o "uio_test.elf"  ./src/xil_uio.o ./src/xil_uio_test.o   
-Finished building target: uio_test.elf
- 
-Invoking: ARM v7 Linux Print Size
-arm-linux-gnueabihf-size uio_test.elf  |tee "uio_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2077	    316	      4	   2397	    95d	uio_test.elf
-Finished building: uio_test.elf.size
- 
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+In file included from ../src/SensorMod.c:1:0:
+../src/SensorMod.h:64:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* dataIn);
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:62:6: note: previous declaration of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.h:67:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.h:66:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:7:47: error: ‘uio_dev’ undeclared (first use in this function); did you mean ‘_uio_dev’?
+     self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
+                                               ^~~~~~~
+                                               _uio_dev
+../src/SensorMod.c:7:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:53:64: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+                                                                ^~
+../src/SensorMod.c:55:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+                                                                  ^~
+src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
+../src/SensorMod.c:57:66: error: invalid type argument of ‘->’ (have ‘sensorMod_data_t {aka union sensorMod_union_t}’)
+    empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+                                                                  ^~
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:62:6: error: conflicting types for ‘sensorMod_start’
+ void sensorMod_start(sensorMod* self, float* posIn_f, float* currIn_f, float* voltIn_f){
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.c:47:6: note: previous definition of ‘sensorMod_start’ was here
+ void sensorMod_start(sensorMod* self,
+      ^~~~~~~~~~~~~~~
+../src/SensorMod.c: In function ‘sensorMod_start’:
+../src/SensorMod.c:63:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+  sensorMod_data_t *posIn._float32 = *posIn_f;
+                         ^
+../src/SensorMod.c:63:25: error: expected expression before ‘.’ token
+../src/SensorMod.c:64:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+  sensorMod_data_t *currIn._float32 = *currIn_f;
+                          ^
+../src/SensorMod.c:64:26: error: expected expression before ‘.’ token
+../src/SensorMod.c:65:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+  sensorMod_data_t *voltIn._float32 = *voltIn_f;
+                          ^
+../src/SensorMod.c:65:26: error: expected expression before ‘.’ token
+../src/SensorMod.c:66:24: error: ‘posIn’ undeclared (first use in this function); did you mean ‘posIn_f’?
+  sensorMod_start(self, posIn, currIn, voltIn);
+                        ^~~~~
+                        posIn_f
+../src/SensorMod.c:66:31: error: ‘currIn’ undeclared (first use in this function); did you mean ‘currIn_f’?
+  sensorMod_start(self, posIn, currIn, voltIn);
+                               ^~~~~~
+                               currIn_f
+../src/SensorMod.c:66:39: error: ‘voltIn’ undeclared (first use in this function); did you mean ‘voltIn_f’?
+  sensorMod_start(self, posIn, currIn, voltIn);
+                                       ^~~~~~
+                                       voltIn_f
+../src/SensorMod.c: At top level:
+../src/SensorMod.c:71:8: error: conflicting types for ‘sensorMod_get_filteredData’
+ float *sensorMod_get_filteredData(sensorMod* self);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/SensorMod.c:70:19: note: previous declaration of ‘sensorMod_get_filteredData’ was here
+ sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/SensorMod.o] Error 1
 
-23:06:36 Build Finished (took 1s.119ms)
+23:25:38 Build Finished (took 683ms)
 
