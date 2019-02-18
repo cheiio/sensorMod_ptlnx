@@ -878,3 +878,43 @@ src/subdir.mk:24: recipe for target 'src/SensorMod.o' failed
  sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
                    ^~~~~~~~~~~~~~~~~~~~~~~~~~
 make: *** [src/SensorMod.o] Error 1
+17:29:21 **** Auto Build of configuration Debug for project uio_test ****
+make all 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+../src/SensorMod.c: In function ‘sensorMod__init’:
+../src/SensorMod.c:14:24: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+     self->Q._uint32[0] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
+                        ^
+../src/SensorMod.c:16:24: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+     self->Q._uint32[1] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
+                        ^
+../src/SensorMod.c:18:24: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+     self->Q._uint32[2] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
+                        ^
+../src/SensorMod.c:20:25: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+     self->ab._uint32[0] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
+                         ^
+../src/SensorMod.c:22:25: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+     self->ab._uint32[1] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
+                         ^
+../src/SensorMod.c: In function ‘sensorMod__create’:
+../src/SensorMod.c:29:5: warning: implicit declaration of function ‘Point__init’ [-Wimplicit-function-declaration]
+     Point__init(result, _uio_dev, _uio_size);
+     ^~~~~~~~~~~
+Finished building: ../src/SensorMod.c
+ 
+Building file: ../src/xil_uio_test.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio_test.o" -MMD -MP -MF"src/xil_uio_test.d" -MT"src/xil_uio_test.o" -o "src/xil_uio_test.o" "../src/xil_uio_test.c"
+Finished building: ../src/xil_uio_test.c
+ 
+Building target: uio_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "uio_test.elf"  ./src/SensorMod.o ./src/xil_uio.o ./src/xil_uio_test.o   
+./src/SensorMod.o: In function `sensorMod__create':
+/home/chellovb/Documents/GitHub/sensorMod_ptlnx/uio_test/Debug/../src/SensorMod.c:29: undefined reference to `Point__init'
+collect2: error: ld returned 1 exit status
+makefile:36: recipe for target 'uio_test.elf' failed
+make: *** [uio_test.elf] Error 1

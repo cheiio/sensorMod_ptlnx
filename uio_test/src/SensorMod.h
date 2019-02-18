@@ -7,8 +7,6 @@
 
 #define SENMOD_SIZE		0x10000
 
-#define STATUS_READ     0x01
-
 #define OFFSET_POS      0x02
 #define OFFSET_CURR     0x04
 #define OFFSET_VOLT     0x06
@@ -33,6 +31,10 @@
 
 #define Nmodules		7
 
+#define STATUS_READ     0x01
+#define READY_MASK		0xFFFF0000
+#define ISREADY			(1<<Nmodules)-1
+
 /**************************** Type Definitions *****************************/
 typedef union sensorMod_union_t {
 	        uint32_t 	*_uint32;
@@ -47,8 +49,8 @@ typedef struct sensorMod_struct{
 						filt_curr;
 
 	sensorMod_data_t center_current;
-	sensorMod_data_t dt, R, Q[3];
-	sensorMod_data_t ab[2];
+	sensorMod_data_t dt, R, Q;
+	sensorMod_data_t ab;
 }sensorMod;
 
 /************************** Driver Class Definition ************************/
@@ -64,13 +66,12 @@ void sensorMod_start(sensorMod* self,
 void sensorMod_start_float(sensorMod* self, 
 		float* posIn_f, float* currIn_f, float* voltIn_f);
 uint32_t sensorMod_isReady(sensorMod* self);
-sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
-float *sensorMod_get_filteredData(sensorMod* self);
+//sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
+//float *sensorMod_get_filteredData(sensorMod* self);
 
 //***********************************************  Configuration Functions
 void sensorMod__set_centerCurr(sensorMod* self, float centerCurr);
-void sensorMod__set_Kalman(sensorMod* self, float dt, float R,
-											float* Q, float* ab);
+void sensorMod__set_Kalman(sensorMod* self, float dt, float R, float Q);
 void sensorMod__set_butter(sensorMod* self, float* ab);
 
 //***********************************************  Variable Functions
