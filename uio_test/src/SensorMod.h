@@ -35,16 +35,16 @@
 
 /**************************** Type Definitions *****************************/
 typedef union sensorMod_union_t {
-	        uint32_t 	_uint32;
-	        float 		_float32;
+	        uint32_t 	*_uint32;
+	        float 		*_float32;
         }sensorMod_data_t;
 
 typedef struct sensorMod_struct{
 	xil_uio *sensorMod_handler;
 
-	sensorMod_data_t 	filt_pos[Nmodules],
-						filt_vel[Nmodules],
-						filt_curr[Nmodules];
+	sensorMod_data_t 	filt_pos,
+						filt_vel,
+						filt_curr;
 
 	sensorMod_data_t center_current;
 	sensorMod_data_t dt, R, Q[3];
@@ -60,8 +60,9 @@ void sensorMod__destroy(sensorMod* self);
 
 //***********************************************  Calculating Functions
 void sensorMod_start(sensorMod* self,
-		sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn);
-void sensorMod_start(sensorMod* self, float* dataIn);
+		sensorMod_data_t posIn, sensorMod_data_t currIn, sensorMod_data_t voltIn);
+void sensorMod_start_float(sensorMod* self, 
+		float* posIn_f, float* currIn_f, float* voltIn_f);
 uint32_t sensorMod_isReady(sensorMod* self);
 sensorMod_data_t *sensorMod_get_filteredData(sensorMod* self);
 float *sensorMod_get_filteredData(sensorMod* self);

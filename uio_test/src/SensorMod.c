@@ -4,22 +4,22 @@
 
 // Constructor (without allocation)
 void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size){
-    self->sensorMod_handler = xil_uio__create(uio_dev, SENMOD_SIZE);
-    self->center_current._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->sensorMod_handler = xil_uio__create(_uio_dev, _uio_size);
+    self->center_current._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_CEN_CURR);
-    self->dt._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->dt._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_DT);
-    self->R._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->R._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_R);
-    self->Q[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->Q[0]._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_Q0);
-    self->Q[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->Q[1]._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_Q12);
-    self->Q[2]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->Q[2]._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_Q3);
-    self->ab[0]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->ab[0]._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_a1);
-    self->ab[1]._uint32 = xil_uio__read32(self->sensorMod_handler, 
+    self->ab[1]._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_b01);
 }
 
@@ -44,25 +44,24 @@ void sensorMod__destroy(sensorMod* _sensorMod){
 }
 
 //***********************************************  Calculating Functions
-void sensorMod_start(sensorMod* self,
-		sensorMod_data_t* posIn, sensorMod_data_t* currIn, sensorMod_data_t* voltIn){
+void sensorMod_start(sensorMod *self,
+		sensorMod_data_t posIn, sensorMod_data_t currIn, sensorMod_data_t voltIn){
 	const uint8_t empty_8bit = 0;
 	uint32_t data_n = 0;
 	for(uint8_t mod=1; mod <= Nmodules; mod++){
 		xil_uio__write32(self->sensorMod_handler->virtAddr,
-			empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn[data_n]->_uint32);
+			empty_8bit | OFFSET_POS | OFFSET_SEN | mod<<3, posIn._uint32[data_n]);
 		xil_uio__write32(self->sensorMod_handler->virtAddr,
-			empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn[data_n]->_uint32);
+			empty_8bit | OFFSET_CURR | OFFSET_SEN | mod<<3, currIn._uint32[data_n]);
 		xil_uio__write32(self->sensorMod_handler->virtAddr,
-			empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn[data_n]->_uint32);
+			empty_8bit | OFFSET_VOLT | OFFSET_SEN | mod<<3, voltIn._uint32[data_n]);
 		data_n++;
 	}
 }
 
-void sensorMod_start(sensorMod* self, float* posIn_f, float* currIn_f, float* voltIn_f){
-	sensorMod_data_t *posIn._float32 = *posIn_f;
-	sensorMod_data_t *currIn._float32 = *currIn_f;
-	sensorMod_data_t *voltIn._float32 = *voltIn_f;
+void sensorMod_start_float(sensorMod* self, float* posIn_f, float* currIn_f, float* voltIn_f){
+	sensorMod_data_t *posIn, *currIn, *voltIn;
+    memcpy(posIn._float32, posIn_f, sizeof(posIn_f));
 	sensorMod_start(self, posIn, currIn, voltIn);
 }
 
