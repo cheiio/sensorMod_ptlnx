@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;uio_test/src/xil_uio_test.c&apos; to &apos;sensorMod_test.c&apos;" description="Rename resource &apos;xil_uio_test.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/xil_uio_test.c" name="sensorMod_test.c" stamp="1550581681853" updateReferences="true"/>
+</session>
