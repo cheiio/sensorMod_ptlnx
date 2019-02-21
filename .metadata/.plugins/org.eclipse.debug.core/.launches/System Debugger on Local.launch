@@ -23,20 +23,23 @@
 <booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.lock.step" value="false"/>
 <booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.rpu" value="false"/>
 <booleanAttribute key="com.xilinx.sdk.tcf.debug.uireset.system" value="false"/>
-<stringAttribute key="com.xilinx.sdk.tcf.debug.uitarget.peer" value="arty_z7"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uitarget.peer" value="artyZ7"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/sensorMod_test"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
 </listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
 <booleanAttribute key="org.eclipse.tcf.debug.AttachChildren" value="true"/>
 <booleanAttribute key="org.eclipse.tcf.debug.DisconnectOnCtxExit" value="false"/>
 <stringAttribute key="org.eclipse.tcf.debug.LocalProgramFile" value="Debug/sensorMod_test.elf"/>
-<stringAttribute key="org.eclipse.tcf.debug.ProgramFile" value=""/>
+<stringAttribute key="org.eclipse.tcf.debug.ProgramFile" value="/mnt/sensorMod_test.elf"/>
 <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="sensorMod_test"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtEntry" value="false"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtMain" value="true"/>
 <booleanAttribute key="org.eclipse.tcf.debug.UseContextFilter" value="false"/>
-<booleanAttribute key="org.eclipse.tcf.debug.UseTerminal" value="true"/>
+<booleanAttribute key="org.eclipse.tcf.debug.UseTerminal" value="false"/>
 </launchConfiguration>

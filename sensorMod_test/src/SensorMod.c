@@ -5,12 +5,10 @@
 // Constructor (without allocation)
 void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size){
     self->sensorMod_handler = xil_uio__create(_uio_dev, _uio_size);
-    self->center_current._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
-                                OFFSET_CONF | OFFSET_CEN_CURR);
-    self->dt._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
-                                OFFSET_CONF | OFFSET_DT);
-    self->R._uint32 = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
-                                OFFSET_CONF | OFFSET_R);
+    self->center_current._uint32 = xil_uio__read32(self->sensorMod_handler,	OFFSET_CEN_CURR);
+    self->dt._uint32 = xil_uio__read32(self->sensorMod_handler, OFFSET_DT);
+    self->R._uint32 = xil_uio__read32(self->sensorMod_handler, OFFSET_R);
+/*
     self->Q._uint32[0] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_Q0);
     self->Q._uint32[1] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
@@ -21,6 +19,7 @@ void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_
                                 OFFSET_CONF | OFFSET_a1);
     self->ab._uint32[1] = (uint32_t *)xil_uio__read32(self->sensorMod_handler, 
                                 OFFSET_CONF | OFFSET_b01);
+*/
 }
 
 // Allocation + initialization
@@ -42,6 +41,9 @@ void sensorMod__destroy(sensorMod* _sensorMod){
         free(_sensorMod);
     }
 }
+
+/*
+
 
 //***********************************************  Calculating Functions
 void sensorMod__start(sensorMod *self,
@@ -116,8 +118,10 @@ void sensorMod__set_butter(sensorMod* self, float* ab){
 }
 
 //***********************************************  Variable Functions
-float sensorMod__get_centerCurr(sensorMod* self){return *self->center_current._float32;}
-float sensorMod__get_dt(sensorMod* self){return *self->dt._float32;};
-float sensorMod__get_R(sensorMod* self){return *self->R._float32;};
-float* sensorMod__get_Q(sensorMod* self){return self->Q._float32;};
-float* sensorMod__get_ab(sensorMod* self){return self->ab._float32;};
+float sensorMod__get_centerCurr(sensorMod* self){return (float)*self->center_current._float32;}
+float sensorMod__get_dt(sensorMod* self){return (float)*self->dt._float32;};
+float sensorMod__get_R(sensorMod* self){return (float)*self->R._float32;};
+float* sensorMod__get_Q(sensorMod* self){return (float *)self->Q._float32;};
+float* sensorMod__get_ab(sensorMod* self){return (float *)self->ab._float32;};
+
+*/

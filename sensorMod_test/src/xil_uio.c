@@ -44,13 +44,13 @@ void xil_uio__destroy(xil_uio* _xil_uio) {
 
 // Read data from uio device
 uint32_t xil_uio__read32(xil_uio *self, const uint32_t offset){	
-	uint32_t read_result = *((volatile uint8_t *) (self->virtAddr + offset));
+	uint32_t read_result = *((volatile uint32_t *) (self->virtAddr + offset));
 	return read_result;
 }
 
 // Write data to  uio device
 void 	xil_uio__write32 (xil_uio *self, const uint32_t offset, const uint32_t writeval){
-	 *((volatile uint8_t *) (self->virtAddr + offset)) = writeval;
+	 *((volatile uint32_t *) (self->virtAddr + offset)) = writeval;
 }
 
 uint32_t xil_uio__mapSize(xil_uio* self){ return(self->mapSize);}

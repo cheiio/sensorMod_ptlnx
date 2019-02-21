@@ -6,7 +6,7 @@
 #include "xil_uio.h"
 
 #define SENMOD_SIZE		0x10000
-
+/*
 #define OFFSET_POS      0x02
 #define OFFSET_CURR     0x04
 #define OFFSET_VOLT     0x06
@@ -27,18 +27,34 @@
 #define OFFSET_FILT     0x00
 #define OFFSET_SEN      0x40
 #define OFFSET_CONF     0x80
+*/
 
+#define STATUS_R_MOD_W 		0
+#define OFFSET_DT 			4
+#define OFFSET_R 			8
+#define OFFSET_CEN_CURR 	12
+#define OFFSET_Q0 			16
+#define OFFSET_Q12 			20
+#define OFFSET_Q3 			24
+#define OFFSET_b01 			28
+#define OFFSET_a1 			32
+#define OFFSET_POS 			36
+#define OFFSET_VEL_CURR		40
+#define OFFSET_CURR_VOLT 	44
 
 #define Nmodules		7
 
 #define STATUS_READ     0x01
 #define READY_MASK		0xFFFF0000
-#define ISREADY			(1<<Nmodules)-1
+//#define ISREADY			(1<<Nmodules)-1
+#define MASK_MOD_IN		0xFFFFFFE0
+#define MASK_READY		0xFFFF0000
+#define ISREADY			0x7F0000
 
 /**************************** Type Definitions *****************************/
 typedef union sensorMod_union_t {
-	        uint32_t 	*_uint32;
-	        float 		*_float32;
+	        uint32_t 	_uint32;
+	        float 		_float32;
         }sensorMod_data_t;
 
 typedef struct sensorMod_struct{
@@ -60,6 +76,8 @@ sensorMod* sensorMod__create(const char *_uio_dev,
 		const uint32_t _uio_size);
 void sensorMod__destroy(sensorMod* self);
 
+/*
+
 //***********************************************  Calculating Functions
 void sensorMod__start(sensorMod* self,
 		sensorMod_data_t posIn, sensorMod_data_t currIn, sensorMod_data_t voltIn);
@@ -80,5 +98,5 @@ float sensorMod__get_dt(sensorMod* self);
 float sensorMod__get_R(sensorMod* self);
 float* sensorMod__get_Q(sensorMod* self);
 float* sensorMod__get_ab(sensorMod* self);
-
+*/
 #endif // SENSORMOD_H

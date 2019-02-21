@@ -18,3 +18,18 @@
 17:28:59 INFO  : XSCT server has started successfully.
 17:28:59 INFO  : Successfully done setting XSCT server connection channel  
 17:29:04 INFO  : Successfully done setting SDK workspace  
+11:21:02 INFO  : Registering command handlers for SDK TCF services
+11:21:02 INFO  : Launching XSCT server: xsct.bat -interactive C:\shared_vb\GitHub\sensorMod_ptlnx\temp_xsdb_launch_script.tcl
+11:21:04 INFO  : XSCT server has started successfully.
+11:21:05 INFO  : Successfully done setting XSCT server connection channel  
+11:21:05 INFO  : Successfully done setting SDK workspace  
+19:49:37 INFO  : Registering command handlers for SDK TCF services
+19:49:39 INFO  : Launching XSCT server: xsct -n -interactive /media/sf_shared_vb/GitHub/sensorMod_ptlnx/temp_xsdb_launch_script.tcl
+19:49:43 INFO  : XSCT server has started successfully.
+19:49:44 INFO  : Successfully done setting XSCT server connection channel  
+19:49:44 INFO  : Successfully done setting SDK workspace  
+19:56:00 INFO  : Registering command handlers for SDK TCF services
+19:56:01 INFO  : Launching XSCT server: xsct.bat -interactive C:\shared_vb\GitHub\sensorMod_ptlnx\temp_xsdb_launch_script.tcl
+19:56:04 INFO  : XSCT server has started successfully.
+19:56:05 INFO  : Successfully done setting XSCT server connection channel  
+19:56:05 INFO  : Successfully done setting SDK workspace  
