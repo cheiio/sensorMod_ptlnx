@@ -1,6 +1,21 @@
-20:31:17 **** Incremental Build of configuration Debug for project sensorMod_test ****
+15:08:41 **** Auto Build of configuration Debug for project sensorMod_test ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/SensorMod.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+'Finished building: ../src/SensorMod.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5521	    320	      4	   5845	   16d5	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
 
-20:31:17 Build Finished (took 325ms)
+15:08:42 Build Finished (took 1s.358ms)
 
