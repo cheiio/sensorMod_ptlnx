@@ -1,6 +1,6 @@
-20:31:17 **** Incremental Build of configuration Debug for project sensorMod_test ****
+22:48:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
 make all 
-make: Nothing to be done for `all'.
+make: Nothing to be done for 'all'.
 
-20:31:17 Build Finished (took 325ms)
+22:48:04 Build Finished (took 678ms)
 

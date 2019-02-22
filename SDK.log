@@ -33,3 +33,8 @@
 19:56:04 INFO  : XSCT server has started successfully.
 19:56:05 INFO  : Successfully done setting XSCT server connection channel  
 19:56:05 INFO  : Successfully done setting SDK workspace  
+21:24:11 INFO  : Registering command handlers for SDK TCF services
+21:24:13 INFO  : Launching XSCT server: xsct -n -interactive /home/cheiio/Documents/dev/sensorMod_ptlnx/temp_xsdb_launch_script.tcl
+21:24:17 INFO  : XSCT server has started successfully.
+21:24:17 INFO  : Successfully done setting XSCT server connection channel  
+21:24:17 INFO  : Successfully done setting SDK workspace  
