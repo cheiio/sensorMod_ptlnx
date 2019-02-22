@@ -79,7 +79,8 @@ void sensorMod__start(sensorMod *self,
 	}
 }
 
-void sensorMod__start_float(sensorMod* self, float* posIn_f, float* currIn_f, float* voltIn_f){
+void sensorMod__start_float(sensorMod* self,
+		float* posIn_f, float* currIn_f, float* voltIn_f){
 	sensorMod_data_t posIn, currIn, voltIn;
     posIn._float32 = posIn_f;   currIn._float32 = currIn_f;   voltIn._float32 = voltIn_f;   
     sensorMod__start(self, posIn, currIn, voltIn);
@@ -113,7 +114,7 @@ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data)
 //***********************************************  Configuration Functions
 void sensorMod__set_centerCurr(sensorMod* self, float centerCurr){
     self->center_current._float32 = &centerCurr;
-    xil_uio__write32(self->sensorMod_handler,	OFFSET_CEN_CURR,
+    xil_uio__write32(self->sensorMod_handler, OFFSET_CEN_CURR,
     		*self->center_current._uint32);
 }
 

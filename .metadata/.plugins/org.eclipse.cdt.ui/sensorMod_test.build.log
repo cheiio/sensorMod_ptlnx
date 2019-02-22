@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 15:08:41 **** Auto Build of configuration Debug for project sensorMod_test ****
 make all 
 'Building file: ../src/SensorMod.c'
@@ -18,4 +19,11 @@ arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
 ' '
 
 15:08:42 Build Finished (took 1s.358ms)
+=======
+22:48:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for 'all'.
+
+22:48:04 Build Finished (took 678ms)
+>>>>>>> cdf7640b2667e2cafb1a5651bdd92572e60f3109
 

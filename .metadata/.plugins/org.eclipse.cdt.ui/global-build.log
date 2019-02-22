@@ -1,4 +1,5 @@
 22:48:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
+<<<<<<< HEAD
 make all 
 make: Nothing to be done for 'all'.
 09:14:54 **** Build of configuration Debug for project sensorMod_test ****
@@ -2391,3 +2392,7 @@ arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
    5521	    320	      4	   5845	   16d5	sensorMod_test.elf
 'Finished building: sensorMod_test.elf.size'
 ' '
+=======
+make all 
+make: Nothing to be done for 'all'.
+>>>>>>> cdf7640b2667e2cafb1a5651bdd92572e60f3109

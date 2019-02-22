@@ -1,2 +1,7 @@
+<<<<<<< HEAD
    text	   data	    bss	    dec	    hex	filename
    5521	    320	      4	   5845	   16d5	sensorMod_test.elf
+=======
+   text	   data	    bss	    dec	    hex	filename
+   4509	    320	      4	   4833	   12e1	sensorMod_test.elf
+>>>>>>> cdf7640b2667e2cafb1a5651bdd92572e60f3109
