@@ -5831,3 +5831,1277 @@ java.io.FileNotFoundException: /home/cheiio/Documents/dev/sensorMod_ptlnx/.metad
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2019-02-25 10:50:04.737 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-25 10:51:58.410
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2019-02-25 10:51:59.844
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-02-25 10:51:59.844
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-02-25 10:52:01.314
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-02-25 10:52:01.320
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.equinox.preferences 4 2 2019-02-25 10:52:01.530
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.equinox.preferences".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1236)
+	at org.eclipse.swt.widgets.Display.checkDevice(Display.java:815)
+	at org.eclipse.swt.widgets.Display.disposeExec(Display.java:1213)
+	at org.eclipse.jface.resource.ColorRegistry.hookDisplayDispose(ColorRegistry.java:256)
+	at org.eclipse.jface.resource.ColorRegistry.<init>(ColorRegistry.java:119)
+	at org.eclipse.jface.resource.ColorRegistry.<init>(ColorRegistry.java:102)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.init(WorkbenchThemeManager.java:135)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.getCurrentTheme(WorkbenchThemeManager.java:259)
+	at org.eclipse.cdt.ui.CUIPreferenceInitializer.setThemeBasedPreferences(CUIPreferenceInitializer.java:103)
+	at org.eclipse.cdt.ui.PreferenceConstants.initializeDefaultValues(PreferenceConstants.java:2326)
+	at org.eclipse.cdt.ui.CUIPreferenceInitializer.initializeDefaultPreferences(CUIPreferenceInitializer.java:46)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper$1.run(PreferenceServiceRegistryHelper.java:298)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.runInitializer(PreferenceServiceRegistryHelper.java:301)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:131)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:370)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:222)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:276)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:370)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:623)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:766)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.core.runtime.preferences.DefaultScope.getNode(DefaultScope.java:74)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getDefaultPreferences(ScopedPreferenceStore.java:237)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getPreferenceNodes(ScopedPreferenceStore.java:268)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:418)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getInt(ScopedPreferenceStore.java:436)
+	at org.eclipse.cdt.internal.ui.preferences.BuildConsolePreferencePage.buildConsoleLines(BuildConsolePreferencePage.java:154)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.<init>(BuildConsolePartitioner.java:361)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.getProjectConsolePartioner(BuildConsoleManager.java:454)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.getProjectConsole(BuildConsoleManager.java:435)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsoleManager.getConsole(BuildConsoleManager.java:420)
+	at org.eclipse.cdt.internal.ui.buildconsole.CBuildConsole.start(CBuildConsole.java:55)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder$CfgBuildInfo.getConsole(CommonBuilder.java:169)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:758)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 0 2019-02-25 10:52:02.321
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.themes.Theme.<init>(Theme.java:93)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.getTheme(WorkbenchThemeManager.java:307)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.getTheme(WorkbenchThemeManager.java:317)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.doSetCurrentTheme(WorkbenchThemeManager.java:232)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.setCurrentTheme(WorkbenchThemeManager.java:346)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.getCurrentTheme(WorkbenchThemeManager.java:270)
+	at org.eclipse.ui.internal.Workbench$29.runWithException(Workbench.java:1842)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:5406)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:95)
+	at org.eclipse.ui.internal.Workbench.initializeFonts(Workbench.java:1835)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1673)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2938)
+	at org.eclipse.ui.internal.Workbench.access$9(Workbench.java:2869)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+
+!ENTRY org.eclipse.core.resources 4 2 2019-02-25 10:52:02.985
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Internal error building project sensorMod_test configuration Debug
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:142)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:72)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:753)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:756)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:100)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:94)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1372)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:214)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:113)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:138)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:79)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:421)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:406)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:65)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:200)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:190)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:71)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:34)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:161)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:101)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:92)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:85)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:47)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:36)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:79)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:235)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:113)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:150)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:196)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:500)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:237)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:437)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:419)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:413)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:406)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:480)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:461)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.<init>(RefreshScopeManager.java:108)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.getInstance(RefreshScopeManager.java:90)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.refreshProject(BuildRunnerHelper.java:360)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:133)
+	... 16 more
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2019-02-25 10:52:02.986
+!MESSAGE Internal error building project sensorMod_test configuration Debug
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:756)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:100)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:94)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1372)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:214)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:113)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:138)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:79)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:421)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:406)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:65)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:200)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:190)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:71)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:34)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:161)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:101)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:92)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:85)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:47)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:36)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:79)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:235)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:113)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:150)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:196)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:500)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:237)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:437)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:419)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:413)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:406)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:480)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:461)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.<init>(RefreshScopeManager.java:108)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.getInstance(RefreshScopeManager.java:90)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.refreshProject(BuildRunnerHelper.java:360)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:133)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:72)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:753)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.managedbuilder.core 4 0 2019-02-25 10:52:02.988
+!MESSAGE Internal error building project sensorMod_test configuration Debug
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.core.CCorePlugin.getCProjectDescription(CCorePlugin.java:756)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.load(ScannerConfigInfoFactory2.java:100)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2$ScannerConfigInfoSet.<init>(ScannerConfigInfoFactory2.java:94)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigInfoFactory2.createInfoSet(ScannerConfigInfoFactory2.java:1372)
+	at org.eclipse.cdt.make.internal.core.scannerconfig2.ScannerConfigProfileManager.createScannerConfigBuildInfo2Set(ScannerConfigProfileManager.java:214)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getContainer(CfgScannerConfigInfoFactory2.java:113)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.createMap(CfgScannerConfigInfoFactory2.java:138)
+	at org.eclipse.cdt.build.internal.core.scannerconfig2.CfgScannerConfigInfoFactory2$CfgInfo.getInfo(CfgScannerConfigInfoFactory2.java:79)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:421)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getContextInfo(CfgDiscoveredPathManager.java:406)
+	at org.eclipse.cdt.build.internal.core.scannerconfig.CfgDiscoveredPathManager.getDiscoveredInfo(CfgDiscoveredPathManager.java:168)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ProfileInfoProvider.getEntryValues(ProfileInfoProvider.java:65)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.getDiscoveredEntries(BuildEntryStorage.java:200)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildEntryStorage.putEntriesToLevel(BuildEntryStorage.java:190)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.initCache(AbstractEntryStorage.java:71)
+	at org.eclipse.cdt.core.settings.model.util.AbstractEntryStorage.getEntries(AbstractEntryStorage.java:34)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.BuildLanguageData.getEntries(BuildLanguageData.java:161)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.getEntriesToCopy(CDefaultLanguageData.java:101)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.createStore(CDefaultLanguageData.java:92)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultLanguageData.copySettingsFrom(CDefaultLanguageData.java:85)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.copySettingsFrom(CLanguageSettingCache.java:47)
+	at org.eclipse.cdt.internal.core.settings.model.CLanguageSettingCache.<init>(CLanguageSettingCache.java:36)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.copyLanguageData(CFolderDescriptionCache.java:79)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultFolderData.copyDataFrom(CDefaultFolderData.java:56)
+	at org.eclipse.cdt.internal.core.settings.model.CFolderDescriptionCache.<init>(CFolderDescriptionCache.java:38)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.copyFolderData(CConfigurationDescriptionCache.java:235)
+	at org.eclipse.cdt.core.settings.model.extension.impl.CDefaultConfigurationData.copySettingsFrom(CDefaultConfigurationData.java:113)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:150)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:196)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:500)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:237)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:437)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:419)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:413)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:406)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:480)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.loadSettings(RefreshScopeManager.java:461)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.<init>(RefreshScopeManager.java:108)
+	at org.eclipse.cdt.core.resources.RefreshScopeManager.getInstance(RefreshScopeManager.java:90)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.refreshProject(BuildRunnerHelper.java:360)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeExternalBuild(ExternalBuildRunner.java:133)
+	at org.eclipse.cdt.managedbuilder.core.ExternalBuildRunner.invokeBuild(ExternalBuildRunner.java:72)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:753)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:513)
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-02-25 10:52:03.006
+!MESSAGE An internal error occurred during: "Initiating resource change handling..".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: null argument:Participant must not be null
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:85)
+	at org.eclipse.core.internal.resources.Workspace.addSaveParticipant(Workspace.java:338)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.startSaveParticipant(CProjectDescriptionManager.java:381)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.access$1(CProjectDescriptionManager.java:378)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$3.run(CProjectDescriptionManager.java:353)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-25 10:52:03.036
+!MESSAGE The workspace will exit with unsaved changes in this session.
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-02-25 10:52:03.434
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.ui.CUIPlugin$3
+!SESSION 2019-02-25 10:53:50.547 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-02-25 10:54:15.088
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2019-02-25 10:54:15.809
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-02-25 10:54:15.809
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-02-25 10:54:16.302
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-02-25 10:54:16.302
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-02-25 10:54:22.743
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\sapmc'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-02-25 10:54:26.645
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-02-25 10:54:26.650
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-02-25 10:54:26.656
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-02-25 10:54:26.664
+!MESSAGE XSCT Command: [setws C:/shared_vb/GitHub/sensorMod_ptlnx], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-02-25 10:54:28.952
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-02-25 10:54:28.957
+!MESSAGE XSCT command with result: [setws C:/shared_vb/GitHub/sensorMod_ptlnx], Result: [null, ]. Thread: Thread-15
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 10:59:15.677
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 11:05:14.328
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:30:33.336
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:31:08.011
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:31:36.413
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:31:50.145
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 11:32:52.669
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:33:17.900
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:33:28.309
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:33:44.078
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:37:42.740
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:37:56.867
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:38:12.766
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 11:38:15.307
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:38:49.915
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:39:04.883
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:39:51.246
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:40:05.725
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 11:40:30.143
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 11:43:44.772
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 11:58:29.800
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:30:21.065
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:30:36.619
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:30:49.198
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:31:02.191
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:31:19.718
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:31:38.837
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:32:39.369
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:32:51.906
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:33:11.839
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 12:34:14.160
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:34:21.474
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:36:20.209
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 12:39:17.767
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:39:58.685
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:40:15.433
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:41:06.291
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:41:20.976
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 12:41:32.612
+!MESSAGE Debugger console IO error. Process ID P1979. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:42:14.734
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:42:45.429
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:44:19.633
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 12:44:36.401
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:45:14.806
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 12:50:12.643
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:50:13.629
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 12:50:23.740
+!MESSAGE Debugger console IO error. Process ID P1987. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 12:50:23.980
+!MESSAGE Debugger console IO error. Process ID P1987. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 12:50:25.596
+!MESSAGE Debugger console IO error. Process ID P1987. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 12:50:25.795
+!MESSAGE Debugger console IO error. Process ID P1987. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:50:59.515
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:51:48.894
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 12:52:13.548
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 12:55:48.115
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 13:00:50.469
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 13:40:33.746
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 13:45:31.125
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:39:16.089
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 14:43:21.510
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:45:02.402
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:45:39.304
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:02.974
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:03.150
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:03.334
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:06.055
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:06.230
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:06.423
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:08.126
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:08.231
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:08.238
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:08.335
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:08.463
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:46:08.471
+!MESSAGE Debugger console IO error. Process ID P2028. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:46:21.465
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:48:47.463
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 14:49:59.955
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:50:07.740
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:38.735
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:39.446
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:39.647
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:39.855
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:41.726
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:42.174
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:42.446
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:42.687
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:53.767
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:53.772
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:50:53.778
+!MESSAGE Debugger console IO error. Process ID P2037. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:52:06.179
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 14:52:16.262
+!MESSAGE Debugger console IO error. Process ID P2038. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 14:52:20.847
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 14:55:02.509
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 15:11:54.519
+!MESSAGE Debugger console IO error. Process ID P2039. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 15:11:54.983
+!MESSAGE Debugger console IO error. Process ID P2039. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.tcf.debug.ui 4 0 2019-02-25 15:11:55.167
+!MESSAGE Debugger console IO error. Process ID P2039. Stream 0
+!STACK 0
+java.io.IOException: No target process
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.writeProcessInputStream(TCFLaunch.java:1167)
+	at org.eclipse.tcf.internal.debug.ui.model.TCFConsole$ViewPage$1$1.run(TCFConsole.java:87)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:242)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 15:24:52.512
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 15:36:41.922
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 17:21:21.687
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 17:21:56.176
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 17:22:48.869
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 17:29:14.267
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 17:54:55.215
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 18:03:38.657
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 18:12:52.235
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 18:13:14.301
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 18:14:03.930
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 18:17:42.359
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 18:17:52.222
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-02-25 18:18:38.133
+!MESSAGE Updating toolusage
+
+!ENTRY org.eclipse.core.resources 4 568 2019-02-25 18:22:45.525
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1852)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1224)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.ide 4 4 2019-02-25 19:44:10.254
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2019-02-25 19:44:10.260
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2019-02-25 19:44:10.260
+!MESSAGE Could not write metadata for '/RemoteSystemsTempFiles'.
+!STACK 0
+java.io.FileNotFoundException: C:\shared_vb\GitHub\sensorMod_ptlnx\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1657)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1739)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1199)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2283)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:456)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)

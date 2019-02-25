@@ -2671,3 +2671,2416 @@ arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_te
            ^~~~~~~
 src/subdir.mk:27: recipe for target 'src/sensorMod_test.o' failed
 make: *** [src/sensorMod_test.o] Error 1
+10:54:17 **** Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:34:5: warning: implicit declaration of function 'setmotor'; did you mean 'setMotor'? [-Wimplicit-function-declaration]
+     setmotor(motors_handler, );
+     ^~~~~~~~
+     setMotor
+../src/sensorMod_test.c:34:30: error: expected expression before ')' token
+     setmotor(motors_handler, );
+                              ^
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+10:58:37 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:34:30: error: expected expression before ')' token
+     setMotor(motors_handler, );
+                              ^
+../src/sensorMod_test.c:34:5: error: too few arguments to function 'setMotor'
+     setMotor(motors_handler, );
+     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:9:0:
+../src/MotorDriver.h:17:6: note: declared here
+ void setMotor(xil_uio *motorMod, uint8_t pwmPin, double pid_Out);
+      ^~~~~~~~
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:00:14 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:34:30: error: expected expression before ')' token
+     setMotor(motors_handler, );
+                              ^
+../src/sensorMod_test.c:34:5: error: too few arguments to function 'setMotor'
+     setMotor(motors_handler, );
+     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:9:0:
+../src/MotorDriver.h:17:6: note: declared here
+ void setMotor(xil_uio *motorMod, uint8_t pwmPin, double pid_Out);
+      ^~~~~~~~
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:01:34 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:34:30: error: expected expression before ')' token
+     setMotor(motors_handler, );
+                              ^
+../src/sensorMod_test.c:34:5: error: too few arguments to function 'setMotor'
+     setMotor(motors_handler, );
+     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:9:0:
+../src/MotorDriver.h:18:6: note: declared here
+ void setMotor(xil_uio *motorMod, uint8_t pwmPin, double pid_Out);
+      ^~~~~~~~
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:02:54 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+../src/MotorDriver.c:20:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ disableMotors(xil_uio *motorMod){
+ ^~~~~~~~~~~~~
+../src/MotorDriver.c:20:1: warning: conflicting types for 'disableMotors'
+In file included from ../src/MotorDriver.c:3:0:
+../src/MotorDriver.h:19:6: note: previous declaration of 'disableMotors' was here
+ void disableMotors(xil_uio *motorMod);
+      ^~~~~~~~~~~~~
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:34:30: error: expected expression before ')' token
+     setMotor(motors_handler, );
+                              ^
+../src/sensorMod_test.c:34:5: error: too few arguments to function 'setMotor'
+     setMotor(motors_handler, );
+     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:9:0:
+../src/MotorDriver.h:18:6: note: declared here
+ void setMotor(xil_uio *motorMod, uint8_t pwmPin, double pid_Out);
+      ^~~~~~~~
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:03:09 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:34:30: error: expected expression before ')' token
+     setMotor(motors_handler, );
+                              ^
+../src/sensorMod_test.c:34:5: error: too few arguments to function 'setMotor'
+     setMotor(motors_handler, );
+     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:9:0:
+../src/MotorDriver.h:18:6: note: declared here
+ void setMotor(xil_uio *motorMod, uint8_t pwmPin, double pid_Out);
+      ^~~~~~~~
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:03:16 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:54:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building file: ../src/xil_uio.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio.o" -MMD -MP -MF"src/xil_uio.d" -MT"src/xil_uio.o" -o "src/xil_uio.o" "../src/xil_uio.c"
+'Finished building: ../src/xil_uio.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5825	    324	      4	   6153	   1809	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:27:52 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:70:12: warning: format '%x' expects argument of type 'unsigned int *', but argument 2 has type 'float *' [-Wformat=]
+   scanf ("%x",&volt);
+           ~^  ~~~~~
+           %e
+../src/sensorMod_test.c:72:34: error: request for member 'pwmPin' in something not a structure or union
+   printf("\nMotor %d set on %.2f". pwmPin, volt);
+                                  ^
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:28:08 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:70:12: warning: format '%x' expects argument of type 'unsigned int *', but argument 2 has type 'float *' [-Wformat=]
+   scanf ("%x",&volt);
+           ~^  ~~~~~
+           %e
+../src/sensorMod_test.c:72:34: error: request for member 'pwmPin' in something not a structure or union
+   printf("\nMotor %d set on %.2f". pwmPin, volt);
+                                  ^
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+11:28:17 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:70:12: warning: format '%x' expects argument of type 'unsigned int *', but argument 2 has type 'float *' [-Wformat=]
+   scanf ("%x",&volt);
+           ~^  ~~~~~
+           %e
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6060	    328	      4	   6392	   18f8	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:28:27 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6060	    328	      4	   6392	   18f8	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:29:28 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6108	    328	      4	   6440	   1928	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:30:33 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:30:58 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6100	    328	      4	   6432	   1920	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:31:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:31:25 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:29:49: warning: unused variable 'motors_handler' [-Wunused-variable]
+     xil_uio *gpioSw_handler, *gpioLED_handler, *motors_handler;
+                                                 ^~~~~~~~~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5789	    324	      4	   6117	   17e5	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:31:33 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:31:46 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:29:49: warning: variable 'motors_handler' set but not used [-Wunused-but-set-variable]
+     xil_uio *gpioSw_handler, *gpioLED_handler, *motors_handler;
+                                                 ^~~~~~~~~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5817	    324	      4	   6145	   1801	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:33:15 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:33:24 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5825	    324	      4	   6153	   1809	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:33:40 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5833	    324	      4	   6161	   1811	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:37:35 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:62:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:61:13: warning: unused variable 'pwmPin' [-Wunused-variable]
+     int32_t pwmPin;
+             ^~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5857	    324	      4	   6185	   1829	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:37:39 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:37:51 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6108	    328	      4	   6440	   1928	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:37:54 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:38:07 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6108	    328	      4	   6440	   1928	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:38:09 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:38:44 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6160	    328	      4	   6492	   195c	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:38:47 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:39:00 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:62:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6008	    328	      4	   6340	   18c4	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:39:02 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:39:44 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:62:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6008	    328	      4	   6340	   18c4	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:39:49 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:39:59 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:62:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:61:9: warning: unused variable 'pwmPin' [-Wunused-variable]
+     int pwmPin;
+         ^~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5901	    324	      4	   6229	   1855	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:40:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:40:24 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:66:21: warning: format '%d' expects a matching 'int *' argument [-Wformat=]
+   pwmPin = scanf ("%d");
+                    ~^
+../src/sensorMod_test.c:62:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:61:9: warning: variable 'pwmPin' set but not used [-Wunused-but-set-variable]
+     int pwmPin;
+         ^~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6004	    328	      4	   6336	   18c0	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+11:40:26 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+11:53:29 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+../src/MotorDriver.c: In function 'disableMotors':
+../src/MotorDriver.c:21:23: error: 'AVAILABLE_MOTORS' undeclared (first use in this function)
+  for (uint32_t i=0; i<AVAILABLE_MOTORS; i++){
+                       ^~~~~~~~~~~~~~~~
+../src/MotorDriver.c:21:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/MotorDriver.o] Error 1
+11:53:35 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:66:21: warning: format '%d' expects a matching 'int *' argument [-Wformat=]
+   pwmPin = scanf ("%d");
+                    ~^
+../src/sensorMod_test.c:62:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:61:9: warning: variable 'pwmPin' set but not used [-Wunused-but-set-variable]
+     int pwmPin;
+         ^~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6004	    328	      4	   6336	   18c0	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:29:14 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:75:24: error: lvalue required as left operand of assignment
+   if (sign&(uint32_t)1 = 0){  volt = (float)voltint*8.0/15.0;
+                        ^
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+12:29:30 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:75:11: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   if (sign&(uint32_t)1 == 0){  volt = (float)voltint*8.0/15.0;
+           ^
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6382	    328	      4	   6714	   1a3a	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:29:45 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6442	    328	      4	   6774	   1a76	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:30:18 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:30:34 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:30:42 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6410	    328	      4	   6742	   1a56	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:30:46 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:30:58 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:62:14: warning: unused variable 'pwmPin' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+              ^~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5881	    324	      4	   6209	   1841	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:31:10 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:92:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+12:31:16 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:92:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+12:31:36 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6110	    328	      4	   6442	   192a	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:31:38 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:31:52 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6094	    328	      4	   6426	   191a	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:32:32 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6081	    328	      4	   6413	   190d	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:32:36 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:32:47 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5949	    324	      4	   6277	   1885	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:32:49 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:33:07 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6005	    328	      4	   6337	   18c1	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:33:09 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:34:17 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6010	    328	      4	   6342	   18c6	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:36:17 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:39:36 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5954	    328	      4	   6286	   188e	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:39:53 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5978	    328	      4	   6310	   18a6	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:39:55 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:40:10 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5977	    328	      4	   6309	   18a5	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:40:12 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:40:19 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5978	    328	      4	   6310	   18a6	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:40:24 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:40:47 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5994	    328	      4	   6326	   18b6	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:41:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:41:17 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5993	    328	      4	   6325	   18b5	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:42:05 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:63:11: warning: unused variable 'volt' [-Wunused-variable]
+     float volt;
+           ^~~~
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6073	    328	      4	   6405	   1905	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:42:09 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:42:43 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:44:03 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:67:14: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'double' [-Wformat=]
+      scanf("%f", volt);
+             ~^
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6096	    328	      4	   6428	   191c	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:44:14 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6092	    328	      4	   6424	   1918	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:44:16 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:45:12 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:45:30 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:62:35: warning: unused variable 'sign' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                                   ^~~~
+../src/sensorMod_test.c:62:26: warning: unused variable 'voltint' [-Wunused-variable]
+     uint32_t pwmPin = 0, voltint, sign;
+                          ^~~~~~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6088	    328	      4	   6420	   1914	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:49:52 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:67:14: warning: format '%f' expects argument of type 'float *', but argument 2 has type 'int32_t * {aka int *}' [-Wformat=]
+      scanf("%f", &pwmPin);
+             ~^   ~~~~~~~
+             %d
+../src/sensorMod_test.c:75:2: error: expected expression before '/' token
+ */
+  ^
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+12:49:59 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:75:2: error: expected expression before '/' token
+ */
+  ^
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+12:50:05 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:50:11 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:50:48 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:50:54 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:51:43 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:51:46 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:52:06 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:52:09 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:52:11 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+12:55:45 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+12:55:50 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+13:40:30 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:38:21 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:39:12 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:42:23 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:44:59 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:45:27 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:45:33 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:46:18 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:47:21 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:48:40 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/MotorDriver.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+'Finished building: ../src/MotorDriver.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6168	    328	      4	   6500	   1964	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:48:44 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:50:02 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6200	    328	      4	   6532	   1984	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:50:05 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:51:22 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:68:17: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+      if (pwmPin < 0 | pwmPin > NMOTORS) break;
+          ~~~~~~~^~~
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6236	    328	      4	   6568	   19a8	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:51:40 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6236	    328	      4	   6568	   19a8	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:51:47 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:56:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6244	    328	      4	   6576	   19b0	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+14:51:56 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+14:52:18 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+15:19:52 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+15:31:42 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+In file included from ../src/sensorMod_test.c:11:0:
+../src/data_mem.h:11:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/sensorMod_test.o] Error 1
+15:31:45 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+In file included from ../src/sensorMod_test.c:11:0:
+../src/data_mem.h:11:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/sensorMod_test.o] Error 1
+15:31:47 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+In file included from ../src/sensorMod_test.c:11:0:
+../src/data_mem.h:11:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/sensorMod_test.o] Error 1
+15:32:25 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+In file included from ../src/sensorMod_test.c:11:0:
+../src/data_mem.h:11:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/sensorMod_test.o] Error 1
+15:33:26 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+In file included from ../src/sensorMod_test.c:11:0:
+../src/data_mem.h:11:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/sensorMod_test.o] Error 1
+17:17:48 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+In file included from ../src/sensorMod_test.c:11:0:
+../src/data_mem.h:11:10: fatal error: xbasic_types.h: No such file or directory
+ #include "xbasic_types.h"
+          ^~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/sensorMod_test.o] Error 1
+17:20:04 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:57:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8672	    328	      4	   9004	   232c	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+17:21:18 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8672	    328	      4	   9004	   232c	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+17:21:51 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8672	    328	      4	   9004	   232c	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+17:21:53 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+17:24:14 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8696	    328	      4	   9028	   2344	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+17:49:55 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/SensorMod.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+'Finished building: ../src/SensorMod.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8696	    328	      4	   9028	   2344	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+17:49:59 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:66:12: error: conflicting types for 'posIn_f'
+     _real *posIn_f;
+            ^~~~~~~
+../src/sensorMod_test.c:65:11: note: previous declaration of 'posIn_f' was here
+     _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+           ^~~~~~~
+../src/sensorMod_test.c:72:6: warning: implicit declaration of function 'sensorMod__get_filteredData'; did you mean 'sensorMod__get_modFilt_Data'? [-Wimplicit-function-declaration]
+      sensorMod__get_filteredData(sensor_handler);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      sensorMod__get_modFilt_Data
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+17:58:38 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:74:6: warning: implicit declaration of function 'sensorMod__get_filteredData'; did you mean 'sensorMod__get_modFilt_Data'? [-Wimplicit-function-declaration]
+      sensorMod__get_filteredData(sensor_handler);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      sensorMod__get_modFilt_Data
+../src/sensorMod_test.c:66:82: warning: unused variable 'modLit' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+                                                                                  ^~~~~~
+../src/sensorMod_test.c:66:70: warning: unused variable 'modRing' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+                                                                      ^~~~~~~
+../src/sensorMod_test.c:66:59: warning: unused variable 'modMid' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+                                                           ^~~~~~
+../src/sensorMod_test.c:66:46: warning: unused variable 'modTumb2' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+                                              ^~~~~~~~
+../src/sensorMod_test.c:66:34: warning: unused variable 'modTumb' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+                                  ^~~~~~~
+../src/sensorMod_test.c:66:22: warning: unused variable 'modInd2' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+                      ^~~~~~~
+../src/sensorMod_test.c:66:11: warning: unused variable 'modInd' [-Wunused-variable]
+     _real modInd[3], modInd2[3], modTumb[3], modTumb2[3], modMid[3], modRing[3], modLit[3];
+           ^~~~~~
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8940	    328	      4	   9272	   2438	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:00:24 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:74:6: warning: implicit declaration of function 'sensorMod__get_filteredData'; did you mean 'sensorMod__get_modFilt_Data'? [-Wimplicit-function-declaration]
+      sensorMod__get_filteredData(sensor_handler);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      sensorMod__get_modFilt_Data
+../src/sensorMod_test.c:76:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 1, modInd);
+                                                     ^~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:77:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 2, modTumb);
+                                                     ^~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:78:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 3, modMid);
+                                                     ^~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:79:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 4, modRing);
+                                                     ^~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:80:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 5, modLit);
+                                                     ^~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:81:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 6, modInd2);
+                                                     ^~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:82:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 7, modTumb2);
+                                                     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9044	    328	      4	   9376	   24a0	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:01:04 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:76:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 1, modInd);
+                                                     ^~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:77:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 2, modTumb);
+                                                     ^~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:78:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 3, modMid);
+                                                     ^~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:79:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 4, modRing);
+                                                     ^~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:80:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 5, modLit);
+                                                     ^~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:81:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 6, modInd2);
+                                                     ^~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:82:53: warning: passing argument 3 of 'sensorMod__get_modFilt_Data' from incompatible pointer type [-Wincompatible-pointer-types]
+      sensorMod__get_modFilt_Data(sensor_handler, 7, modTumb2);
+                                                     ^~~~~~~~
+In file included from ../src/sensorMod_test.c:10:0:
+../src/SensorMod.h:86:6: note: expected 'float *' but argument is of type '_real * {aka double *}'
+ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9044	    328	      4	   9376	   24a0	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:01:45 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7840	    328	      4	   8172	   1fec	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:02:20 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7840	    328	      4	   8172	   1fec	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:12:42 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8164	    328	      4	   8496	   2130	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:12:49 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+18:13:09 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8164	    328	      4	   8496	   2130	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:13:11 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+18:13:54 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:92:11: error: expected ')' before 'rawPos'
+           rawPos[i],rawCurr[i],modInd[0],modInd[1],modInd[1]);
+           ^~~~~~
+../src/sensorMod_test.c:91:25: warning: format '%f' expects a matching 'double' argument [-Wformat=]
+         printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i
+                      ~~~^
+../src/sensorMod_test.c:91:32: warning: format '%f' expects a matching 'double' argument [-Wformat=]
+         printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i
+                             ~~~^
+../src/sensorMod_test.c:91:40: warning: format '%f' expects a matching 'double' argument [-Wformat=]
+         printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i
+                                     ~~~^
+../src/sensorMod_test.c:91:47: warning: format '%f' expects a matching 'double' argument [-Wformat=]
+         printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i
+                                            ~~~^
+../src/sensorMod_test.c:91:54: warning: format '%f' expects a matching 'double' argument [-Wformat=]
+         printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i
+                                                   ~~~^
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+make: *** [src/sensorMod_test.o] Error 1
+18:13:58 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8168	    328	      4	   8500	   2134	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:14:00 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+18:17:45 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8168	    328	      4	   8500	   2134	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:17:49 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+18:18:32 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'nQ' [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:54:11: warning: unused variable 'R' [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:53:11: warning: unused variable 'dt' [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8148	    328	      4	   8480	   2120	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
+18:18:35 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for `all'.
+19:44:05 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable 'nQ' [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:54:11: warning: unused variable 'R' [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:53:11: warning: unused variable 'dt' [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    328	      4	   8472	   2118	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '

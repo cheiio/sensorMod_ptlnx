@@ -86,7 +86,7 @@ void sensorMod__start_float(sensorMod* self,
     sensorMod__start(self, posIn, currIn, voltIn);
 }
 
-void sensorMod_get_filteredData(sensorMod* self){
+void sensorMod__get_filteredData(sensorMod* self){
 	for (uint32_t mod=1; mod<Nmodules; mod++){
 		xil_uio__write32(self->sensorMod_handler, STATUS_R_MOD_W, mod);
 		self->filt_pos._uint32[mod] = xil_uio__read32( self->sensorMod_handler, OFFSET_POS);
@@ -98,7 +98,7 @@ void sensorMod_get_filteredData(sensorMod* self){
 uint32_t sensorMod__isReady(sensorMod* self){
     uint32_t status = xil_uio__read32(self->sensorMod_handler, STATUS_R_MOD_W);
     if ( (status & READY_MASK) == ISREADY ){
-    	sensorMod_get_filteredData(self);
+    	sensorMod__get_filteredData(self);
     	return 1;
     }else{
     	return 0;

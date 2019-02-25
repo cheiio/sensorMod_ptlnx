@@ -1,21 +1,34 @@
-11:59:11 **** Auto Build of configuration Debug for project sensorMod_test ****
+19:44:05 **** Auto Build of configuration Debug for project sensorMod_test ****
 make all 
-Building file: ../src/sensorMod_test.c
-Invoking: ARM v7 Linux gcc compiler
+'Building file: ../src/sensorMod_test.c'
+'Invoking: ARM v7 Linux gcc compiler'
 arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
-../src/sensorMod_test.c: In function ‘main’:
-../src/sensorMod_test.c:34:5: warning: implicit declaration of function ‘setmotor’; did you mean ‘setMotor’? [-Wimplicit-function-declaration]
-     setmotor(motors_handler, );
-     ^~~~~~~~
-     setMotor
-../src/sensorMod_test.c:34:30: error: expected expression before ‘)’ token
-     setmotor(motors_handler, );
-                              ^
-../src/sensorMod_test.c:54:11: warning: unused variable ‘cenCurr’ [-Wunused-variable]
+../src/sensorMod_test.c: In function 'main':
+../src/sensorMod_test.c:58:11: warning: unused variable 'cenCurr' [-Wunused-variable]
      float cenCurr = 36486.206;
            ^~~~~~~
-src/subdir.mk:27: recipe for target 'src/sensorMod_test.o' failed
-make: *** [src/sensorMod_test.o] Error 1
+../src/sensorMod_test.c:55:11: warning: unused variable 'nQ' [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:54:11: warning: unused variable 'R' [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:53:11: warning: unused variable 'dt' [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+'Finished building: ../src/sensorMod_test.c'
+' '
+'Building target: sensorMod_test.elf'
+'Invoking: ARM v7 Linux gcc linker'
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+'Finished building target: sensorMod_test.elf'
+' '
+'Invoking: ARM v7 Linux Print Size'
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    328	      4	   8472	   2118	sensorMod_test.elf
+'Finished building: sensorMod_test.elf.size'
+' '
 
-11:59:12 Build Finished (took 1s.152ms)
+19:44:07 Build Finished (took 1s.426ms)
 

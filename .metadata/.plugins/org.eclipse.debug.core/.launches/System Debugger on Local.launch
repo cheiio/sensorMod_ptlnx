@@ -41,5 +41,5 @@
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtEntry" value="false"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtMain" value="true"/>
 <booleanAttribute key="org.eclipse.tcf.debug.UseContextFilter" value="false"/>
-<booleanAttribute key="org.eclipse.tcf.debug.UseTerminal" value="false"/>
+<booleanAttribute key="org.eclipse.tcf.debug.UseTerminal" value="true"/>
 </launchConfiguration>
