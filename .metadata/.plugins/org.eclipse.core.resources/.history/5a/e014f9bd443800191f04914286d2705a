@@ -31,7 +31,6 @@ int main(int argc, char *argv[]) {
     gpioLED_handler = xil_uio__create(uio_dev_1, XIL_SIZE);
     motors_handler = xil_uio__create(uio_motorMod, XIL_SIZE);
 
-    setmotor(motors_handler, );
 	// --------------------------------------------- Switch Read
     xil_uio__write32(gpioSw_handler, XIL_GPIO_2_TRI_OFFSET, 0xFF); // set as input
     unsigned data = xil_uio__read32(gpioSw_handler, XIL_GPIO_2_OFFSET);

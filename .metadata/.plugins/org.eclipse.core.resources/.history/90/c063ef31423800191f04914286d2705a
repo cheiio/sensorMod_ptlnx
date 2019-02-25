@@ -1,0 +1,21 @@
+
+/***************************** Include Files *******************************/
+#include "MotorDriver.h"
+
+void setMotor(xil_uio *motorMod, uint8_t pwmPin, double pid_Out){
+
+	uint32_t pwm_Out = PWM_V * pid_Out;
+	if (pwm_Out > MAX_DUTY){
+		pwm_Out = MAX_DUTY;
+	}else{
+		if (pwm_Out < -MAX_DUTY){
+			pwm_Out = -MAX_DUTY;
+		}
+	}
+	uint32_t pwm_AXI = (pwm_Out << PWM_OUT_LSB) + (pwmPin);
+	xil_uio__write32( motorMod , pwm_AXI );
+
+}
+
+
+/************************** Function Definitions ***************************/ 

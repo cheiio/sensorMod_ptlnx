@@ -4,16 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/MotorDriver.c \
 ../src/SensorMod.c \
 ../src/sensorMod_test.c \
 ../src/xil_uio.c 
 
 OBJS += \
+./src/MotorDriver.o \
 ./src/SensorMod.o \
 ./src/sensorMod_test.o \
 ./src/xil_uio.o 
 
 C_DEPS += \
+./src/MotorDriver.d \
 ./src/SensorMod.d \
 ./src/sensorMod_test.d \
 ./src/xil_uio.d 
