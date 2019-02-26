@@ -3,7 +3,10 @@
 //***********************************************  Constructor
 
 // Constructor (without allocation)
-void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size){
+void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size, 
+        float* posIn, float* currIn, float* voltIn,
+	    float* pos_filt, float* vel_filt, float* curr_filt){
+    
     self->sensorMod_handler = xil_uio__create(_uio_dev, _uio_size);
 
     // Center Current
@@ -31,18 +34,26 @@ void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_
     self->ab._uint32 = ab;
 
     // Filter
-    uint32_t *pos = (uint32_t*)malloc(4*Nmodules);
-    uint32_t *vel = (uint32_t*)malloc(4*Nmodules);
-    uint32_t *curr = (uint32_t*)malloc(4*Nmodules);
-    self->filt_pos._uint32 = pos;
-    self->filt_vel._uint32 = vel;
-    self->filt_curr._uint32 = curr;
+    //uint32_t *pos = (uint32_t*)malloc(4*Nmodules);
+    //uint32_t *vel = (uint32_t*)malloc(4*Nmodules);
+    //uint32_t *curr = (uint32_t*)malloc(4*Nmodules);
+    pos_filt = (float*)malloc(4*Nmodules);  self->filt_pos._float32 = pos_filt;
+    vel_filt = (float*)malloc(4*Nmodules);  self->filt_vel._float32 = vel_filt;
+    curr_filt = (float*)malloc(4*Nmodules); self->filt_curr._float32 = curr_filt;
+
+    posIn = (float*)malloc(4*Nmodules); self->posIn._float32 = posIn;
+    currIn = (float*)malloc(4*Nmodules);self->currIn._float32 = currIn;
+    voltIn = (float*)malloc(4*Nmodules);self->voltIn._float32 = voltIn;
 }
 
 // Allocation + initialization
-sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size){
+sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size,
+    float* posIn, float* currIn, float* voltIn,
+	float* pos_filt, float* vel_filt, float* curr_filt){
+        
     sensorMod* result = (sensorMod*) malloc(sizeof(sensorMod));
-    sensorMod__init(result, _uio_dev, _uio_size);
+    sensorMod__init(result, _uio_dev, _uio_size, posIn, currIn, voltIn, 
+                    pos_filt, vel_filt, curr_filt);
     return result;
 }
 
@@ -61,29 +72,20 @@ void sensorMod__destroy(sensorMod* _sensorMod){
 
 
 //***********************************************  Calculating Functions
-void sensorMod__start(sensorMod *self,
-		sensorMod_data_t posIn, sensorMod_data_t currIn, sensorMod_data_t voltIn){
-
+void sensorMod__start(sensorMod *self){
 	uint32_t data_n = 0;
 	for(uint32_t mod=1; mod <= Nmodules; mod++){
-		posIn._uint32[data_n] = (posIn._uint32[data_n] & MASK_MOD_IN) | mod;
-		xil_uio__write32(self->sensorMod_handler, OFFSET_POS, posIn._uint32[data_n]);
+		self->posIn._uint32[data_n] = (self->posIn._uint32[data_n] & MASK_MOD_IN) | mod;
+		xil_uio__write32(self->sensorMod_handler, OFFSET_POS, self->posIn._uint32[data_n]);
 
-		currIn._uint32[data_n] = (currIn._uint32[data_n] & MASK_MOD_IN) | mod;
-		xil_uio__write32(self->sensorMod_handler, OFFSET_VEL_CURR, currIn._uint32[data_n]);
+		self->currIn._uint32[data_n] = (self->currIn._uint32[data_n] & MASK_MOD_IN) | mod;
+		xil_uio__write32(self->sensorMod_handler, OFFSET_VEL_CURR, self->currIn._uint32[data_n]);
 
-		voltIn._uint32[data_n] = (voltIn._uint32[data_n] & MASK_MOD_IN) | mod;
-		xil_uio__write32(self->sensorMod_handler, OFFSET_CURR_VOLT, voltIn._uint32[data_n]);
+		self->voltIn._uint32[data_n] = (self->voltIn._uint32[data_n] & MASK_MOD_IN) | mod;
+		xil_uio__write32(self->sensorMod_handler, OFFSET_CURR_VOLT, self->voltIn._uint32[data_n]);
 
 		data_n++;
 	}
-}
-
-void sensorMod__start_float(sensorMod* self,
-		float* posIn_f, float* currIn_f, float* voltIn_f){
-	sensorMod_data_t posIn, currIn, voltIn;
-    posIn._float32 = posIn_f;   currIn._float32 = currIn_f;   voltIn._float32 = voltIn_f;   
-    sensorMod__start(self, posIn, currIn, voltIn);
 }
 
 void sensorMod__get_filteredData(sensorMod* self){
@@ -95,7 +97,7 @@ void sensorMod__get_filteredData(sensorMod* self){
 	}
 }
 
-uint32_t sensorMod__isReady(sensorMod* self){
+uint32_t sensorMod__wait(sensorMod* self){
     uint32_t status = xil_uio__read32(self->sensorMod_handler, STATUS_R_MOD_W);
     if ( (status & READY_MASK) == ISREADY ){
     	sensorMod__get_filteredData(self);

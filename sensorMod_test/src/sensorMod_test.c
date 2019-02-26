@@ -52,7 +52,11 @@ int main(int argc, char *argv[]) {
 
 	// --------------------------------------------- Create & Configure handlers for sensorMod
     sensorMod *sensor_handler;
-    sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE);
+    _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+    _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+    _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
+    sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE, 
+        posIn_f, currIn_f, voltIn_f, pos_filt, vel_filt, curr_filt);
     float dt = 5e-3;
     float R = 8.2673e-04;
     float nQ = 3;
@@ -63,10 +67,12 @@ int main(int argc, char *argv[]) {
     sensorMod__printConfig(sensor_handler);
     //float Q[3];
 
+    // --------------------------------------------- Create Impedance Controllers
+    impedance *impInd = impedance__create
+    , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
+
     // --------------------------------------------- Test SensorMod Calc
     size_t n_data = sizeof(rawPos)/sizeof(*rawPos);
-    _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
-    _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
     printf("\nStart Filtering\n");
     printf("  |     Raw Data    ||        Filtered Data       |\n");
     printf("# |  Pos "
@@ -77,9 +83,9 @@ int main(int argc, char *argv[]) {
     	}
 
     	// start filtering
-    	sensorMod__start_float(sensor_handler, (float*)posIn_f, (float*)currIn_f, (float*)voltIn_f);
+    	sensorMod__start_float(sensor_handler);
     	// wait data
-    	sensorMod__isReady(sensor_handler);
+    	sensorMod__wait(sensor_handler);
 
     	// get data
     	sensorMod__get_modFilt_Data(sensor_handler, 1, modInd);
