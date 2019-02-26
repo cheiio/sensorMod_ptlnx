@@ -5084,3 +5084,1538 @@ arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
    8140	    328	      4	   8472	   2118	sensorMod_test.elf
 'Finished building: sensorMod_test.elf.size'
 ' '
+20:50:08 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/MotorDriver.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
+Finished building: ../src/MotorDriver.c
+ 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
+Finished building: ../src/SensorMod.c
+ 
+Building file: ../src/sensorMod_test.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function ‘main’:
+../src/sensorMod_test.c:58:11: warning: unused variable ‘cenCurr’ [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable ‘nQ’ [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:54:11: warning: unused variable ‘R’ [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:53:11: warning: unused variable ‘dt’ [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+Finished building: ../src/sensorMod_test.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8140	    328	      4	   8472	   2118	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+20:52:29 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for 'all'.
+20:55:14 **** Incremental Build of configuration Debug for project sensorMod_test ****
+make all 
+make: Nothing to be done for 'all'.
+21:55:01 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+In file included from ../src/Impedance_v1.c:6:0:
+../src/Impedance_v1.h:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+make: *** [src/Impedance_v1.o] Error 1
+22:10:52 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+In file included from ../src/Impedance_v1.c:6:0:
+../src/Impedance_v1.h:15:1: error: expected ‘{’ before ‘double’
+ double myM;                  // * M - Inertia Component
+ ^~~~~~
+../src/Impedance_v1.h:15:1: error: two or more data types in declaration specifiers
+../src/Impedance_v1.h:38:1: error: unknown type name ‘bool’; did you mean ‘_Bool’?
+ bool inAuto;
+ ^~~~
+ _Bool
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+../src/Impedance_v1.h:41:1: warning: data definition has no type or storage class
+ Impedance(double*, double*, double*, double*, double*, // * Constructor.  links the Impedance controller to the Input,
+ ^~~~~~~~~
+../src/Impedance_v1.h:41:1: warning: type defaults to ‘int’ in declaration of ‘Impedance’ [-Wimplicit-int]
+../src/Impedance_v1.h:46:1: error: unknown type name ‘bool’; did you mean ‘_Bool’?
+ bool Compute();       // * Performs the Impedance Controller action calculation.
+ ^~~~
+ _Bool
+../src/Impedance_v1.c:12:10: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ Impedance::Impedance(double* Input, double* x_e, double* x_ep, double* Output, double* Setpoint,
+          ^
+../src/Impedance_v1.c:47:1: error: unknown type name ‘bool’; did you mean ‘_Bool’?
+ bool Impedance::Compute(){
+ ^~~~
+ _Bool
+../src/Impedance_v1.c:47:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ bool Impedance::Compute(){
+               ^
+../src/Impedance_v1.c:92:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetTunings(double M, double B, double K){
+               ^
+../src/Impedance_v1.c:107:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetSampleTime(int NewSampleTime){
+               ^
+../src/Impedance_v1.c:120:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetMode(int Mode){
+               ^
+../src/Impedance_v1.c:133:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::Initialize(){
+               ^
+../src/Impedance_v1.c:146:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetControllerDirection(int Direction){
+               ^
+../src/Impedance_v1.c:156:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::GetM() { return  dispM; }
+                 ^
+../src/Impedance_v1.c:157:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::GetB() { return  dispB; }
+                 ^
+../src/Impedance_v1.c:158:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::GetK() { return  dispK; }
+                 ^
+../src/Impedance_v1.c:159:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::Get_xp() { return  xp; }
+                 ^
+../src/Impedance_v1.c:160:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ int Impedance::GetMode() { return  inAuto ? AUTOMATIC : MANUAL; }
+              ^
+../src/Impedance_v1.c:161:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ int Impedance::GetDirection() { return controllerDirection; }
+              ^
+make: *** [src/Impedance_v1.o] Error 1
+22:11:06 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+In file included from ../src/Impedance_v1.c:6:0:
+../src/Impedance_v1.h:15:1: error: expected ‘{’ before ‘double’
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+ double myM;                  // * M - Inertia Component
+ ^~~~~~
+../src/Impedance_v1.h:15:1: error: two or more data types in declaration specifiers
+../src/Impedance_v1.h:38:1: error: unknown type name ‘bool’; did you mean ‘_Bool’?
+ bool inAuto;
+ ^~~~
+ _Bool
+../src/Impedance_v1.h:41:1: warning: data definition has no type or storage class
+ Impedance(double*, double*, double*, double*, double*, // * Constructor.  links the Impedance controller to the Input,
+ ^~~~~~~~~
+../src/Impedance_v1.h:41:1: warning: type defaults to ‘int’ in declaration of ‘Impedance’ [-Wimplicit-int]
+../src/Impedance_v1.h:46:1: error: unknown type name ‘bool’; did you mean ‘_Bool’?
+ bool Compute();       // * Performs the Impedance Controller action calculation.
+ ^~~~
+ _Bool
+../src/Impedance_v1.c:12:10: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ Impedance::Impedance(double* Input, double* x_e, double* x_ep, double* Output, double* Setpoint,
+          ^
+../src/Impedance_v1.c:47:1: error: unknown type name ‘bool’; did you mean ‘_Bool’?
+ bool Impedance::Compute(){
+ ^~~~
+ _Bool
+../src/Impedance_v1.c:47:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ bool Impedance::Compute(){
+               ^
+../src/Impedance_v1.c:92:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetTunings(double M, double B, double K){
+               ^
+../src/Impedance_v1.c:107:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetSampleTime(int NewSampleTime){
+               ^
+../src/Impedance_v1.c:120:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetMode(int Mode){
+               ^
+../src/Impedance_v1.c:133:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::Initialize(){
+               ^
+../src/Impedance_v1.c:146:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ void Impedance::SetControllerDirection(int Direction){
+               ^
+../src/Impedance_v1.c:156:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::GetM() { return  dispM; }
+                 ^
+../src/Impedance_v1.c:157:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::GetB() { return  dispB; }
+                 ^
+../src/Impedance_v1.c:158:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::GetK() { return  dispK; }
+                 ^
+../src/Impedance_v1.c:159:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ double Impedance::Get_xp() { return  xp; }
+                 ^
+../src/Impedance_v1.c:160:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ int Impedance::GetMode() { return  inAuto ? AUTOMATIC : MANUAL; }
+              ^
+../src/Impedance_v1.c:161:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘:’ token
+ int Impedance::GetDirection() { return controllerDirection; }
+              ^
+make: *** [src/Impedance_v1.o] Error 1
+23:19:06 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+In file included from ../src/Impedance_v1.c:6:0:
+../src/Impedance_v1.h:22:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘typedef’
+ typedef struct impedance_struct{
+ ^~~~~~~
+../src/Impedance_v1.h:23:2: error: unknown type name ‘_real’
+  _real myM; // * M - Inertia Component
+  ^~~~~
+../src/Impedance_v1.h:53:30: error: unknown type name ‘_real’
+ impedance* impedance__create(_real*, _real*, _real*, _real*, _real*,
+                              ^~~~~
+../src/Impedance_v1.h:53:38: error: unknown type name ‘_real’
+ impedance* impedance__create(_real*, _real*, _real*, _real*, _real*,
+                                      ^~~~~
+../src/Impedance_v1.h:53:46: error: unknown type name ‘_real’
+ impedance* impedance__create(_real*, _real*, _real*, _real*, _real*,
+                                              ^~~~~
+../src/Impedance_v1.h:53:54: error: unknown type name ‘_real’
+ impedance* impedance__create(_real*, _real*, _real*, _real*, _real*,
+                                                      ^~~~~
+../src/Impedance_v1.h:53:62: error: unknown type name ‘_real’
+ impedance* impedance__create(_real*, _real*, _real*, _real*, _real*,
+                                                              ^~~~~
+../src/Impedance_v1.h:54:2: error: unknown type name ‘_real’
+  _real, _real, _real, uint32_t);
+  ^~~~~
+../src/Impedance_v1.h:54:9: error: unknown type name ‘_real’
+  _real, _real, _real, uint32_t);
+         ^~~~~
+../src/Impedance_v1.h:54:16: error: unknown type name ‘_real’
+  _real, _real, _real, uint32_t);
+                ^~~~~
+../src/Impedance_v1.h:72:41: error: unknown type name ‘_real’
+ void impedance__setTunings(impedance* , _real, _real, _real);
+                                         ^~~~~
+../src/Impedance_v1.h:72:48: error: unknown type name ‘_real’
+ void impedance__setTunings(impedance* , _real, _real, _real);
+                                                ^~~~~
+../src/Impedance_v1.h:72:55: error: unknown type name ‘_real’
+ void impedance__setTunings(impedance* , _real, _real, _real);
+                                                       ^~~~~
+../src/Impedance_v1.h:86:1: error: unknown type name ‘_real’
+ _real impedance__getM(impedance*);
+ ^~~~~
+../src/Impedance_v1.h:87:1: error: unknown type name ‘_real’
+ _real impedance__getB(impedance*);
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+ ^~~~~
+../src/Impedance_v1.h:88:1: error: unknown type name ‘_real’
+ _real impedance__getK(impedance*);
+ ^~~~~
+../src/Impedance_v1.h:89:1: error: unknown type name ‘_real’
+ _real impedance__get_xp(impedance*);
+ ^~~~~
+../src/Impedance_v1.c:9:39: error: unknown type name ‘_real’
+ void impedance__init(impedance* self, _real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                       ^~~~~
+../src/Impedance_v1.c:9:53: error: unknown type name ‘_real’
+ void impedance__init(impedance* self, _real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                                     ^~~~~
+../src/Impedance_v1.c:9:65: error: unknown type name ‘_real’
+ void impedance__init(impedance* self, _real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                                                 ^~~~~
+../src/Impedance_v1.c:9:78: error: unknown type name ‘_real’
+ void impedance__init(impedance* self, _real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                                                              ^~~~~
+../src/Impedance_v1.c:10:3: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+   ^~~~~
+../src/Impedance_v1.c:10:20: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+                    ^~~~~
+../src/Impedance_v1.c:10:29: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+                             ^~~~~
+../src/Impedance_v1.c:10:38: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+                                      ^~~~~
+../src/Impedance_v1.c:35:30: error: unknown type name ‘_real’
+ impedance* impedance__create(_real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                              ^~~~~
+../src/Impedance_v1.c:35:44: error: unknown type name ‘_real’
+ impedance* impedance__create(_real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                            ^~~~~
+../src/Impedance_v1.c:35:56: error: unknown type name ‘_real’
+ impedance* impedance__create(_real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                                        ^~~~~
+../src/Impedance_v1.c:35:69: error: unknown type name ‘_real’
+ impedance* impedance__create(_real* Input, _real* x_e, _real* x_ep, _real* Output, 
+                                                                     ^~~~~
+../src/Impedance_v1.c:36:3: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+   ^~~~~
+../src/Impedance_v1.c:36:20: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+                    ^~~~~
+../src/Impedance_v1.c:36:29: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+                             ^~~~~
+../src/Impedance_v1.c:36:38: error: unknown type name ‘_real’
+   _real* Setpoint, _real M, _real B, _real K, uint32_t ControllerDirection){
+                                      ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__compute’:
+../src/Impedance_v1.c:63:11: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘inAuto’
+  if (!self->inAuto) return 0;
+           ^~
+../src/Impedance_v1.c:65:17: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  uint64_t now = millis();
+                 ^~~~~~
+                 malloc
+../src/Impedance_v1.c:66:35: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘lastTime’
+  uint64_t timeChange = (now - self->lastTime);
+                                   ^~
+../src/Impedance_v1.c:67:24: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘SampleTime’
+  if (timeChange >= self->SampleTime){
+                        ^~
+../src/Impedance_v1.c:69:3: error: unknown type name ‘_real’
+   _real input = *self->myInput;
+   ^~~~~
+../src/Impedance_v1.c:69:22: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘myInput’
+   _real input = *self->myInput;
+                      ^~
+../src/Impedance_v1.c:70:3: error: unknown type name ‘_real’
+   _real f_error = *self->mySetpoint - input;
+   ^~~~~
+../src/Impedance_v1.c:70:24: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘mySetpoint’
+   _real f_error = *self->mySetpoint - input;
+                        ^~
+../src/Impedance_v1.c:71:3: error: unknown type name ‘_real’
+   _real x_error = self->x - *self->my_x;
+   ^~~~~
+../src/Impedance_v1.c:71:23: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘x’
+   _real x_error = self->x - *self->my_x;
+                       ^~
+../src/Impedance_v1.c:71:34: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘my_x’
+   _real x_error = self->x - *self->my_x;
+                                  ^~
+../src/Impedance_v1.c:72:3: error: unknown type name ‘_real’
+   _real xp_error = self->xp - *self->my_xp;
+   ^~~~~
+../src/Impedance_v1.c:72:24: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xp’
+   _real xp_error = self->xp - *self->my_xp;
+                        ^~
+../src/Impedance_v1.c:72:36: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘my_xp’
+   _real xp_error = self->xp - *self->my_xp;
+                                    ^~
+../src/Impedance_v1.c:76:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xpp’
+   self->xpp = self->myM*(f_error - self->myK*x_error - self->myB*xp_error);
+       ^~
+../src/Impedance_v1.c:76:19: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘myM’
+   self->xpp = self->myM*(f_error - self->myK*x_error - self->myB*xp_error);
+                   ^~
+../src/Impedance_v1.c:76:40: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘myK’
+   self->xpp = self->myM*(f_error - self->myK*x_error - self->myB*xp_error);
+                                        ^~
+../src/Impedance_v1.c:76:60: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘myB’
+   self->xpp = self->myM*(f_error - self->myK*x_error - self->myB*xp_error);
+                                                            ^~
+../src/Impedance_v1.c:79:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xp’
+   self->xp = (self->SampleTimeInSec*0.5)*(self->xpp + self->last_xpp) + self->last_xp;
+       ^~
+../src/Impedance_v1.c:79:19: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘SampleTimeInSec’
+   self->xp = (self->SampleTimeInSec*0.5)*(self->xpp + self->last_xpp) + self->last_xp;
+                   ^~
+../src/Impedance_v1.c:79:47: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xpp’
+   self->xp = (self->SampleTimeInSec*0.5)*(self->xpp + self->last_xpp) + self->last_xp;
+                                               ^~
+../src/Impedance_v1.c:79:59: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xpp’
+   self->xp = (self->SampleTimeInSec*0.5)*(self->xpp + self->last_xpp) + self->last_xp;
+                                                           ^~
+../src/Impedance_v1.c:79:77: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xp’
+   self->xp = (self->SampleTimeInSec*0.5)*(self->xpp + self->last_xpp) + self->last_xp;
+                                                                             ^~
+../src/Impedance_v1.c:80:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘x’
+   self->x = (self->SampleTimeInSec*0.5)*(self->xp + self->last_xp) + self->last_x;
+       ^~
+../src/Impedance_v1.c:80:18: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘SampleTimeInSec’
+   self->x = (self->SampleTimeInSec*0.5)*(self->xp + self->last_xp) + self->last_x;
+                  ^~
+../src/Impedance_v1.c:80:46: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xp’
+   self->x = (self->SampleTimeInSec*0.5)*(self->xp + self->last_xp) + self->last_x;
+                                              ^~
+../src/Impedance_v1.c:80:57: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xp’
+   self->x = (self->SampleTimeInSec*0.5)*(self->xp + self->last_xp) + self->last_x;
+                                                         ^~
+../src/Impedance_v1.c:80:74: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_x’
+   self->x = (self->SampleTimeInSec*0.5)*(self->xp + self->last_xp) + self->last_x;
+                                                                          ^~
+../src/Impedance_v1.c:86:11: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘controllerDirection’
+   if (self->controllerDirection == DIRECT)
+           ^~
+../src/Impedance_v1.c:87:8: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘myOutput’
+   *self->myOutput = self->x;
+        ^~
+../src/Impedance_v1.c:87:25: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘x’
+   *self->myOutput = self->x;
+                         ^~
+../src/Impedance_v1.c:89:8: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘myOutput’
+   *self->myOutput = (0-self->x);
+        ^~
+../src/Impedance_v1.c:89:28: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘x’
+   *self->myOutput = (0-self->x);
+                            ^~
+../src/Impedance_v1.c:92:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_x’
+   self->last_x = self->x;
+       ^~
+../src/Impedance_v1.c:92:22: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘x’
+   self->last_x = self->x;
+                      ^~
+../src/Impedance_v1.c:93:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xp’
+   self->last_xp = self->xp;
+       ^~
+../src/Impedance_v1.c:93:23: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xp’
+   self->last_xp = self->xp;
+                       ^~
+../src/Impedance_v1.c:94:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xpp’
+   self->last_xpp = self->xpp;
+       ^~
+../src/Impedance_v1.c:94:24: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xpp’
+   self->last_xpp = self->xpp;
+                        ^~
+../src/Impedance_v1.c:95:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘lastTime’
+   self->lastTime = now;
+       ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:107:45: error: unknown type name ‘_real’
+ void impedance__setTunings(impedance* self, _real M, _real B, _real K){
+                                             ^~~~~
+../src/Impedance_v1.c:107:54: error: unknown type name ‘_real’
+ void impedance__setTunings(impedance* self, _real M, _real B, _real K){
+                                                      ^~~~~
+../src/Impedance_v1.c:107:63: error: unknown type name ‘_real’
+ void impedance__setTunings(impedance* self, _real M, _real B, _real K){
+                                                               ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__setSampleTime’:
+../src/Impedance_v1.c:125:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘SampleTime’
+   self->SampleTime = (uint64_t)NewSampleTime;
+       ^~
+../src/Impedance_v1.c:126:7: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘SampleTimeInSec’
+   self->SampleTimeInSec = ((_real)self->SampleTime) / 1000.00;
+       ^~
+../src/Impedance_v1.c:126:29: error: ‘_real’ undeclared (first use in this function); did you mean ‘pread’?
+   self->SampleTimeInSec = ((_real)self->SampleTime) / 1000.00;
+                             ^~~~~
+                             pread
+../src/Impedance_v1.c:126:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/Impedance_v1.c:126:35: error: expected ‘)’ before ‘self’
+   self->SampleTimeInSec = ((_real)self->SampleTime) / 1000.00;
+                                   ^~~~
+../src/Impedance_v1.c: In function ‘impedance__setMode’:
+../src/Impedance_v1.c:138:22: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘inAuto’
+  if (newAuto == !self->inAuto){  /*we just went from manual to auto*/
+                      ^~
+../src/Impedance_v1.c:139:3: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__getMode’? [-Wimplicit-function-declaration]
+   impedance__initialize(self);
+   ^~~~~~~~~~~~~~~~~~~~~
+   impedance__getMode
+../src/Impedance_v1.c:141:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘inAuto’
+  self->inAuto = newAuto;
+      ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:148:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:139:3: note: previous implicit declaration of ‘impedance__initialize’ was here
+   impedance__initialize(self);
+   ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__initialize’:
+../src/Impedance_v1.c:150:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xpp’
+  self->xpp = 0;
+      ^~
+../src/Impedance_v1.c:151:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xp’
+  self->xp = 0;
+      ^~
+../src/Impedance_v1.c:152:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘x’
+  self->x = *self->my_x;
+      ^~
+../src/Impedance_v1.c:152:17: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘my_x’
+  self->x = *self->my_x;
+                 ^~
+../src/Impedance_v1.c:154:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xpp’
+  self->last_xpp = 0;
+      ^~
+../src/Impedance_v1.c:155:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_xp’
+  self->last_xp = 0;
+      ^~
+../src/Impedance_v1.c:156:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘last_x’
+  self->last_x = *self->my_x;
+      ^~
+../src/Impedance_v1.c:156:22: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘my_x’
+  self->last_x = *self->my_x;
+                      ^~
+../src/Impedance_v1.c: In function ‘impedance__setControllerDirection’:
+../src/Impedance_v1.c:163:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘controllerDirection’
+  self->controllerDirection = Direction;
+      ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:171:1: error: unknown type name ‘_real’
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+                                                      ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:172:1: error: unknown type name ‘_real’
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+                                                      ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:173:1: error: unknown type name ‘_real’
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+                                                      ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:174:1: error: unknown type name ‘_real’
+ _real impedance__get_xp(impedance* self) { return  self->xp; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__get_xp’:
+../src/Impedance_v1.c:174:56: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘xp’
+ _real impedance__get_xp(impedance* self) { return  self->xp; }
+                                                        ^~
+../src/Impedance_v1.c: In function ‘impedance__getMode’:
+../src/Impedance_v1.c:175:60: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘inAuto’
+ uint32_t impedance__getMode(impedance* self) { return  self->inAuto ? AUTOMATIC : MANUAL; }
+                                                            ^~
+../src/Impedance_v1.c: In function ‘impedance__getDirection’:
+../src/Impedance_v1.c:176:64: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘controllerDirection’
+ uint32_t impedance__getDirection(impedance* self) { return self->controllerDirection; }
+                                                                ^~
+../src/Impedance_v1.c: In function ‘impedance__compute’:
+../src/Impedance_v1.c:100:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__get_xp’:
+../src/Impedance_v1.c:174:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__get_xp(impedance* self) { return  self->xp; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getMode’:
+../src/Impedance_v1.c:175:1: warning: control reaches end of non-void function [-Wreturn-type]
+ uint32_t impedance__getMode(impedance* self) { return  self->inAuto ? AUTOMATIC : MANUAL; }
+ ^~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__getDirection’:
+../src/Impedance_v1.c:176:1: warning: control reaches end of non-void function [-Wreturn-type]
+ uint32_t impedance__getDirection(impedance* self) { return self->controllerDirection; }
+ ^~~~~~~~
+make: *** [src/Impedance_v1.o] Error 1
+23:20:14 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c:28:19: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  self->lastTime = millis() - self->SampleTime;
+                   ^~~~~~
+                   malloc
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__setTunings’:
+../src/Impedance_v1.c:111:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+      ^~
+../src/Impedance_v1.c:111:23: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+                       ^~
+../src/Impedance_v1.c:111:40: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+                                        ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:148:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+ ^~~~~
+make: *** [src/Impedance_v1.o] Error 1
+23:20:37 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c:28:19: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  self->lastTime = millis() - self->SampleTime;
+                   ^~~~~~
+                   malloc
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__setTunings’:
+../src/Impedance_v1.c:111:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+      ^~
+../src/Impedance_v1.c:111:23: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+                       ^~
+../src/Impedance_v1.c:111:40: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+                                        ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:148:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+ ^~~~~
+make: *** [src/Impedance_v1.o] Error 1
+23:20:44 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c:28:19: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  self->lastTime = millis() - self->SampleTime;
+                   ^~~~~~
+                   malloc
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__setTunings’:
+../src/Impedance_v1.c:111:6: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+      ^~
+../src/Impedance_v1.c:111:23: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+                       ^~
+../src/Impedance_v1.c:111:40: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+  self->dispM = M; self->dispB = B; self->dispK = K;
+                                        ^~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:148:6: warning: conflicting types for ‘impedance__initialize’
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:173:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+ ^~~~~
+make: *** [src/Impedance_v1.o] Error 1
+23:21:32 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c:28:19: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  self->lastTime = millis() - self->SampleTime;
+                   ^~~~~~
+                   malloc
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:169:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispM’
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:170:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispB’
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:171:54: error: ‘impedance {aka struct impedance_struct}’ has no member named ‘dispK’
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+                                                      ^~
+../src/Impedance_v1.c: In function ‘impedance__getM’:
+../src/Impedance_v1.c:169:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getM(impedance* self) { return  self->dispM; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getB’:
+../src/Impedance_v1.c:170:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getB(impedance* self) { return  self->dispB; }
+ ^~~~~
+../src/Impedance_v1.c: In function ‘impedance__getK’:
+../src/Impedance_v1.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+ _real impedance__getK(impedance* self) { return  self->dispK; }
+ ^~~~~
+src/subdir.mk:30: recipe for target 'src/Impedance_v1.o' failed
+make: *** [src/Impedance_v1.o] Error 1
+23:22:01 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c:28:19: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  self->lastTime = millis() - self->SampleTime;
+                   ^~~~~~
+                   malloc
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building file: ../src/sensorMod_test.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function ‘main’:
+../src/sensorMod_test.c:32:22: error: ‘xil_uio__’ undeclared (first use in this function); did you mean ‘xil_uio_t’?
+     gpioSw_handler = xil_uio__ create(uio_dev_0, XIL_SIZE);
+                      ^~~~~~~~~
+                      xil_uio_t
+../src/sensorMod_test.c:32:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/sensorMod_test.c:32:32: error: expected ‘;’ before ‘create’
+     gpioSw_handler = xil_uio__ create(uio_dev_0, XIL_SIZE);
+                                ^~~~~~
+../src/sensorMod_test.c:58:11: warning: unused variable ‘cenCurr’ [-Wunused-variable]
+src/subdir.mk:30: recipe for target 'src/sensorMod_test.o' failed
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable ‘nQ’ [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:54:11: warning: unused variable ‘R’ [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:53:11: warning: unused variable ‘dt’ [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+make: *** [src/sensorMod_test.o] Error 1
+23:22:32 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/sensorMod_test.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function ‘main’:
+../src/sensorMod_test.c:58:11: warning: unused variable ‘cenCurr’ [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:55:11: warning: unused variable ‘nQ’ [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:54:11: warning: unused variable ‘R’ [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:53:11: warning: unused variable ‘dt’ [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+Finished building: ../src/sensorMod_test.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+./src/SensorMod.o: In function `sensorMod__destroy':
+/home/cheiio/Documents/dev/sensorMod_ptlnx/sensorMod_test/Debug/../src/SensorMod.c:55: multiple definition of `sensorMod__destroy'
+makefile:36: recipe for target 'sensorMod_test.elf' failed
+./src/Impedance_v1.o:/home/cheiio/Documents/dev/sensorMod_ptlnx/sensorMod_test/Debug/../src/Impedance_v1.c:48: first defined here
+./src/Impedance_v1.o: In function `impedance__init':
+/home/cheiio/Documents/dev/sensorMod_ptlnx/sensorMod_test/Debug/../src/Impedance_v1.c:28: undefined reference to `millis'
+./src/Impedance_v1.o: In function `impedance__compute':
+/home/cheiio/Documents/dev/sensorMod_ptlnx/sensorMod_test/Debug/../src/Impedance_v1.c:65: undefined reference to `millis'
+collect2: error: ld returned 1 exit status
+make: *** [sensorMod_test.elf] Error 1
+23:23:17 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c:28:19: warning: implicit declaration of function ‘millis’; did you mean ‘malloc’? [-Wimplicit-function-declaration]
+  self->lastTime = millis() - self->SampleTime;
+                   ^~~~~~
+                   malloc
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/sensorMod_test.o ./src/xil_uio.o   
+./src/Impedance_v1.o: In function `impedance__init':
+/home/cheiio/Documents/dev/sensorMod_ptlnx/sensorMod_test/Debug/../src/Impedance_v1.c:28: undefined reference to `millis'
+./src/Impedance_v1.o: In function `impedance__compute':
+/home/cheiio/Documents/dev/sensorMod_ptlnx/sensorMod_test/Debug/../src/Impedance_v1.c:65: undefined reference to `millis'
+collect2: error: ld returned 1 exit status
+make: *** [sensorMod_test.elf] Error 1
+makefile:36: recipe for target 'sensorMod_test.elf' failed
+23:27:51 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c:7:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/Time_Meas.o] Error 1
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+23:28:05 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c:7:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:28:17 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c:7:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:29:16 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c:7:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:29:25 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+In file included from ../src/Time_Meas.c:7:0:
+../src/Time_Meas.h:17:2: error: unknown type name ‘XTime’
+  XTime getClockCount();
+  ^~~~~
+../src/Time_Meas.c:9:1: error: unknown type name ‘XTime’
+ XTime x_time;
+ ^~~~~
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’
+ XTime getClockCount(){ 
+ ^~~~~
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:29:30 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+In file included from ../src/Time_Meas.c:7:0:
+../src/Time_Meas.h:17:2: error: unknown type name ‘XTime’
+  XTime getClockCount();
+  ^~~~~
+../src/Time_Meas.c:9:1: error: unknown type name ‘Time’; did you mean ‘time_t’?
+ Time x_time;
+ ^~~~
+ time_t
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+ XTime getClockCount(){ 
+ ^~~~~
+make: *** [src/Time_Meas.o] Error 1
+23:31:26 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+In file included from ../src/Time_Meas.c:7:0:
+../src/Time_Meas.h:13:9: error: unknown type name ‘uint64_t’
+ typedef uint64_t Time;
+         ^~~~~~~~
+../src/Time_Meas.h:19:2: error: unknown type name ‘XTime’; did you mean ‘Time’?
+  XTime getClockCount();
+  ^~~~~
+  Time
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){ 
+ ^~~~~
+ Time
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:31:29 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+In file included from ../src/Time_Meas.c:7:0:
+../src/Time_Meas.h:13:9: error: unknown type name ‘uint64_t’
+ typedef uint64_t Time;
+         ^~~~~~~~
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){ 
+ ^~~~~
+ Time
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:32:17 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+In file included from ../src/Time_Meas.c:7:0:
+../src/Time_Meas.h:14:9: error: unknown type name ‘uint64_t’
+ typedef uint64_t Time;
+         ^~~~~~~~
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){ 
+ ^~~~~
+ Time
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:32:32 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){ 
+ ^~~~~
+ Time
+../src/Time_Meas.c:29:7: error: conflicting types for ‘getClockCount’
+ XTime getClockCount(){ 
+       ^~~~~~~~~~~~~
+In file included from ../src/Time_Meas.c:7:0:
+../src/Time_Meas.h:20:7: note: previous declaration of ‘getClockCount’ was here
+  Time getClockCount();
+       ^~~~~~~~~~~~~
+make: *** [src/Time_Meas.o] Error 1
+23:32:48 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){ 
+ ^~~~~
+ Time
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:33:01 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:13:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:35:26 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND*1e-6f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:22:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){
+ ^~~~~
+ Time
+make: *** [src/Time_Meas.o] Error 1
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+23:35:42 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c: In function ‘micros’:
+../src/Time_Meas.c:15:48: error: ‘COUNTS_PER_SEC’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SEC*1e-6f);
+                                                ^~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:15:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:22:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){
+ ^~~~~
+ Time
+make: *** [src/Time_Meas.o] Error 1
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+23:35:58 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c: In function ‘millis’:
+../src/Time_Meas.c:22:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+../src/Time_Meas.c:24:48: error: ‘COUNTS_PER_SECOND’ undeclared (first use in this function); did you mean ‘CLOCKS_PER_SEC’?
+  float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+                                                ^~~~~~~~~~~~~~~~~
+                                                CLOCKS_PER_SEC
+../src/Time_Meas.c:24:48: note: each undeclared identifier is reported only once for each function it appears in
+../src/Time_Meas.c: At top level:
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){
+ ^~~~~
+ Time
+make: *** [src/Time_Meas.o] Error 1
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+23:36:27 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+../src/Time_Meas.c:29:1: error: unknown type name ‘XTime’; did you mean ‘Time’?
+ XTime getClockCount(){
+ ^~~~~
+ Time
+../src/Time_Meas.c: In function ‘getClockCount’:
+../src/Time_Meas.c:31:2: warning: implicit declaration of function ‘XTime_GetTime’; did you mean ‘timer_gettime’? [-Wimplicit-function-declaration]
+  XTime_GetTime(&x_time);
+  ^~~~~~~~~~~~~
+  timer_gettime
+src/subdir.mk:33: recipe for target 'src/Time_Meas.o' failed
+make: *** [src/Time_Meas.o] Error 1
+23:36:34 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+Finished building: ../src/Time_Meas.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10872	    332	     16	  11220	   2bd4	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:37:02 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10960	    332	     16	  11308	   2c2c	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:38:37 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__restart’; did you mean ‘impedance__destroy’? [-Wimplicit-function-declaration]
+  impedance__restart(self);
+  ^~~~~~~~~~~~~~~~~~
+  impedance__destroy
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__restart’
+ void impedance__restart(impedance* self){
+      ^~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__restart’ was here
+  impedance__restart(self);
+  ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10960	    332	     16	  11308	   2c2c	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:39:40 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__initialize’; did you mean ‘impedance__init’? [-Wimplicit-function-declaration]
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+  impedance__init
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__initialize’
+ void impedance__initialize(impedance* self){
+      ^~~~~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__initialize’ was here
+  impedance__initialize(self);
+  ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10960	    332	     16	  11308	   2c2c	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:40:12 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__restart’; did you mean ‘impedance__destroy’? [-Wimplicit-function-declaration]
+  impedance__restart(self);
+  ^~~~~~~~~~~~~~~~~~
+  impedance__destroy
+../src/Impedance_v1.c: In function ‘impedance__create’:
+../src/Impedance_v1.c:39:5: warning: implicit declaration of function ‘sensorMod__init’ [-Wimplicit-function-declaration]
+     sensorMod__init(result, Input, x_e, x_ep, Output, Setpoint, M, B, K, ControllerDirection);
+     ^~~~~~~~~~~~~~~
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__restart’
+ void impedance__restart(impedance* self){
+      ^~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__restart’ was here
+  impedance__restart(self);
+  ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10960	    332	     16	  11308	   2c2c	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:41:06 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+../src/Impedance_v1.c: In function ‘impedance__init’:
+../src/Impedance_v1.c:24:2: warning: implicit declaration of function ‘impedance__restart’; did you mean ‘impedance__destroy’? [-Wimplicit-function-declaration]
+  impedance__restart(self);
+  ^~~~~~~~~~~~~~~~~~
+  impedance__destroy
+../src/Impedance_v1.c: At top level:
+../src/Impedance_v1.c:146:6: warning: conflicting types for ‘impedance__restart’
+ void impedance__restart(impedance* self){
+      ^~~~~~~~~~~~~~~~~~
+../src/Impedance_v1.c:24:2: note: previous implicit declaration of ‘impedance__restart’ was here
+  impedance__restart(self);
+  ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10936	    332	     16	  11284	   2c14	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:41:40 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
+Finished building: ../src/Impedance_v1.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10936	    332	     16	  11284	   2c14	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 
+23:43:13 **** Auto Build of configuration Debug for project sensorMod_test ****
+make all 
+Building file: ../src/sensorMod_test.c
+Invoking: ARM v7 Linux gcc compiler
+arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
+../src/sensorMod_test.c: In function ‘main’:
+../src/sensorMod_test.c:61:11: warning: unused variable ‘cenCurr’ [-Wunused-variable]
+     float cenCurr = 36486.206;
+           ^~~~~~~
+../src/sensorMod_test.c:58:11: warning: unused variable ‘nQ’ [-Wunused-variable]
+     float nQ = 3;
+           ^~
+../src/sensorMod_test.c:57:11: warning: unused variable ‘R’ [-Wunused-variable]
+     float R = 8.2673e-04;
+           ^
+../src/sensorMod_test.c:56:11: warning: unused variable ‘dt’ [-Wunused-variable]
+     float dt = 5e-3;
+           ^~
+Finished building: ../src/sensorMod_test.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
+arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
+arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10936	    332	     16	  11284	   2c14	sensorMod_test.elf
+Finished building: sensorMod_test.elf.size
+ 

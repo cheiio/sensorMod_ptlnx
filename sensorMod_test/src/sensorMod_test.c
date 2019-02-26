@@ -5,11 +5,14 @@
 #include <sys/mman.h>
 #include <fcntl.h>
 
-#include "xil_uio.h"
-#include "MotorDriver.h"
-#include "SensorMod.h"
 #include "data_mem.h"
 #include "definitions.h"
+
+#include "xil_uio.h"
+
+#include "SensorMod.h"
+#include "Impedance_v1.h"
+#include "MotorDriver.h"
 
 #define XIL_SIZE				0x10000
 

@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-   8140	    328	      4	   8472	   2118	sensorMod_test.elf
+  10936	    332	     16	  11284	   2c14	sensorMod_test.elf

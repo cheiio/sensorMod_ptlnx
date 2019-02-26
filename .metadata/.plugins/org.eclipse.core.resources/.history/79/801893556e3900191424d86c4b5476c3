@@ -1,0 +1,33 @@
+/*
+ * XTime_Meas.cpp
+ *
+ *  Created on: 19 de dez de 2017
+ *      Author: sapmc
+ */
+#include "XTime_Meas.h"
+
+XTime x_time;
+
+float micros(){
+
+	XTime_GetTime(&x_time);
+
+	float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000000.0f);
+
+	return (time_f);
+}
+
+float millis(){	
+
+	XTime_GetTime(&x_time);
+
+	float time_f = (float)(x_time)*(1.0f)/((float)COUNTS_PER_SECOND/1000.0f);
+
+	return (time_f);
+}
+
+XTime getClockCount(){	
+
+	XTime_GetTime(&x_time);
+	return (2*x_time);
+}

@@ -1,0 +1,19 @@
+/*
+ * time_measuring.h
+ *
+ *  Created on: 18 de dez de 2017
+ *      Author: sapmc
+ */
+
+#ifndef XTIME_MEAS_H
+#define XTIME_MEAS_H
+
+#include "time.h"
+
+	float micros();
+
+	float millis();
+	
+	XTime getClockCount();
+
+#endif /* SRC_TIME_MEASURING_H_ */
