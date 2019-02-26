@@ -3,8 +3,9 @@
 //***********************************************  Constructor
 
 // Constructor (without allocation)
-void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size, float* posIn,
-		float* currIn, float* voltIn, float* pos_filt, float* vel_filt, float* curr_filt){
+void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size, 
+        float* posIn, float* currIn, float* voltIn,
+	    float* pos_filt, float* vel_filt, float* curr_filt){
     
     self->sensorMod_handler = xil_uio__create(_uio_dev, _uio_size);
 
@@ -44,7 +45,8 @@ void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_
 
 // Allocation + initialization
 sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size,
-		float* posIn, float* currIn, float* voltIn, float* pos_filt, float* vel_filt, float* curr_filt){
+    float* posIn, float* currIn, float* voltIn,
+	float* pos_filt, float* vel_filt, float* curr_filt){
         
     sensorMod* result = (sensorMod*) malloc(sizeof(sensorMod));
     sensorMod__init(result, _uio_dev, _uio_size, posIn, currIn, voltIn, 

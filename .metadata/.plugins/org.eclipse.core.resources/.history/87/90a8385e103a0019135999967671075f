@@ -3,8 +3,9 @@
 //***********************************************  Constructor
 
 // Constructor (without allocation)
-void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size, float* posIn,
-		float* currIn, float* voltIn, float* pos_filt, float* vel_filt, float* curr_filt){
+void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size, 
+        float* posIn, float* currIn, float* voltIn,
+	    float* pos_filt, float* vel_filt, float* curr_filt){
     
     self->sensorMod_handler = xil_uio__create(_uio_dev, _uio_size);
 
@@ -33,18 +34,19 @@ void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_
     self->ab._uint32 = ab;
 
     // Filter;
-    pos_filt = (float*)malloc(4*Nmodules);  self->filt_pos._float32 = pos_filt;
-    vel_filt = (float*)malloc(4*Nmodules);  self->filt_vel._float32 = vel_filt;
-    curr_filt = (float*)malloc(4*Nmodules); self->filt_curr._float32 = curr_filt;
+    self->filt_pos._float32 = pos_filt;
+    self->filt_vel._float32 = vel_filt;
+    self->filt_curr._float32 = curr_filt;
 
-    posIn = (float*)malloc(4*Nmodules); 	self->posIn._float32 = posIn;
-    currIn = (float*)malloc(4*Nmodules);	self->currIn._float32 = currIn;
-    voltIn = (float*)malloc(4*Nmodules);	self->voltIn._float32 = voltIn;
+    self->posIn._float32 = posIn;
+    self->currIn._float32 = currIn;
+    self->voltIn._float32 = voltIn;
 }
 
 // Allocation + initialization
 sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size,
-		float* posIn, float* currIn, float* voltIn, float* pos_filt, float* vel_filt, float* curr_filt){
+    float* posIn, float* currIn, float* voltIn,
+	float* pos_filt, float* vel_filt, float* curr_filt){
         
     sensorMod* result = (sensorMod*) malloc(sizeof(sensorMod));
     sensorMod__init(result, _uio_dev, _uio_size, posIn, currIn, voltIn, 

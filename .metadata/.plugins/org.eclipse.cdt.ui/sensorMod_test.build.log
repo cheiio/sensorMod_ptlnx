@@ -1,34 +1,6 @@
-23:43:13 **** Auto Build of configuration Debug for project sensorMod_test ****
+18:57:00 **** Incremental Build of configuration Debug for project sensorMod_test ****
 make all 
-Building file: ../src/sensorMod_test.c
-Invoking: ARM v7 Linux gcc compiler
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sensorMod_test.o" -MMD -MP -MF"src/sensorMod_test.d" -MT"src/sensorMod_test.o" -o "src/sensorMod_test.o" "../src/sensorMod_test.c"
-../src/sensorMod_test.c: In function ‘main’:
-../src/sensorMod_test.c:61:11: warning: unused variable ‘cenCurr’ [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/sensorMod_test.c:58:11: warning: unused variable ‘nQ’ [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/sensorMod_test.c:57:11: warning: unused variable ‘R’ [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/sensorMod_test.c:56:11: warning: unused variable ‘dt’ [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-Finished building: ../src/sensorMod_test.c
- 
-Building target: sensorMod_test.elf
-Invoking: ARM v7 Linux gcc linker
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/sensorMod_test.o ./src/xil_uio.o   
-Finished building target: sensorMod_test.elf
- 
-Invoking: ARM v7 Linux Print Size
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  10936	    332	     16	  11284	   2c14	sensorMod_test.elf
-Finished building: sensorMod_test.elf.size
- 
+make: Nothing to be done for `all'.
 
-23:43:14 Build Finished (took 880ms)
+18:57:00 Build Finished (took 256ms)
 
