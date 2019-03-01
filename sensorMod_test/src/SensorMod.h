@@ -4,6 +4,7 @@
 /****************** Include Files ********************/
 
 #include "xil_uio.h"
+#include "Time_Meas.h"
 
 #define SENMOD_SIZE		0x10000
 /*
@@ -67,6 +68,9 @@ typedef struct sensorMod_struct{
 	sensorMod_data_t center_current;
 	sensorMod_data_t dt, R, Q;
 	sensorMod_data_t ab;
+
+	uint64_t lastTime;
+	uint64_t SampleTime;
 }sensorMod;
 
 /************************** Driver Class Definition ************************/
@@ -80,12 +84,13 @@ void sensorMod__destroy(sensorMod* self);
 
 
 //***********************************************  Calculating Functions
+void sensorMod__reset(sensorMod* self);
 void sensorMod__start(sensorMod* self);
-uint32_t sensorMod__wait(sensorMod* self);
+void sensorMod__wait(sensorMod* self);
 void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
 
 //***********************************************  Configuration Functions
-void sensorMod__set_centerCurr(sensorMod* self, float centerCurr);
+void sensorMod__set_centerCurr(sensorMod* self, const float centerCurr);
 void sensorMod__set_Kalman(sensorMod* self, float dt, float R, float Q);
 void sensorMod__set_butter(sensorMod* self, float* ab);
 

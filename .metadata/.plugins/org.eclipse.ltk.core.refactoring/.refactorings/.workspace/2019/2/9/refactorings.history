@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;sensorMod_test/src/Time_Meas.c&apos;" deleteContents="false" description="Delete resource &apos;sensorMod_test/src/Time_Meas.c&apos;" element1="/sensorMod_test/src/Time_Meas.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1551306985109"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/psOnly_1mod/src/KalmanSimple_v1.cpp" element2="/psOnly_1mod/src/KalmanSimple_v1.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1551397636989"/>
+</session>

@@ -42,7 +42,7 @@ typedef struct impedance_struct{
 	uint64_t lastTime;
 	_real last_xpp, last_xp, last_x;
 
-	unsigned long SampleTime;
+	uint32_t SampleTime;
 	_real SampleTimeInSec;
 	_real outMin, outMax;
 	uint8_t inAuto;
@@ -81,7 +81,7 @@ void impedance__setControllerDirection(impedance*, uint32_t);
 
 // * Sets the frequency, in Milliseconds, with which
 //   the PID calculation is performed.  default is 100
-void impedance__getSampleTime(impedance*, uint32_t);
+void impedance__setSampleTime(impedance*, uint32_t);
 
 //Display functions ****************************************************************
 //	These functions query the Impedance Controller for interal values.

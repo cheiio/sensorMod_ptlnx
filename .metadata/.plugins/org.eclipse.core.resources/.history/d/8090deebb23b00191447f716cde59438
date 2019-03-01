@@ -1,0 +1,11 @@
+/*
+ * Empty C++ Application
+ */
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "\n Test for Software Only 1 Mod \n" << endl;
+	return 0;
+}

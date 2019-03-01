@@ -1,0 +1,88 @@
+
+#include "KalmanSimple_v1.h"
+
+//--------------------------------------------------------------------------//
+// Constructor receives initial position and dt
+KalmanSimple::KalmanSimple(int SampleTime, double* z, double* x) {
+	my_z = z;
+	Mode = OUTANPIN;
+
+	my_dt = SampleTime*0.001;
+	my_SampleTime = SampleTime * 1000;
+	my_x = x;
+
+}
+
+//--------------------------------------------------------------------------//
+// Estimator receives the current (noisy) estate from sensor and returns the estimation
+bool KalmanSimple::Estimate()
+{
+	if (!inAuto) return false;
+
+	unsigned long now = micros();
+	unsigned long timeChange = (now - lastTime);
+	if (timeChange >= my_SampleTime) {
+
+		if (Mode == OUTANPIN) {
+			z = *my_z;
+		}
+
+		xp = *my_x;
+		Pp = P + Q;
+
+		K = Pp / (Pp + R);
+
+		*my_x = xp + K*(z - xp);
+		P = Pp - K*Pp;
+
+		/*Remember some variables for next time*/
+		lastTime = now;
+
+		return true;
+
+	}
+	else return false;
+
+}
+
+//--------------------------------------------------------------------------//
+// Set mode to automatic or manual
+
+void KalmanSimple::SetMode(int Mode)
+{
+	bool newAuto = (Mode == AUTOMATIC);
+	if (newAuto == !inAuto)
+	{  /*we just went from manual to auto*/
+		KalmanSimple::Initialize();
+	}
+	inAuto = newAuto;
+}
+
+//--------------------------------------------------------------------------//
+// Here the Filter is Initialized
+
+void KalmanSimple::Initialize() {
+
+	if (Mode == OUTANPIN) {
+		*my_x = *my_z;
+	}
+
+	Q = nQ*my_dt;
+
+	P = R;
+
+	lastTime = micros() - my_SampleTime;
+
+}
+
+//--------------------------------------------------------------------------//
+// This functions are to set new values to the variance R and the multiplication 
+// factor of the Q matrix nQ, this are meant to be used at the start only. since the
+// calculation of the matrices Q and P initial are calculated only in the initialization
+// function and only there
+void KalmanSimple::Set_R(double new_R) { R = new_R; }
+void KalmanSimple::Set_nQ(double new_nQ) { nQ = new_nQ; }
+
+//--------------------------------------------------------------------------//
+// With this function you can access to the las raw value measured by the 
+int KalmanSimple::GetLast() { return (int)z; }

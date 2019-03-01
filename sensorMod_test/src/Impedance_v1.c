@@ -40,7 +40,7 @@ void impedance__init(impedance* self, _real* Input, _real* x_e, _real* x_ep, _re
 	impedance__setControllerDirection(self, ControllerDirection);
 	impedance__setTunings(self, M, B, K);
 
-	self->lastTime = millis() - self->SampleTime;
+	self->lastTime = millis();
 
 }
 
@@ -135,7 +135,7 @@ void impedance__setTunings(impedance* self, _real M, _real B, _real K){
 void impedance__setSampleTime(impedance* self, uint32_t NewSampleTime){
 
 	if (NewSampleTime > 0){
-		self->SampleTime = (uint64_t)NewSampleTime;
+		self->SampleTime = NewSampleTime;
 		self->SampleTimeInSec = ((_real)self->SampleTime) / 1000.00;
 	}
 }

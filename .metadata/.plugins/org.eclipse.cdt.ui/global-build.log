@@ -1,867 +1,2810 @@
-12:01:49 **** Clean-only build of configuration Debug for project sensorMod_test ****
+20:45:33 **** Clean-only build of configuration Debug for project psOnly_1mod ****
 make clean 
-rm -rf  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/xil_uio.o  ./src/Impedance_v1.d ./src/MotorDriver.d ./src/SensorMod.d ./src/Time_Meas.d ./src/xil_uio.d  sensorMod_test.elf.size  sensorMod_test.elf
+rm -rf  ./src/Impedance_v1.o ./src/KalmanPos_v1.o ./src/KalmanSimple_v1.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o  ./src/Time_Meas.d ./src/xil_uio.d  ./src/Impedance_v1.d ./src/KalmanPos_v1.d ./src/KalmanSimple_v1.d ./src/main.d  psOnly_1mod.elf.size  psOnly_1mod.elf
 ' '
-12:01:50 **** Clean-only build of configuration Debug for project sensorMod_test ****
-make clean 
-rm -rf  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/xil_uio.o  ./src/Impedance_v1.d ./src/MotorDriver.d ./src/SensorMod.d ./src/Time_Meas.d ./src/xil_uio.d  sensorMod_test.elf.size  sensorMod_test.elf
-' '
-12:01:50 **** Build of configuration Debug for project sensorMod_test ****
+20:45:34 **** Build of configuration Debug for project psOnly_1mod ****
 make all 
-'Building file: ../src/Impedance_v1.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
-'Finished building: ../src/Impedance_v1.c'
+'Building file: ../src/Impedance_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.cpp"
+In file included from ../src/Impedance_v1.cpp:6:0:
+../src/Impedance_v1.hpp:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/Impedance_v1.o] Error 1
+20:45:45 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/Impedance_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.cpp"
+In file included from ../src/Impedance_v1.cpp:6:0:
+../src/Impedance_v1.hpp:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/Impedance_v1.o] Error 1
+20:46:21 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/Impedance_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.cpp"
+In file included from ../src/Impedance_v1.cpp:6:0:
+../src/Impedance_v1.hpp:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/Impedance_v1.o] Error 1
+20:46:36 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/Impedance_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.cpp"
+'Finished building: ../src/Impedance_v1.cpp'
 ' '
-'Building file: ../src/MotorDriver.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
-'Finished building: ../src/MotorDriver.c'
+'Building file: ../src/KalmanPos_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanPos_v1.o" -MMD -MP -MF"src/KalmanPos_v1.d" -MT"src/KalmanPos_v1.o" -o "src/KalmanPos_v1.o" "../src/KalmanPos_v1.cpp"
+In file included from ../src/KalmanPos_v1.cpp:1:0:
+../src/KalmanPos_v1.hpp:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/KalmanPos_v1.o] Error 1
+20:46:43 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/KalmanPos_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanPos_v1.o" -MMD -MP -MF"src/KalmanPos_v1.d" -MT"src/KalmanPos_v1.o" -o "src/KalmanPos_v1.o" "../src/KalmanPos_v1.cpp"
+../src/KalmanPos_v1.cpp: In member function 'bool KalmanPos::Estimate()':
+../src/KalmanPos_v1.cpp:23:22: error: 'micros' was not declared in this scope
+  unsigned long now = micros();
+                      ^~~~~~
+../src/KalmanPos_v1.cpp:23:22: note: suggested alternative: 'millis'
+  unsigned long now = micros();
+                      ^~~~~~
+                      millis
+../src/KalmanPos_v1.cpp: In member function 'void KalmanPos::Initialize()':
+../src/KalmanPos_v1.cpp:126:13: error: 'micros' was not declared in this scope
+  lastTime = micros() - my_SampleTime;
+             ^~~~~~
+../src/KalmanPos_v1.cpp:126:13: note: suggested alternative: 'millis'
+  lastTime = micros() - my_SampleTime;
+             ^~~~~~
+             millis
+make: *** [src/KalmanPos_v1.o] Error 1
+20:46:52 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/KalmanPos_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanPos_v1.o" -MMD -MP -MF"src/KalmanPos_v1.d" -MT"src/KalmanPos_v1.o" -o "src/KalmanPos_v1.o" "../src/KalmanPos_v1.cpp"
+../src/KalmanPos_v1.cpp: In member function 'void KalmanPos::Initialize()':
+../src/KalmanPos_v1.cpp:126:13: error: 'micros' was not declared in this scope
+  lastTime = micros() - my_SampleTime;
+             ^~~~~~
+../src/KalmanPos_v1.cpp:126:13: note: suggested alternative: 'millis'
+  lastTime = micros() - my_SampleTime;
+             ^~~~~~
+             millis
+make: *** [src/KalmanPos_v1.o] Error 1
+20:47:03 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/KalmanPos_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanPos_v1.o" -MMD -MP -MF"src/KalmanPos_v1.d" -MT"src/KalmanPos_v1.o" -o "src/KalmanPos_v1.o" "../src/KalmanPos_v1.cpp"
+'Finished building: ../src/KalmanPos_v1.cpp'
 ' '
-'Building file: ../src/SensorMod.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
-'Finished building: ../src/SensorMod.c'
+'Building file: ../src/KalmanSimple_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanSimple_v1.o" -MMD -MP -MF"src/KalmanSimple_v1.d" -MT"src/KalmanSimple_v1.o" -o "src/KalmanSimple_v1.o" "../src/KalmanSimple_v1.cpp"
+In file included from ../src/KalmanSimple_v1.cpp:2:0:
+../src/KalmanSimple_v1.h:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/KalmanSimple_v1.o] Error 1
+20:47:08 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/KalmanPos_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanPos_v1.o" -MMD -MP -MF"src/KalmanPos_v1.d" -MT"src/KalmanPos_v1.o" -o "src/KalmanPos_v1.o" "../src/KalmanPos_v1.cpp"
+'Finished building: ../src/KalmanPos_v1.cpp'
 ' '
+'Building file: ../src/KalmanSimple_v1.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/KalmanSimple_v1.o" -MMD -MP -MF"src/KalmanSimple_v1.d" -MT"src/KalmanSimple_v1.o" -o "src/KalmanSimple_v1.o" "../src/KalmanSimple_v1.cpp"
+In file included from ../src/KalmanSimple_v1.cpp:2:0:
+../src/KalmanSimple_v1.h:4:10: fatal error: XTime_Meas.h: No such file or directory
+ #include "XTime_Meas.h"
+          ^~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/KalmanSimple_v1.o] Error 1
+20:47:17 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
 'Building file: ../src/Time_Meas.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
 'Finished building: ../src/Time_Meas.c'
 ' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:71:25: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
-     impedance *impInd = impedance__create
-                         ^~~~~~~~~~~~~~~~~
-../src/main.c:72:29: error: redeclaration of 'impThumb' with no linkage
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-                             ^~~~~~~~
-../src/main.c:72:18: note: previous declaration of 'impThumb' was here
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-                  ^~~~~~~~
-../src/main.c:86:6: warning: implicit declaration of function 'sensorMod__start_float'; did you mean 'sensorMod__start'? [-Wimplicit-function-declaration]
-      sensorMod__start_float(sensor_handler);
-      ^~~~~~~~~~~~~~~~~~~~~~
-      sensorMod__start
-../src/main.c:72:59: warning: unused variable 'impLit' [-Wunused-variable]
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-                                                           ^~~~~~
-../src/main.c:72:49: warning: unused variable 'impRing' [-Wunused-variable]
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-                                                 ^~~~~~~
-../src/main.c:72:40: warning: unused variable 'impMid' [-Wunused-variable]
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-                                        ^~~~~~
-../src/main.c:72:29: warning: unused variable 'impThumb' [-Wunused-variable]
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-                             ^~~~~~~~
-../src/main.c:72:8: warning: unused variable 'impInd2' [-Wunused-variable]
-     , *impInd2, *impThumb, *impThumb, *impMid, *impRing, *impLit;
-        ^~~~~~~
-../src/main.c:71:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create
-                ^~~~~~
-../src/main.c:65:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:62:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:61:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:60:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:12:7: error: 'u32' does not name a type; did you mean 'dup2'?
+ const u32 pwmPinC = XPAR_MOTORDRIVER_0_S_AXI_BASEADDR;
+       ^~~
+       dup2
+../src/main.cpp:15:7: error: 'u32' does not name a type; did you mean 'dup2'?
+ const u32 anPinC_Curr = A7, anPinC_Pos = A14;
+       ^~~
+       dup2
+../src/main.cpp:19:19: error: 'XPAR_AXI_GPIO_SWS_BASEADDR' was not declared in this scope
+ const int dipSw = XPAR_AXI_GPIO_SWS_BASEADDR;
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:20:17: error: 'XPAR_AXI_GPIO_LEDS_BASEADDR' was not declared in this scope
+ const int led = XPAR_AXI_GPIO_LEDS_BASEADDR;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:54:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:139:1: error: 'KalmanSimple' does not name a type; did you mean 'Kalman_T'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ Kalman_T
+../src/main.cpp:162:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:172:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:191:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:191:15: error: 'u32' was not declared in this scope
+../src/main.cpp:191:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:191:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:191:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:192:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:192:12: error: 'u32' was not declared in this scope
+../src/main.cpp:192:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:194:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:199:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:199:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:199:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:202:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:205:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:209:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:209:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:213:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:217:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:217:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:222:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:229:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:238:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:239:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:239:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:262:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:262:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:288:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:289:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:289:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:329:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:329:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:333:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:334:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:334:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:340:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:340:2: note: suggested alternative: 'pid_T'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pid_T
+../src/main.cpp:347:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:347:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:365:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:373:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:373:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:376:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:378:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:378:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:379:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:379:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:476:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:476:15: error: 'u32' was not declared in this scope
+../src/main.cpp:476:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:476:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:476:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:487:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:487:12: error: 'u32' was not declared in this scope
+../src/main.cpp:487:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
 make: *** [src/main.o] Error 1
-18:27:29 **** Auto Build of configuration Debug for project sensorMod_test ****
+20:47:27 **** Auto Build of configuration Debug for project psOnly_1mod ****
 make all 
-'Building file: ../src/Impedance_v1.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
-'Finished building: ../src/Impedance_v1.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:125:6: warning: implicit declaration of function 'sensorMod__start_float'; did you mean 'sensorMod__start'? [-Wimplicit-function-declaration]
-      sensorMod__start_float(sensor_handler);
-      ^~~~~~~~~~~~~~~~~~~~~~
-      sensorMod__start
-../src/main.c:112:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:108:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:104:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:12:26: error: 'XPAR_MOTORDRIVER_0_S_AXI_BASEADDR' was not declared in this scope
+ const uint32_t pwmPinC = XPAR_MOTORDRIVER_0_S_AXI_BASEADDR;
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:15:7: error: 'u32' does not name a type; did you mean 'dup2'?
+ const u32 anPinC_Curr = A7, anPinC_Pos = A14;
+       ^~~
+       dup2
+../src/main.cpp:19:19: error: 'XPAR_AXI_GPIO_SWS_BASEADDR' was not declared in this scope
+ const int dipSw = XPAR_AXI_GPIO_SWS_BASEADDR;
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:20:17: error: 'XPAR_AXI_GPIO_LEDS_BASEADDR' was not declared in this scope
+ const int led = XPAR_AXI_GPIO_LEDS_BASEADDR;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:54:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:139:1: error: 'KalmanSimple' does not name a type; did you mean 'Kalman_T'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ Kalman_T
+../src/main.cpp:162:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:172:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:191:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:191:15: error: 'u32' was not declared in this scope
+../src/main.cpp:191:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:191:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:191:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:192:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:192:12: error: 'u32' was not declared in this scope
+../src/main.cpp:192:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:194:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:199:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:199:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:202:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:205:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:209:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:209:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:213:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:217:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:217:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:222:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:229:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:238:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:239:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:239:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:262:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:262:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:288:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:289:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:289:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:329:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:329:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:333:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:334:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:334:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:340:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:340:2: note: suggested alternative: 'pid_T'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pid_T
+../src/main.cpp:347:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:347:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:365:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:373:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:373:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:376:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:378:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:378:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:379:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:379:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:476:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:476:15: error: 'u32' was not declared in this scope
+../src/main.cpp:476:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:476:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:476:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:487:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:487:12: error: 'u32' was not declared in this scope
+../src/main.cpp:487:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:47:44 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:15:26: error: 'XPAR_MOTORDRIVER_0_S_AXI_BASEADDR' was not declared in this scope
+ const uint32_t pwmPinC = XPAR_MOTORDRIVER_0_S_AXI_BASEADDR;
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:18:7: error: 'u32' does not name a type; did you mean 'dup2'?
+ const u32 anPinC_Curr = A7, anPinC_Pos = A14;
+       ^~~
+       dup2
+../src/main.cpp:22:19: error: 'XPAR_AXI_GPIO_SWS_BASEADDR' was not declared in this scope
+ const int dipSw = XPAR_AXI_GPIO_SWS_BASEADDR;
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:23:17: error: 'XPAR_AXI_GPIO_LEDS_BASEADDR' was not declared in this scope
+ const int led = XPAR_AXI_GPIO_LEDS_BASEADDR;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.cpp:57:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:142:1: error: 'KalmanSimple' does not name a type; did you mean 'Kalman_T'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ Kalman_T
+../src/main.cpp:165:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:175:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:194:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:194:15: error: 'u32' was not declared in this scope
+../src/main.cpp:194:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:194:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:194:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:195:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:195:12: error: 'u32' was not declared in this scope
+../src/main.cpp:195:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:197:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:202:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:205:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:205:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:208:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:212:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:212:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:216:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:220:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:220:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:225:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:232:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:241:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:242:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:242:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:265:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:265:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:291:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:292:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:292:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:332:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:332:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:336:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:337:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:337:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:343:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:343:2: note: suggested alternative: 'pid_T'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pid_T
+../src/main.cpp:350:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:350:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:368:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:376:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:376:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:379:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:381:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:381:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:382:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:382:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:479:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:479:15: error: 'u32' was not declared in this scope
+../src/main.cpp:479:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:479:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:479:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:490:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:490:12: error: 'u32' was not declared in this scope
+../src/main.cpp:490:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:50:07 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:47:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:132:1: error: 'KalmanSimple' does not name a type; did you mean 'Kalman_T'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ Kalman_T
+../src/main.cpp:155:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:165:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:184:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:184:15: error: 'u32' was not declared in this scope
+../src/main.cpp:184:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:184:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:184:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:185:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:185:12: error: 'u32' was not declared in this scope
+../src/main.cpp:185:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:187:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:192:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:192:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:192:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:195:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:195:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:198:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:202:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:202:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:206:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:210:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:210:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:210:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:215:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:222:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:231:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:232:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:232:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:255:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:255:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:255:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:281:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:282:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:282:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:322:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:322:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:326:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:327:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:327:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:333:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:333:2: note: suggested alternative: 'pid_T'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pid_T
+../src/main.cpp:340:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:340:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:358:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:366:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:366:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:369:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:371:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:371:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:372:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:372:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:469:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:469:15: error: 'u32' was not declared in this scope
+../src/main.cpp:469:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:469:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:469:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:480:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:480:12: error: 'u32' was not declared in this scope
+../src/main.cpp:480:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:50:56 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:47:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:132:1: error: 'KalmanSimple' does not name a type; did you mean 'Kalman_T'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ Kalman_T
+../src/main.cpp:155:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:165:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:184:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:184:15: error: 'u32' was not declared in this scope
+../src/main.cpp:184:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:184:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:184:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:185:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:185:12: error: 'u32' was not declared in this scope
+../src/main.cpp:185:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:187:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:192:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:192:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:192:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:195:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:195:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:198:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:202:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:202:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:206:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:210:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:210:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:210:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:215:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:222:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:231:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:232:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:232:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:255:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:255:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:255:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:281:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:282:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:282:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:322:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:322:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:326:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:327:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:327:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:333:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:333:2: note: suggested alternative: 'pid_T'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pid_T
+../src/main.cpp:340:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:340:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:358:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:366:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:366:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:369:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:371:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:371:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:372:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:372:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:469:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:469:15: error: 'u32' was not declared in this scope
+../src/main.cpp:469:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:469:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:469:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:480:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:480:12: error: 'u32' was not declared in this scope
+../src/main.cpp:480:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:51:08 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:47:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:131:25: error: 'Kalman_T' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+../src/main.cpp:131:25: note: suggested alternative: 'KalmanPos'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+                         KalmanPos
+../src/main.cpp:132:1: error: 'KalmanSimple' does not name a type; did you mean 'KalmanPos'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ KalmanPos
+../src/main.cpp:155:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:165:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:184:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:184:15: error: 'u32' was not declared in this scope
+../src/main.cpp:184:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:184:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:184:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:185:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:185:12: error: 'u32' was not declared in this scope
+../src/main.cpp:185:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:187:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:192:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:192:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:192:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:195:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:195:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:198:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:202:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:202:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:206:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:210:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:210:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:210:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:215:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:222:8: error: 'Kalman_T' was not declared in this scope
+  delay(Kalman_T);
+        ^~~~~~~~
+../src/main.cpp:222:8: note: suggested alternative: 'KalmanPos'
+  delay(Kalman_T);
+        ^~~~~~~~
+        KalmanPos
+../src/main.cpp:222:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:231:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:232:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:232:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:255:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:255:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:255:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:281:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:282:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:282:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:322:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:322:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:326:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:327:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:327:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:333:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:333:2: note: suggested alternative: 'pid_T'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pid_T
+../src/main.cpp:340:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:340:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:358:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:366:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:366:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:369:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:371:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:371:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:372:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:372:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:469:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:469:15: error: 'u32' was not declared in this scope
+../src/main.cpp:469:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:469:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:469:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:480:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:480:12: error: 'u32' was not declared in this scope
+../src/main.cpp:480:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:52:45 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:32:7: error: conflicting declaration 'float dt'
+ float dt = 5e-3;
+       ^~
+../src/main.cpp:17:16: note: previous declaration as 'const uint32_t dt'
+ const uint32_t dt = 5;               // Filter Period in uS
+                ^~
+../src/main.cpp:35:30: error: expected '}' before ';' token
+ float ab[] = {-0.9450, 0.0275;};
+                              ^
+../src/main.cpp:35:31: error: expected declaration before '}' token
+ float ab[] = {-0.9450, 0.0275;};
+                               ^
+make: *** [src/main.o] Error 1
+20:53:08 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:35:36: error: expected '}' before ';' token
+ const _real ab[] = {-0.9450, 0.0275;};
+                                    ^
+../src/main.cpp:35:37: error: expected declaration before '}' token
+ const _real ab[] = {-0.9450, 0.0275;};
+                                     ^
+make: *** [src/main.o] Error 1
+20:53:15 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:35:37: error: expected '}' before ';' token
+ const _real ab[2] = {-0.9450, 0.0275;};
+                                     ^
+../src/main.cpp:35:38: error: expected declaration before '}' token
+ const _real ab[2] = {-0.9450, 0.0275;};
+                                      ^
+make: *** [src/main.o] Error 1
+20:53:23 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:38:14: error: conflicting declaration 'const double K'
+ const double K = 5.0774, B = 0.5489, Z = 0.7; // Impedance tuning
+              ^
+../src/main.cpp:27:5: note: previous declaration as 'const _real K'
+     K = 88.6173474407601,
+     ^
+../src/main.cpp:38:26: error: conflicting declaration 'const double B'
+ const double K = 5.0774, B = 0.5489, Z = 0.7; // Impedance tuning
+                          ^
+../src/main.cpp:28:5: note: previous declaration as 'const _real B'
+     B = 9.58011226419688,
+     ^
+../src/main.cpp:40:14: error: conflicting declaration 'const double M'
+ const double M = B*B/(4*(Z*Z)*K);
+              ^
+../src/main.cpp:26:14: note: previous declaration as 'const _real M'
+ const _real  M = 0.528404343800586,
+              ^
+../src/main.cpp:54:1: error: 'XTime' does not name a type; did you mean 'stime'?
+ XTime t = 0;
+ ^~~~~
+ stime
+../src/main.cpp:138:25: error: 'Kalman_T' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+../src/main.cpp:138:25: note: suggested alternative: 'KalmanPos'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+                         KalmanPos
+../src/main.cpp:139:1: error: 'KalmanSimple' does not name a type; did you mean 'KalmanPos'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ KalmanPos
+../src/main.cpp:162:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:172:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:191:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:191:15: error: 'u32' was not declared in this scope
+../src/main.cpp:191:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:191:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:191:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:192:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:192:12: error: 'u32' was not declared in this scope
+../src/main.cpp:192:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:194:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:199:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:199:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:199:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:202:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:202:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:205:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:209:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:209:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:209:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:213:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:217:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:217:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:217:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:222:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:229:8: error: 'Kalman_T' was not declared in this scope
+  delay(Kalman_T);
+        ^~~~~~~~
+../src/main.cpp:229:8: note: suggested alternative: 'KalmanPos'
+  delay(Kalman_T);
+        ^~~~~~~~
+        KalmanPos
+../src/main.cpp:229:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:238:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:239:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:239:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:262:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:262:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:262:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:288:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:289:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:289:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:329:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:329:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:333:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:334:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:334:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:340:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:340:2: note: suggested alternative: 'pi'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pi
+../src/main.cpp:340:23: error: 'minOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                       ^~~~~~~~~
+../src/main.cpp:340:34: error: 'maxOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                                  ^~~~~~~~~
+../src/main.cpp:340:34: note: suggested alternative: 'maxCurrent'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                                  ^~~~~~~~~
+                                  maxCurrent
+../src/main.cpp:341:21: error: 'pid_T' was not declared in this scope
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+../src/main.cpp:341:21: note: suggested alternative: 'pid_t'
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+                     pid_t
+../src/main.cpp:347:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:347:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:365:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:373:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:373:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:376:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:378:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:378:23: note: suggested alternative: 'currReadC'
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+                       currReadC
+../src/main.cpp:379:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:379:21: note: suggested alternative: 'posReadC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+                     posReadC
+../src/main.cpp: At global scope:
+../src/main.cpp:476:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:476:15: error: 'u32' was not declared in this scope
+../src/main.cpp:476:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:476:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:476:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:487:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:487:12: error: 'u32' was not declared in this scope
+../src/main.cpp:487:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:54:12 **** Auto Build of configuration Debug for project psOnly_1mod ****
+make all 
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:41:15: error: 'Nmodules' was not declared in this scope
+ _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+               ^~~~~~~~
+../src/main.cpp:41:15: note: suggested alternative: 'modfl'
+ _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+               ^~~~~~~~
+               modfl
+../src/main.cpp:41:35: error: 'Nmodules' was not declared in this scope
+ _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+                                   ^~~~~~~~
+../src/main.cpp:41:35: note: suggested alternative: 'modfl'
+ _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+                                   ^~~~~~~~
+                                   modfl
+../src/main.cpp:41:55: error: 'Nmodules' was not declared in this scope
+ _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+                                                       ^~~~~~~~
+../src/main.cpp:41:55: note: suggested alternative: 'modfl'
+ _real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+                                                       ^~~~~~~~
+                                                       modfl
+../src/main.cpp:42:16: error: 'Nmodules' was not declared in this scope
+ _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
                 ^~~~~~~~
-../src/main.c:100:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:96:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:92:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:88:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:82:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:81:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:80:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:71:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:68:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:67:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:66:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:64:84: warning: unused variable 'modLit' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-                                                                                    ^~~~~~
-../src/main.c:64:72: warning: unused variable 'modRing' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-                                                                        ^~~~~~~
-../src/main.c:64:61: warning: unused variable 'modMid' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-                                                             ^~~~~~
-../src/main.c:64:47: warning: unused variable 'modThumb2' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-                                               ^~~~~~~~~
-../src/main.c:64:34: warning: unused variable 'modThumb' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-                                  ^~~~~~~~
-../src/main.c:64:22: warning: unused variable 'modInd2' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-                      ^~~~~~~
-../src/main.c:64:11: warning: unused variable 'modInd' [-Wunused-variable]
-     _real modInd[3], modInd2[3], modThumb[3], modThumb2[3], modMid[3], modRing[3], modLit[3];
-           ^~~~~~
-../src/main.c:61:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         posIn_f, currIn_f, voltIn_f, pos_filt, vel_filt, curr_filt);
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:61:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'pos_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'vel_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'curr_filt' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/xil_uio.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio.o" -MMD -MP -MF"src/xil_uio.d" -MT"src/xil_uio.o" -o "src/xil_uio.o" "../src/xil_uio.c"
-'Finished building: ../src/xil_uio.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-./src/main.o: In function `main':
-C:\shared_vb\GitHub\sensorMod_ptlnx\sensorMod_test\Debug/../src/main.c:125: undefined reference to `sensorMod__start_float'
-collect2.exe: error: ld returned 1 exit status
-make: *** [sensorMod_test.elf] Error 1
-18:28:16 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:112:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:108:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:104:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
+../src/main.cpp:42:16: note: suggested alternative: 'modfl'
+ _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
                 ^~~~~~~~
-../src/main.c:100:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:96:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:92:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:88:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:82:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:81:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:80:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:71:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:68:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:67:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:66:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:61:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         posIn_f, currIn_f, voltIn_f, pos_filt, vel_filt, curr_filt);
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:61:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'pos_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'vel_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'curr_filt' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11589	    328	     16	  11933	   2e9d	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:30:03 **** Incremental Build of configuration Debug for project sensorMod_test ****
+                modfl
+../src/main.cpp:42:36: error: 'Nmodules' was not declared in this scope
+ _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+                                    ^~~~~~~~
+../src/main.cpp:42:36: note: suggested alternative: 'modfl'
+ _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+                                    ^~~~~~~~
+                                    modfl
+../src/main.cpp:42:57: error: 'Nmodules' was not declared in this scope
+ _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+                                                         ^~~~~~~~
+../src/main.cpp:42:57: note: suggested alternative: 'modfl'
+ _real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+                                                         ^~~~~~~~
+                                                         modfl
+../src/main.cpp:114:25: error: 'Kalman_T' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+../src/main.cpp:114:25: note: suggested alternative: 'KalmanPos'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+                         KalmanPos
+../src/main.cpp:114:36: error: 'posReadC' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                                    ^~~~~~~~
+../src/main.cpp:114:36: note: suggested alternative: 'posVelC'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                                    ^~~~~~~~
+                                    posVelC
+../src/main.cpp:115:1: error: 'KalmanSimple' does not name a type; did you mean 'KalmanPos'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ KalmanPos
+../src/main.cpp:138:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:148:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:167:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:167:15: error: 'u32' was not declared in this scope
+../src/main.cpp:167:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:167:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:167:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:168:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:168:12: error: 'u32' was not declared in this scope
+../src/main.cpp:168:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:170:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:175:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:175:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:175:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:178:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:178:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:181:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:185:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:185:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:185:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:189:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:190:2: error: 'global_flag' was not declared in this scope
+  global_flag = true;
+  ^~~~~~~~~~~
+../src/main.cpp:193:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:193:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:193:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:198:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:205:8: error: 'Kalman_T' was not declared in this scope
+  delay(Kalman_T);
+        ^~~~~~~~
+../src/main.cpp:205:8: note: suggested alternative: 'KalmanPos'
+  delay(Kalman_T);
+        ^~~~~~~~
+        KalmanPos
+../src/main.cpp:205:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:214:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:215:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:215:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:238:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:238:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:238:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:264:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:265:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:265:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:305:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:305:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:309:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:310:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:310:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:316:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:316:2: note: suggested alternative: 'pi'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pi
+../src/main.cpp:316:23: error: 'minOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                       ^~~~~~~~~
+../src/main.cpp:316:34: error: 'maxOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                                  ^~~~~~~~~
+../src/main.cpp:317:21: error: 'pid_T' was not declared in this scope
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+../src/main.cpp:317:21: note: suggested alternative: 'pid_t'
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+                     pid_t
+../src/main.cpp:323:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:323:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:330:21: error: 'imp_T' was not declared in this scope
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+../src/main.cpp:330:21: note: suggested alternative: 'impC'
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+                     impC
+../src/main.cpp:341:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:349:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:349:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:352:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:354:3: error: 'currReadC' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+../src/main.cpp:354:3: note: suggested alternative: 'currC'
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+   currC
+../src/main.cpp:354:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:355:3: error: 'posReadC' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+../src/main.cpp:355:3: note: suggested alternative: 'posVelC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+   posVelC
+../src/main.cpp:355:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp: At global scope:
+../src/main.cpp:452:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:452:15: error: 'u32' was not declared in this scope
+../src/main.cpp:452:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:452:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:452:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:463:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:463:12: error: 'u32' was not declared in this scope
+../src/main.cpp:463:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:54:38 **** Auto Build of configuration Debug for project psOnly_1mod ****
 make all 
-make: Nothing to be done for `all'.
-18:30:13 **** Incremental Build of configuration Debug for project sensorMod_test ****
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:116:25: error: 'Kalman_T' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+../src/main.cpp:116:25: note: suggested alternative: 'KalmanPos'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+                         KalmanPos
+../src/main.cpp:116:36: error: 'posReadC' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                                    ^~~~~~~~
+../src/main.cpp:116:36: note: suggested alternative: 'posVelC'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                                    ^~~~~~~~
+                                    posVelC
+../src/main.cpp:117:1: error: 'KalmanSimple' does not name a type; did you mean 'KalmanPos'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ KalmanPos
+../src/main.cpp:140:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:150:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:169:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:169:15: error: 'u32' was not declared in this scope
+../src/main.cpp:169:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:169:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:169:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:170:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:170:12: error: 'u32' was not declared in this scope
+../src/main.cpp:170:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:172:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:177:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:177:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:177:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:180:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:180:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:183:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:187:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:187:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:187:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:191:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:192:2: error: 'global_flag' was not declared in this scope
+  global_flag = true;
+  ^~~~~~~~~~~
+../src/main.cpp:195:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:195:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:195:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:200:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:207:8: error: 'Kalman_T' was not declared in this scope
+  delay(Kalman_T);
+        ^~~~~~~~
+../src/main.cpp:207:8: note: suggested alternative: 'KalmanPos'
+  delay(Kalman_T);
+        ^~~~~~~~
+        KalmanPos
+../src/main.cpp:207:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:216:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:217:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:217:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:240:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:240:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:240:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:266:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:267:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:267:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:307:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:307:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:311:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:312:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:312:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:318:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:318:2: note: suggested alternative: 'pi'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pi
+../src/main.cpp:318:23: error: 'minOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                       ^~~~~~~~~
+../src/main.cpp:318:34: error: 'maxOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                                  ^~~~~~~~~
+../src/main.cpp:319:21: error: 'pid_T' was not declared in this scope
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+../src/main.cpp:319:21: note: suggested alternative: 'pid_t'
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+                     pid_t
+../src/main.cpp:325:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:325:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:332:21: error: 'imp_T' was not declared in this scope
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+../src/main.cpp:332:21: note: suggested alternative: 'impC'
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+                     impC
+../src/main.cpp:343:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:351:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:351:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:354:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:356:3: error: 'currReadC' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+../src/main.cpp:356:3: note: suggested alternative: 'currC'
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+   currC
+../src/main.cpp:356:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:357:3: error: 'posReadC' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+../src/main.cpp:357:3: note: suggested alternative: 'posVelC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+   posVelC
+../src/main.cpp:357:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp: At global scope:
+../src/main.cpp:454:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:454:15: error: 'u32' was not declared in this scope
+../src/main.cpp:454:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:454:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:454:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:465:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:465:12: error: 'u32' was not declared in this scope
+../src/main.cpp:465:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:58:01 **** Auto Build of configuration Debug for project psOnly_1mod ****
 make all 
-make: Nothing to be done for `all'.
-18:31:51 **** Auto Build of configuration Debug for project sensorMod_test ****
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:116:25: error: 'Kalman_T' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+../src/main.cpp:116:25: note: suggested alternative: 'KalmanPos'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                         ^~~~~~~~
+                         KalmanPos
+../src/main.cpp:116:36: error: 'posReadC' was not declared in this scope
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                                    ^~~~~~~~
+../src/main.cpp:116:36: note: suggested alternative: 'posVelC'
+ KalmanPos posC_Kalman(  Kalman_T, &posReadC,  posVelC);
+                                    ^~~~~~~~
+                                    posVelC
+../src/main.cpp:117:1: error: 'KalmanSimple' does not name a type; did you mean 'KalmanPos'?
+ KalmanSimple currC_Kalman( Kalman_T, &currReadC,  &currC);
+ ^~~~~~~~~~~~
+ KalmanPos
+../src/main.cpp:140:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:150:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:169:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:169:15: error: 'u32' was not declared in this scope
+../src/main.cpp:169:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:169:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:169:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:170:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:170:12: error: 'u32' was not declared in this scope
+../src/main.cpp:170:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:172:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:177:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:177:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:177:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:180:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:180:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:183:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:187:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:187:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:187:2: note: suggested alternative: 'pidM_Out'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  pidM_Out
+../src/main.cpp:191:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:192:2: error: 'global_flag' was not declared in this scope
+  global_flag = true;
+  ^~~~~~~~~~~
+../src/main.cpp:195:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:195:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:195:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:200:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:207:8: error: 'Kalman_T' was not declared in this scope
+  delay(Kalman_T);
+        ^~~~~~~~
+../src/main.cpp:207:8: note: suggested alternative: 'KalmanPos'
+  delay(Kalman_T);
+        ^~~~~~~~
+        KalmanPos
+../src/main.cpp:207:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:216:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:217:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:217:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:240:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:240:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:240:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:266:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:267:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:267:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:307:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:307:2: note: suggested alternative: 'posC_Kalman'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  posC_Kalman
+../src/main.cpp:311:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:312:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:312:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:318:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:318:2: note: suggested alternative: 'pi'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pi
+../src/main.cpp:318:23: error: 'minOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                       ^~~~~~~~~
+../src/main.cpp:318:34: error: 'maxOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                                  ^~~~~~~~~
+../src/main.cpp:319:21: error: 'pid_T' was not declared in this scope
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+../src/main.cpp:319:21: note: suggested alternative: 'pid_t'
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+                     pid_t
+../src/main.cpp:325:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:325:2: note: suggested alternative: 'fl_torque'
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+  fl_torque
+../src/main.cpp:332:21: error: 'imp_T' was not declared in this scope
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+../src/main.cpp:332:21: note: suggested alternative: 'impC'
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+                     impC
+../src/main.cpp:343:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:351:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:351:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:354:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:356:3: error: 'currReadC' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+../src/main.cpp:356:3: note: suggested alternative: 'currC'
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+   currC
+../src/main.cpp:356:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:357:3: error: 'posReadC' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+../src/main.cpp:357:3: note: suggested alternative: 'posVelC'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+   posVelC
+../src/main.cpp:357:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp: At global scope:
+../src/main.cpp:454:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:454:15: error: 'u32' was not declared in this scope
+../src/main.cpp:454:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:454:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:454:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:465:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:465:12: error: 'u32' was not declared in this scope
+../src/main.cpp:465:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1
+20:58:08 **** Auto Build of configuration Debug for project psOnly_1mod ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:112:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:108:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:104:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:100:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:96:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:92:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:88:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:82:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:81:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:80:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:71:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:68:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:67:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:66:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:61:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         posIn_f, currIn_f, voltIn_f, pos_filt, vel_filt, curr_filt);
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:61:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'pos_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'vel_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:61:20: warning: 'curr_filt' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11417	    328	     16	  11761	   2df1	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:31:57 **** Incremental Build of configuration Debug for project sensorMod_test ****
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:11:10: fatal error: xil_uio.h: No such file or directory
+ #include "xil_uio.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/main.o] Error 1
+20:59:03 **** Auto Build of configuration Debug for project psOnly_1mod ****
 make all 
-make: Nothing to be done for `all'.
-18:33:40 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:115:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:111:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:107:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:103:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:99:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:95:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:91:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:85:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:84:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:83:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:74:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:71:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:70:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:69:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:64:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-         posIn_f, currIn_f, voltIn_f, pos_filt, vel_filt, curr_filt);
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:64:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:64:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11465	    328	     16	  11809	   2e21	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:34:32 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:119:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:115:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:111:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:107:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:103:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:99:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:95:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:89:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:88:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:87:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:78:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:75:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:74:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:73:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11513	    328	     16	  11857	   2e51	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:34:49 **** Incremental Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/SensorMod.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
-'Finished building: ../src/SensorMod.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11417	    328	     16	  11761	   2df1	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:35:37 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:119:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:115:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:111:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:107:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:103:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:99:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:95:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:89:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:88:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:87:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:78:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:75:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:74:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:73:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11589	    328	     16	  11933	   2e9d	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:35:38 **** Incremental Build of configuration Debug for project sensorMod_test ****
-make all 
-make: Nothing to be done for `all'.
-18:49:18 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/SensorMod.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
-'Finished building: ../src/SensorMod.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11685	    328	     16	  12029	   2efd	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:50:19 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/SensorMod.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
-'Finished building: ../src/SensorMod.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11685	    328	     16	  12029	   2efd	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:52:32 **** Incremental Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:119:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:115:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:111:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:107:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:103:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:99:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:95:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:89:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:88:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:87:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:78:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:75:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:74:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:73:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11685	    328	     16	  12029	   2efd	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:52:54 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:120:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:116:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:112:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:108:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:104:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:100:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:96:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:90:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:89:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:88:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:79:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:76:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:75:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:74:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:69:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE, posIn_f, currIn_f, voltIn_f,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       pos_filt, vel_filt, curr_filt);
-       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:69:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'pos_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'vel_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'curr_filt' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11589	    328	     16	  11933	   2e9d	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:52:58 **** Incremental Build of configuration Debug for project sensorMod_test ****
-make all 
-make: Nothing to be done for `all'.
-18:56:41 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:120:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:116:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:112:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:108:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:104:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:100:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:96:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:90:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:89:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:88:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:79:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:76:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:75:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:74:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:69:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE, posIn_f, currIn_f, voltIn_f,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       pos_filt, vel_filt, curr_filt);
-       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:69:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'pos_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'vel_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'curr_filt' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11597	    328	     16	  11941	   2ea5	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:56:45 **** Incremental Build of configuration Debug for project sensorMod_test ****
-make all 
-make: Nothing to be done for `all'.
-18:56:57 **** Auto Build of configuration Debug for project sensorMod_test ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:138:44: warning: format '%f' expects a matching 'double' argument [-Wformat=]
-      printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i, rawPos[i],rawCurr[i],
-                                         ~~~^
-../src/main.c:138:51: warning: format '%f' expects a matching 'double' argument [-Wformat=]
-      printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f |\n", i, rawPos[i],rawCurr[i],
-                                                ~~~^
-../src/main.c:120:16: warning: unused variable 'impThumb2' [-Wunused-variable]
-     impedance *impThumb2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~~
-../src/main.c:116:16: warning: unused variable 'impInd2' [-Wunused-variable]
-     impedance *impInd2 = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:112:16: warning: unused variable 'impThumb' [-Wunused-variable]
-     impedance *impThumb = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~~
-../src/main.c:108:16: warning: unused variable 'impLit' [-Wunused-variable]
-     impedance *impLit = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:104:16: warning: unused variable 'impRing' [-Wunused-variable]
-     impedance *impRing = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~~
-../src/main.c:100:16: warning: unused variable 'impMid' [-Wunused-variable]
-     impedance *impMid = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:96:16: warning: unused variable 'impInd' [-Wunused-variable]
-     impedance *impInd = impedance__create((_real *)(curr_filt+impMod), (_real *)(pos_filt+impMod),
-                ^~~~~~
-../src/main.c:90:21: warning: unused variable 'outMin' [-Wunused-variable]
-                     outMin = -1023.00;
-                     ^~~~~~
-../src/main.c:89:21: warning: unused variable 'outMax' [-Wunused-variable]
-                     outMax = 1023.00,
-                     ^~~~~~
-../src/main.c:88:21: warning: unused variable 'P' [-Wunused-variable]
-                     P = 516.001357364368,
-                     ^
-../src/main.c:79:11: warning: unused variable 'cenCurr' [-Wunused-variable]
-     float cenCurr = 36486.206;
-           ^~~~~~~
-../src/main.c:76:11: warning: unused variable 'nQ' [-Wunused-variable]
-     float nQ = 3;
-           ^~
-../src/main.c:75:11: warning: unused variable 'R' [-Wunused-variable]
-     float R = 8.2673e-04;
-           ^
-../src/main.c:74:11: warning: unused variable 'dt' [-Wunused-variable]
-     float dt = 5e-3;
-           ^~
-../src/main.c:69:20: warning: 'posIn_f' is used uninitialized in this function [-Wuninitialized]
-     sensor_handler = sensorMod__create(uio_sensorMod, XIL_SIZE, posIn_f, currIn_f, voltIn_f,
-     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-       pos_filt, vel_filt, curr_filt);
-       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c:69:20: warning: 'currIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'voltIn_f' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'pos_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'vel_filt' is used uninitialized in this function [-Wuninitialized]
-../src/main.c:69:20: warning: 'curr_filt' is used uninitialized in this function [-Wuninitialized]
-'Finished building: ../src/main.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
-arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
-arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  11541	    328	     16	  11885	   2e6d	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
-18:57:00 **** Incremental Build of configuration Debug for project sensorMod_test ****
-make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 Linux g++ compiler'
+arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:56:1: error: 'TorqueCalc' does not name a type
+ TorqueCalc torqueC(  &tVelC_In, &tVC_In, &tCurrC_In,  &tValC_Out);
+ ^~~~~~~~~~
+../src/main.cpp:66:1: error: 'PID' does not name a type
+ PID pidC( &pidC_In, &pidC_Out, &pidC_sp, K_p, K_i, K_d, DIRECT);
+ ^~~
+../src/main.cpp:75:19: error: 'impC_In' was not declared in this scope
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                   ^~~~~~~
+../src/main.cpp:75:19: note: suggested alternative: 'impC'
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                   ^~~~~~~
+                   impC
+../src/main.cpp:75:29: error: 'impC_x' was not declared in this scope
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                             ^~~~~~
+../src/main.cpp:75:29: note: suggested alternative: 'impC'
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                             ^~~~~~
+                             impC
+../src/main.cpp:75:38: error: 'impC_w' was not declared in this scope
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                                      ^~~~~~
+../src/main.cpp:75:38: note: suggested alternative: 'impC'
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                                      ^~~~~~
+                                      impC
+../src/main.cpp:75:47: error: 'impC_out' was not declared in this scope
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                                               ^~~~~~~~
+../src/main.cpp:75:47: note: suggested alternative: 'impOut'
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                                               ^~~~~~~~
+                                               impOut
+../src/main.cpp:75:58: error: 'impC_sp' was not declared in this scope
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                                                          ^~~~~~~
+../src/main.cpp:75:58: note: suggested alternative: 'imp_sp'
+ Impedance impC(  &impC_In, &impC_x, &impC_w, &impC_out, &impC_sp, M, B, K, DIRECT);
+                                                          ^~~~~~~
+                                                          imp_sp
+../src/main.cpp:85:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+../src/main.cpp:85:15: error: 'u32' was not declared in this scope
+../src/main.cpp:85:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+               ^~~
+               dup2
+../src/main.cpp:85:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                           ^~~~~~
+../src/main.cpp:85:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out);
+                                           ^~~~~~
+../src/main.cpp:86:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms);
+            ^~~
+../src/main.cpp:86:12: error: 'u32' was not declared in this scope
+../src/main.cpp:86:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms);
+            ^~~
+            dup2
+../src/main.cpp:88:1: error: 'XGpio' does not name a type
+ XGpio Gpio;
+ ^~~~~
+../src/main.cpp: In function 'int main()':
+../src/main.cpp:94:12: error: 'pwmPinC' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+            ^~~~~~~
+../src/main.cpp:94:27: error: 'antPid_Out_C' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+                           ^~~~~~~~~~~~
+../src/main.cpp:94:2: error: 'setMotor' was not declared in this scope
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+../src/main.cpp:94:2: note: suggested alternative: 'strtoq'
+  setMotor( pwmPinC, 0.0, &antPid_Out_C);
+  ^~~~~~~~
+  strtoq
+../src/main.cpp:97:2: error: 'init_platform' was not declared in this scope
+  init_platform();
+  ^~~~~~~~~~~~~
+../src/main.cpp:97:2: note: suggested alternative: 'initstate_r'
+  init_platform();
+  ^~~~~~~~~~~~~
+  initstate_r
+../src/main.cpp:100:2: error: 'init_Xanalog' was not declared in this scope
+  init_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:104:11: error: 'led' was not declared in this scope
+  Xil_Out8(led,0xFF);
+           ^~~
+../src/main.cpp:104:2: error: 'Xil_Out8' was not declared in this scope
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+../src/main.cpp:104:2: note: suggested alternative: 'impOut'
+  Xil_Out8(led,0xFF);
+  ^~~~~~~~
+  impOut
+../src/main.cpp:108:2: error: 'u8' was not declared in this scope
+  u8 swRawData;
+  ^~
+../src/main.cpp:109:2: error: 'global_flag' was not declared in this scope
+  global_flag = true;
+  ^~~~~~~~~~~
+../src/main.cpp:112:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:112:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:112:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:117:3: error: 'delay' was not declared in this scope
+   delay(100);
+   ^~~~~
+../src/main.cpp:124:8: error: 'Kalman_T' was not declared in this scope
+  delay(Kalman_T);
+        ^~~~~~~~
+../src/main.cpp:124:8: note: suggested alternative: 'KalmanPos'
+  delay(Kalman_T);
+        ^~~~~~~~
+        KalmanPos
+../src/main.cpp:124:2: error: 'delay' was not declared in this scope
+  delay(Kalman_T);
+  ^~~~~
+../src/main.cpp:133:3: error: 'wait_Xanalog' was not declared in this scope
+   wait_Xanalog();
+   ^~~~~~~~~~~~
+../src/main.cpp:134:25: error: 'anPinC_Pos' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+                         ^~~~~~~~~~
+../src/main.cpp:134:13: error: 'XanalogRead' was not declared in this scope
+   pos_tmp = XanalogRead(anPinC_Pos);
+             ^~~~~~~~~~~
+../src/main.cpp:157:3: error: 'swRawData' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+   ^~~~~~~~~
+../src/main.cpp:157:23: error: 'dipSw' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+                       ^~~~~
+../src/main.cpp:157:15: error: 'Xil_In8' was not declared in this scope
+   swRawData = Xil_In8(dipSw);
+               ^~~~~~~
+../src/main.cpp:183:4: error: 'wait_Xanalog' was not declared in this scope
+    wait_Xanalog();
+    ^~~~~~~~~~~~
+../src/main.cpp:184:25: error: 'anPinC_Curr' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+                         ^~~~~~~~~~~
+../src/main.cpp:184:13: error: 'XanalogRead' was not declared in this scope
+    sum_1 += XanalogRead(anPinC_Curr);
+             ^~~~~~~~~~~
+../src/main.cpp:199:2: error: 'centerCurrentC' was not declared in this scope
+  centerCurrentC = sum_1 * 0.002;
+  ^~~~~~~~~~~~~~
+../src/main.cpp:199:2: note: suggested alternative: 'cenCurr'
+  centerCurrentC = sum_1 * 0.002;
+  ^~~~~~~~~~~~~~
+  cenCurr
+../src/main.cpp:222:2: error: 'posC_Kalman' was not declared in this scope
+  posC_Kalman.Set_R(4);
+  ^~~~~~~~~~~
+../src/main.cpp:224:2: error: 'currC_Kalman' was not declared in this scope
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+../src/main.cpp:224:2: note: suggested alternative: 'curr_filt'
+  currC_Kalman.Set_R(1.321);
+  ^~~~~~~~~~~~
+  curr_filt
+../src/main.cpp:228:2: error: 'wait_Xanalog' was not declared in this scope
+  wait_Xanalog();
+  ^~~~~~~~~~~~
+../src/main.cpp:229:24: error: 'anPinC_Pos' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+                        ^~~~~~~~~~
+../src/main.cpp:229:12: error: 'XanalogRead' was not declared in this scope
+  pos_tmp = XanalogRead(anPinC_Pos);
+            ^~~~~~~~~~~
+../src/main.cpp:233:2: error: 'pidC_In' was not declared in this scope
+  pidC_In = porR_tmp;
+  ^~~~~~~
+../src/main.cpp:233:2: note: suggested alternative: 'pid_t'
+  pidC_In = porR_tmp;
+  ^~~~~~~
+  pid_t
+../src/main.cpp:234:2: error: 'pidC_sp' was not declared in this scope
+  pidC_sp = porR_tmp;
+  ^~~~~~~
+../src/main.cpp:234:2: note: suggested alternative: 'imp_sp'
+  pidC_sp = porR_tmp;
+  ^~~~~~~
+  imp_sp
+../src/main.cpp:235:2: error: 'pidC' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+../src/main.cpp:235:2: note: suggested alternative: 'pi'
+  pidC.SetOutputLimits(minOutput, maxOutput);
+  ^~~~
+  pi
+../src/main.cpp:235:23: error: 'minOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                       ^~~~~~~~~
+../src/main.cpp:235:34: error: 'maxOutput' was not declared in this scope
+  pidC.SetOutputLimits(minOutput, maxOutput);
+                                  ^~~~~~~~~
+../src/main.cpp:236:21: error: 'pid_T' was not declared in this scope
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+../src/main.cpp:236:21: note: suggested alternative: 'pid_t'
+  pidC.SetSampleTime(pid_T);
+                     ^~~~~
+                     pid_t
+../src/main.cpp:239:2: error: 'tVelC_In' was not declared in this scope
+  tVelC_In = 0;
+  ^~~~~~~~
+../src/main.cpp:240:2: error: 'tVC_In' was not declared in this scope
+  tVC_In = 0;
+  ^~~~~~
+../src/main.cpp:241:2: error: 'tCurrC_In' was not declared in this scope
+  tCurrC_In = 0;
+  ^~~~~~~~~
+../src/main.cpp:242:2: error: 'torqueC' was not declared in this scope
+  torqueC.SetCurrentCenter(centerCurrentC);
+  ^~~~~~~
+../src/main.cpp:245:2: error: 'impC_In' was not declared in this scope
+  impC_In = 0;
+  ^~~~~~~
+../src/main.cpp:245:2: note: suggested alternative: 'impC'
+  impC_In = 0;
+  ^~~~~~~
+  impC
+../src/main.cpp:246:2: error: 'impC_sp' was not declared in this scope
+  impC_sp = 0;
+  ^~~~~~~
+../src/main.cpp:246:2: note: suggested alternative: 'imp_sp'
+  impC_sp = 0;
+  ^~~~~~~
+  imp_sp
+../src/main.cpp:247:2: error: 'impC_x' was not declared in this scope
+  impC_x = porR_tmp;
+  ^~~~~~
+../src/main.cpp:247:2: note: suggested alternative: 'impC'
+  impC_x = porR_tmp;
+  ^~~~~~
+  impC
+../src/main.cpp:248:2: error: 'impC_w' was not declared in this scope
+  impC_w = 0;
+  ^~~~~~
+../src/main.cpp:248:2: note: suggested alternative: 'impC'
+  impC_w = 0;
+  ^~~~~~
+  impC
+../src/main.cpp:249:21: error: 'imp_T' was not declared in this scope
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+../src/main.cpp:249:21: note: suggested alternative: 'impC'
+  impC.SetSampleTime(imp_T);
+                     ^~~~~
+                     impC
+../src/main.cpp:260:2: error: 't' was not declared in this scope
+  t = millis();
+  ^
+../src/main.cpp:268:3: error: 'u32' was not declared in this scope
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+../src/main.cpp:268:3: note: suggested alternative: 'dup2'
+   u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+   ^~~
+   dup2
+../src/main.cpp:271:7: error: expected ';' before 'posReadC_Raw'
+   u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+       ^~~~~~~~~~~~
+../src/main.cpp:273:3: error: 'currReadC' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+   ^~~~~~~~~
+../src/main.cpp:273:23: error: 'currReadC_Raw' was not declared in this scope
+   currReadC = (double)currReadC_Raw;
+                       ^~~~~~~~~~~~~
+../src/main.cpp:274:3: error: 'posReadC' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+../src/main.cpp:274:3: note: suggested alternative: 'pread'
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+   ^~~~~~~~
+   pread
+../src/main.cpp:274:21: error: 'posReadC_Raw' was not declared in this scope
+   posReadC = (float)posReadC_Raw*RAD_ADC;
+                     ^~~~~~~~~~~~
+../src/main.cpp:278:3: error: 'fl_pos' was not declared in this scope
+   fl_pos = fl_pos || posC_Kalman.Estimate();
+   ^~~~~~
+../src/main.cpp:278:3: note: suggested alternative: '__pow'
+   fl_pos = fl_pos || posC_Kalman.Estimate();
+   ^~~~~~
+   __pow
+../src/main.cpp:279:3: error: 'fl_curr' was not declared in this scope
+   fl_curr = fl_curr || currC_Kalman.Estimate();
+   ^~~~~~~
+../src/main.cpp:286:15: error: 'posVelC' was not declared in this scope
+    tVelC_In = posVelC[1];
+               ^~~~~~~
+../src/main.cpp:287:13: error: 'pidC_Out' was not declared in this scope
+    tVC_In = pidC_Out;
+             ^~~~~~~~
+../src/main.cpp:287:13: note: suggested alternative: 'pid_t'
+    tVC_In = pidC_Out;
+             ^~~~~~~~
+             pid_t
+../src/main.cpp:288:16: error: 'currC' was not declared in this scope
+    tCurrC_In = currC;
+                ^~~~~
+../src/main.cpp:289:4: error: 'fl_torque' was not declared in this scope
+    fl_torque = torqueC.Compute();
+    ^~~~~~~~~
+../src/main.cpp:298:13: error: 'tValC_Out' was not declared in this scope
+   impC_In = tValC_Out;
+             ^~~~~~~~~
+../src/main.cpp:300:12: error: 'posVelC' was not declared in this scope
+   impC_x = posVelC[0];
+            ^~~~~~~
+../src/main.cpp:302:3: error: 'flagI_C' was not declared in this scope
+   flagI_C = impC.Compute();
+   ^~~~~~~
+../src/main.cpp:306:13: error: 'impC_out' was not declared in this scope
+   pidC_sp = impC_out;
+             ^~~~~~~~
+../src/main.cpp:306:13: note: suggested alternative: 'impOut'
+   pidC_sp = impC_out;
+             ^~~~~~~~
+             impOut
+../src/main.cpp:308:3: error: 'flagM_C' was not declared in this scope
+   flagM_C = pidC.Compute();
+   ^~~~~~~
+../src/main.cpp:310:22: error: 'pidC_Out' was not declared in this scope
+    setMotor(pwmPinC, pidC_Out, &antPid_Out_C);
+                      ^~~~~~~~
+../src/main.cpp:310:22: note: suggested alternative: 'pid_t'
+    setMotor(pwmPinC, pidC_Out, &antPid_Out_C);
+                      ^~~~~~~~
+                      pid_t
+../src/main.cpp: At global scope:
+../src/main.cpp:371:15: error: variable or field 'setMotor' declared void
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+../src/main.cpp:371:15: error: 'u32' was not declared in this scope
+../src/main.cpp:371:15: note: suggested alternative: 'dup2'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+               ^~~
+               dup2
+../src/main.cpp:371:27: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                           ^~~~~~
+../src/main.cpp:371:43: error: expected primary-expression before 'double'
+ void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+                                           ^~~~~~
+../src/main.cpp:382:12: error: variable or field 'delay' declared void
+ void delay(u32 time_ms){
+            ^~~
+../src/main.cpp:382:12: error: 'u32' was not declared in this scope
+../src/main.cpp:382:12: note: suggested alternative: 'dup2'
+ void delay(u32 time_ms){
+            ^~~
+            dup2
+make: *** [src/main.o] Error 1

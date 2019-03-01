@@ -1,0 +1,140 @@
+#include "KalmanPos_v1.hpp"
+
+//--------------------------------------------------------------------------//
+// Constructor that receives SampleTime, the pointer for the current estate and 
+// the vector x[2] for the estimations
+KalmanPos::KalmanPos(int SampleTime, double* z, double* x) {
+	my_z = z;
+	Mode = OUTANPIN;
+
+	my_dt = (double)SampleTime*0.001;
+	my_SampleTime = SampleTime * 1000;
+	my_x = x;
+
+}
+
+
+//--------------------------------------------------------------------------//
+// Estimator receives the current (noisy) estate from sensor and returns the estimation
+bool KalmanPos::Estimate()
+{
+	if (!inAuto) return false;
+
+	unsigned long now = millis();
+	unsigned long timeChange = (now - lastTime);
+	if (timeChange >= my_SampleTime) {
+
+		if (Mode == OUTANPIN)
+		{
+			z = *my_z;
+		}
+
+
+		/*  xp = Ax; */
+		xp[0] = my_x[0] + my_x[1] * my_dt;
+		xp[1] = my_x[1];
+
+		/*  Pp = A*P*A' + Q;     */
+		for (i0 = 0; i0 < 2; i0++) {
+			for (i1 = 0; i1 < 2; i1++) {
+				a[i0 + (i1 << 1)] = 0.0;
+				for (i2 = 0; i2 < 2; i2++) {
+					a[i0 + (i1 << 1)] += b_a[i0 + (i2 << 1)] * P[i2 + (i1 << 1)];
+				}
+			}
+		}
+
+		for (i0 = 0; i0 < 2; i0++) {
+			for (i1 = 0; i1 < 2; i1++) {
+				b = 0.0;
+				for (i2 = 0; i2 < 2; i2++) {
+					b += a[i0 + (i2 << 1)] * b_b[i2 + (i1 << 1)];
+				}
+
+				Pp[i0 + (i1 << 1)] = b + Q[i0 + (i1 << 1)];
+			}
+		}
+
+		/*  K = Pp*H'/(H*Pp*H' + R); */
+		/*  x = xp + K*(z - H*xp); */
+		b = z - xp[0];
+		for (i0 = 0; i0 < 2; i0++) {
+			b_K = Pp[i0] / (Pp[0] + R);
+			my_x[i0] = xp[i0] + b_K * b;
+			K[i0] = b_K;
+		}
+
+		/*  P = Pp - K*H*Pp; */
+		for (i0 = 0; i0 < 2; i0++) {
+			for (i1 = 0; i1 < 2; i1++) {
+				P[i0 + (i1 << 1)] = Pp[i0 + (i1 << 1)] - K[i0] * Pp[i1 << 1];
+			}
+		}
+
+		/*  pos = x(1); */
+		/*  vel = x(2); */
+
+		/*Remember some variables for next time*/
+		lastTime = now;
+
+		return true;
+
+	}
+	else return false;
+
+}
+
+//--------------------------------------------------------------------------//
+// Set mode to automatic or manual
+
+void KalmanPos::SetMode(int Mode)
+{
+	bool newAuto = (Mode == AUTOMATIC);
+	if (newAuto == !inAuto)
+	{  /*we just went from manual to auto*/
+		KalmanPos::Initialize();
+	}
+	inAuto = newAuto;
+}
+
+//--------------------------------------------------------------------------//
+// Here the Filter is Initialized
+
+void KalmanPos::Initialize() {
+
+	if (Mode == OUTANPIN)
+	{
+		my_x[0] = *my_z;
+	}
+
+	my_x[1] = 0;
+
+	b_b[1] = my_dt;
+	b_a[2] = my_dt;
+	/*
+	Q = nQ * [	(1 / 3)*dt ^ 3		(1 / 2)*dt ^ 2;
+				(1 / 2)*dt ^ 2				dt		];
+	*/
+	Q[0] = nQ*0.3333*my_dt*my_dt*my_dt;
+	Q[1] = nQ*0.5*my_dt*my_dt;
+	Q[2] = nQ*0.5*my_dt*my_dt;
+	Q[3] = nQ*my_dt;
+
+	P[0] = R;
+	P[3] = R;
+
+	lastTime = millis();
+
+}
+
+//--------------------------------------------------------------------------//
+// This functions are to set new values to the variance R and the multiplication 
+// factor of the Q matrix nQ, this are meant to be used at the start only. since the
+// calculation of the matrices Q and P initial are calculated only in the initialization
+// function and only there
+void KalmanPos::Set_R(double new_R) { R = new_R; }
+void KalmanPos::Set_nQ(double new_nQ) { nQ = new_nQ; }
+
+//--------------------------------------------------------------------------//
+// With this function you can access to the las raw value measured by the 
+double KalmanPos::GetLast() { return z; }

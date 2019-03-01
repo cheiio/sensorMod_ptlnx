@@ -1,0 +1,22 @@
+/*
+ * time_measuring.h
+ *
+ *  Created on: 18 de dez de 2017
+ *      Author: sapmc
+ */
+
+#ifndef TIME_MEAS_H
+#define TIME_MEAS_H
+
+#include <time.h>
+#include <stdint.h>
+
+	clock_t millis(){
+		struct timespec tp;
+		clock_gettime(CLOCK_MONOTONIC, &tp);
+		clock_t  x_time = tp.tv_nsec;
+
+		x_time = x_time * 1e3 / CLOCKS_PER_SEC;
+	}
+	
+#endif /* SRC_TIME_MEASURING_H_ */

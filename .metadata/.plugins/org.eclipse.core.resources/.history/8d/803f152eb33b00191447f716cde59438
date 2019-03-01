@@ -1,0 +1,61 @@
+#ifndef KALMANSIMPLE_V1_H
+#define KALMANSIMPLE_V1_H
+
+#include "XTime_Meas.h"
+
+class KalmanSimple
+{
+public:
+	// Constants
+#define AUTOMATIC 1
+#define MANUAL 0
+#define INANPIN 1
+#define OUTANPIN 0
+
+	KalmanSimple(int, double*, double*);	// Constructor
+
+	bool Estimate();	// This funtion estimates the current estate
+	void SetMode(int);
+
+	// Functions to custom the filter... These are meant to be used rigth after the constructor
+	// I dont think the behavior will be correct if you set these in the middle of the filtering
+	void Set_R(double);
+	void Set_nQ(double);
+
+	// Display Functions
+	int GetLast();
+
+private:
+	void Initialize();
+
+	double xp;
+
+	double z;
+	unsigned int my_SampleTime;
+	unsigned long lastTime;
+	bool inAuto;
+	int Mode;
+
+	double *my_z;
+	double *my_x;
+	int my_anPin;
+	double my_dt;
+
+	double Pp;
+
+	double Q;
+
+	double P = 176.60*65535/1023;
+
+	double R = 176.60*65535/1023;
+	double nQ = 1000*65535/1023;
+
+/*	double P = 176.60;
+
+	double R = 176.60;
+	double nQ = 1000;
+*/
+	double K;
+};
+
+#endif // !KALMANsimple_H
