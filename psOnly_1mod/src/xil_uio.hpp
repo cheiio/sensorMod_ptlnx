@@ -10,22 +10,19 @@
 
 // Global Variables
 
-typedef struct xil_uio_t{
-    uint32_t mapSize;
-	uint32_t fd;
-	void*   virtAddr;
-} xil_uio;
+class xil_uio {
+	public:
+		xil_uio(const char *_uio_dev, const uint32_t _uio_size);	// Creates UIO handler for /dev/uio* device
 
-xil_uio* xil_uio__create(const char *_uio_dev,
-		const uint32_t _uio_size);    			// Creates UIO handler for /dev/uio* device
-void xil_uio__destroy(xil_uio* self);           // Destroys UIO handler for /dev/uio* device
-
-uint32_t xil_uio__mapSize(xil_uio* self);     // Public method that contains mapsize
-uint32_t xil_uio__fd(xil_uio* self);          // Public method that contains fd /dev/uio* file pointer
-void*    xil_uio__virtAddr(xil_uio* self);    // Public method that contains virtual mem address for /dev/uio*
-
-uint32_t xil_uio__read32(xil_uio* self, const uint32_t offset); // reads data from virtual mem address with offset
-void xil_uio__write32 (xil_uio* self, const uint32_t offset, const uint32_t writeval); 
+		uint32_t read32(const uint32_t offset); 	// reads data from virtual mem address with offset
+		void write32 (const uint32_t offset, const uint32_t writeval); 
                                                                 // writes data from virtual mem address with offset
+	private:
+		uint32_t mapSize;
+		uint32_t fd;
+		void*   virtAddr;
+
+};
+   
 
 #endif /* end of protection macro */

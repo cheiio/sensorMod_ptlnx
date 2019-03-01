@@ -9,8 +9,8 @@
 /*Constructor (...)*********************************************************
 *    The Controller parameters are specified in here.
 ***************************************************************************/
-Impedance::Impedance(double* Input, double* x_e, double* x_ep, double* Output, double* Setpoint,
-	double M, double B, double K, int ControllerDirection){
+Impedance::Impedance(_real* Input, _real* x_e, _real* x_ep, _real* Output, _real* Setpoint,
+	_real M, _real B, _real K, int32_t ControllerDirection){
 
 	myOutput = Output;
 	myInput = Input;
@@ -22,7 +22,7 @@ Impedance::Impedance(double* Input, double* x_e, double* x_ep, double* Output, d
 	inAuto = false;
 
 	SampleTime = 5;							//default Controller Sample Time is 0.005 seconds
-	SampleTimeInSec = ((double)SampleTime) * 0.001;
+	SampleTimeInSec = ((_real)SampleTime) * 0.001;
 
 	xpp = 0;
 	xp = 0;
@@ -32,8 +32,8 @@ Impedance::Impedance(double* Input, double* x_e, double* x_ep, double* Output, d
 	last_xp = 0;
 	last_x = *my_x;
 
-	Impedance::SetControllerDirection(ControllerDirection);
-	Impedance::SetTunings(M, B, K);
+	this->SetControllerDirection(ControllerDirection);
+	this->SetTunings(M, B, K);
 
 	lastTime = millis() - SampleTime;
 }
@@ -47,14 +47,14 @@ Impedance::Impedance(double* Input, double* x_e, double* x_ep, double* Output, d
 bool Impedance::Compute(){
 	if (!inAuto) return false;
 
-	unsigned long now = millis();
-	unsigned long timeChange = (now - lastTime);
+	uint64_t now = millis();
+	uint64_t timeChange = (now - lastTime);
 	if (timeChange >= SampleTime){
 		/*Compute all the working error variables*/
-		double input = *myInput;
-		double f_error = *mySetpoint - input;
-		double x_error = x - *my_x;
-		double xp_error = xp - *my_xp;
+		_real input = *myInput;
+		_real f_error = *mySetpoint - input;
+		_real x_error = x - *my_x;
+		_real xp_error = xp - *my_xp;
 
 		/*Compute Impedance Controller Output*/
 
@@ -89,7 +89,7 @@ bool Impedance::Compute(){
 * it's called automatically from the constructor, but tunings can also
 * be adjusted on the fly during normal operation
 ******************************************************************************/
-void Impedance::SetTunings(double M, double B, double K){
+void Impedance::SetTunings(_real M, _real B, _real K){
 
 	if (M<0 || B<0 || K<0) return;
 
@@ -104,11 +104,11 @@ void Impedance::SetTunings(double M, double B, double K){
 /* SetSampleTime(...) *********************************************************
 * sets the period, in Milliseconds, at which the calculation is performed
 ******************************************************************************/
-void Impedance::SetSampleTime(int NewSampleTime){
+void Impedance::SetSampleTime(int32_t NewSampleTime){
 
 	if (NewSampleTime > 0){
 		SampleTime = (unsigned long)NewSampleTime;
-		SampleTimeInSec = ((double)SampleTime) / 1000;
+		SampleTimeInSec = ((_real)SampleTime) / 1000;
 	}
 }
 
@@ -117,7 +117,7 @@ void Impedance::SetSampleTime(int NewSampleTime){
 * when the transition from manual to auto occurs, the controller is
 * automatically initialized
 ******************************************************************************/
-void Impedance::SetMode(int Mode){
+void Impedance::SetMode(int32_t Mode){
 
 	bool newAuto = (Mode == AUTOMATIC);
 	if (newAuto == !inAuto){  /*we just went from manual to auto*/
@@ -143,7 +143,7 @@ void Impedance::Initialize(){
 
 /* SetControllerDirection(...)*************************************************
 ******************************************************************************/
-void Impedance::SetControllerDirection(int Direction){
+void Impedance::SetControllerDirection(int32_t Direction){
 
 	controllerDirection = Direction;
 }
@@ -153,9 +153,9 @@ void Impedance::SetControllerDirection(int Direction){
 * functions query the internal state of the PID.  they're here for display
 * purposes.  this are the functions the PID Front-end uses for example
 ******************************************************************************/
-double Impedance::GetM() { return  dispM; }
-double Impedance::GetB() { return  dispB; }
-double Impedance::GetK() { return  dispK; }
-double Impedance::Get_xp() { return  xp; }
-int Impedance::GetMode() { return  inAuto ? AUTOMATIC : MANUAL; }
-int Impedance::GetDirection() { return controllerDirection; }
+_real Impedance::GetM() { return  dispM; }
+_real Impedance::GetB() { return  dispB; }
+_real Impedance::GetK() { return  dispK; }
+_real Impedance::Get_xp() { return  xp; }
+int32_t Impedance::GetMode() { return  inAuto ? AUTOMATIC : MANUAL; }
+int32_t Impedance::GetDirection() { return controllerDirection; }
