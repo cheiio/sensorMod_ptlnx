@@ -8,7 +8,7 @@ C_SRCS += \
 ../src/MotorDriver.c \
 ../src/SensorMod.c \
 ../src/Time_Meas.c \
-../src/sensorMod_test.c \
+../src/main.c \
 ../src/xil_uio.c 
 
 OBJS += \
@@ -16,7 +16,7 @@ OBJS += \
 ./src/MotorDriver.o \
 ./src/SensorMod.o \
 ./src/Time_Meas.o \
-./src/sensorMod_test.o \
+./src/main.o \
 ./src/xil_uio.o 
 
 C_DEPS += \
@@ -24,7 +24,7 @@ C_DEPS += \
 ./src/MotorDriver.d \
 ./src/SensorMod.d \
 ./src/Time_Meas.d \
-./src/sensorMod_test.d \
+./src/main.d \
 ./src/xil_uio.d 
 
 

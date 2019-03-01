@@ -3,7 +3,9 @@
 //***********************************************  Constructor
 
 // Constructor (without allocation)
-void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size){
+void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_size, float* posIn,
+		float* currIn, float* voltIn, float* pos_filt, float* vel_filt, float* curr_filt){
+    
     self->sensorMod_handler = xil_uio__create(_uio_dev, _uio_size);
 
     // Center Current
@@ -30,68 +32,76 @@ void sensorMod__init(sensorMod* self, const char *_uio_dev, const uint32_t _uio_
     ab[1] = xil_uio__read32(self->sensorMod_handler, OFFSET_b01);
     self->ab._uint32 = ab;
 
-    // Filter
-    uint32_t *pos = (uint32_t*)malloc(4*Nmodules);
-    uint32_t *vel = (uint32_t*)malloc(4*Nmodules);
-    uint32_t *curr = (uint32_t*)malloc(4*Nmodules);
-    self->filt_pos._uint32 = pos;
-    self->filt_vel._uint32 = vel;
-    self->filt_curr._uint32 = curr;
+    // Filter;
+    self->filt_pos._float32 = (float *)pos_filt;
+	self->filt_vel._float32 = (float *)vel_filt;
+	self->filt_curr._float32 = (float *)curr_filt;
+	// Input
+	self->posIn._float32 = (float *)posIn;
+	self->currIn._float32 = (float *)currIn;
+	self->voltIn._float32 = (float *)voltIn;
+
+	self->SampleTime = self->dt._float32[0]*1000;
+	self->lastTime = millis();
 }
 
 // Allocation + initialization
-sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size){
+sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size,
+		float* posIn, float* currIn, float* voltIn, float* pos_filt, float* vel_filt, float* curr_filt){
+        
     sensorMod* result = (sensorMod*) malloc(sizeof(sensorMod));
-    sensorMod__init(result, _uio_dev, _uio_size);
+    sensorMod__init(result, _uio_dev, _uio_size, posIn, currIn, voltIn, 
+                    pos_filt, vel_filt, curr_filt);
     return result;
 }
 
 // Destructor (without deallocation)
 void  sensorMod__reset(sensorMod* self){
-    xil_uio__destroy(self->sensorMod_handler);
+	xil_uio__write32(self->sensorMod_handler, STATUS_R_MOD_W, 7);
 }
 
 // Destructor + deallocation (equivalent to "delete xil_uio")
 void sensorMod__destroy(sensorMod* _sensorMod){
     if (_sensorMod) {
-        sensorMod__reset(_sensorMod);
+        xil_uio__destroy(_sensorMod->sensorMod_handler);
         free(_sensorMod);
     }
 }
 
 
 //***********************************************  Calculating Functions
-void sensorMod__start(sensorMod *self,
-		sensorMod_data_t posIn, sensorMod_data_t currIn, sensorMod_data_t voltIn){
-
+void sensorMod__start(sensorMod *self){
 	uint32_t data_n = 0;
-	for(uint32_t mod=1; mod <= Nmodules; mod++){
-		posIn._uint32[data_n] = (posIn._uint32[data_n] & MASK_MOD_IN) | mod;
-		xil_uio__write32(self->sensorMod_handler, OFFSET_POS, posIn._uint32[data_n]);
+	uint64_t now = millis();
+	uint64_t timeChange = (now - self->lastTime);
+	if (timeChange >= self->SampleTime){
+		for(uint32_t mod=1; mod <= Nmodules; mod++){
+			self->posIn._uint32[data_n] = (self->posIn._uint32[data_n] & MASK_MOD_IN) | mod;
+			xil_uio__write32(self->sensorMod_handler, OFFSET_POS, self->posIn._uint32[data_n]);
 
-		currIn._uint32[data_n] = (currIn._uint32[data_n] & MASK_MOD_IN) | mod;
-		xil_uio__write32(self->sensorMod_handler, OFFSET_VEL_CURR, currIn._uint32[data_n]);
+			self->currIn._uint32[data_n] = (self->currIn._uint32[data_n] & MASK_MOD_IN) | mod;
+			xil_uio__write32(self->sensorMod_handler, OFFSET_VEL_CURR, self->currIn._uint32[data_n]);
 
-		voltIn._uint32[data_n] = (voltIn._uint32[data_n] & MASK_MOD_IN) | mod;
-		xil_uio__write32(self->sensorMod_handler, OFFSET_CURR_VOLT, voltIn._uint32[data_n]);
+			self->voltIn._uint32[data_n] = (self->voltIn._uint32[data_n] & MASK_MOD_IN) | mod;
+			xil_uio__write32(self->sensorMod_handler, OFFSET_CURR_VOLT, self->voltIn._uint32[data_n]);
 
-		data_n++;
+			data_n++;
+		}
+    	sensorMod__wait(self);
+
+		self->lastTime = now;
 	}
 }
 
-void sensorMod__start_float(sensorMod* self,
-		float* posIn_f, float* currIn_f, float* voltIn_f){
-	sensorMod_data_t posIn, currIn, voltIn;
-    posIn._float32 = posIn_f;   currIn._float32 = currIn_f;   voltIn._float32 = voltIn_f;   
-    sensorMod__start(self, posIn, currIn, voltIn);
-}
-
 void sensorMod__get_filteredData(sensorMod* self){
-	for (uint32_t mod=1; mod<Nmodules; mod++){
-		xil_uio__write32(self->sensorMod_handler, STATUS_R_MOD_W, mod);
+	uint32_t xil_mod=0;
+	for (uint32_t mod=0; mod<Nmodules; mod++){
+		xil_mod++;
+		xil_uio__write32(self->sensorMod_handler, STATUS_R_MOD_W, xil_mod);
 		self->filt_pos._uint32[mod] = xil_uio__read32( self->sensorMod_handler, OFFSET_POS);
 		self->filt_vel._uint32[mod] = xil_uio__read32( self->sensorMod_handler, OFFSET_VEL_CURR);
 		self->filt_curr._uint32[mod] = xil_uio__read32( self->sensorMod_handler, OFFSET_CURR_VOLT);
+
 	}
 }
 
@@ -105,6 +115,13 @@ uint32_t sensorMod__isReady(sensorMod* self){
     }
 }
 
+void sensorMod__wait(sensorMod* self){
+	uint32_t flag = 0;
+	while (flag != 1){
+		flag = sensorMod__isReady(self);
+	}
+}
+
 void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data){
     mod_data[0] = self->filt_pos._float32[mod];
     mod_data[1] = self->filt_vel._float32[mod];
@@ -113,35 +130,37 @@ void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data)
 
 //***********************************************  Configuration Functions
 void sensorMod__set_centerCurr(sensorMod* self, float centerCurr){
-    self->center_current._float32 = &centerCurr;
+    self->center_current._float32[0] = centerCurr;
     xil_uio__write32(self->sensorMod_handler, OFFSET_CEN_CURR,
-    		*self->center_current._uint32);
+    		self->center_current._uint32[0]);
 }
 
 void sensorMod__set_Kalman(sensorMod* self, float dt, float R, float nQ){
-    self->dt._float32 = &dt;
-    xil_uio__write32(self->sensorMod_handler, OFFSET_DT, *self->dt._uint32);
-    self->R._float32 = &R;
-    xil_uio__write32(self->sensorMod_handler, OFFSET_R, *self->R._uint32);
+    self->dt._float32[0] = dt;
+    xil_uio__write32(self->sensorMod_handler, OFFSET_DT, self->dt._uint32[0]);
+    self->R._float32[0] = R;
+    xil_uio__write32(self->sensorMod_handler, OFFSET_R, self->R._uint32[0]);
     self->Q._float32[0] = (nQ*dt*dt*dt*dt)/4.0f;    // (nQ*dt^4)/4
     xil_uio__write32(self->sensorMod_handler, OFFSET_Q0, self->Q._uint32[0]);
     self->Q._float32[1] = (nQ*dt*dt*dt)/2.0f;       // (nQ*dt^3)/2 
     xil_uio__write32(self->sensorMod_handler, OFFSET_Q12, self->Q._uint32[1]);
-    self->Q._float32[2] = nQ*dt;                    // nQ*dt 
+    self->Q._float32[2] = nQ*dt*dt;                    // nQ*dt^2
     xil_uio__write32(self->sensorMod_handler, OFFSET_Q3, self->Q._uint32[2]);
+
+    self->SampleTime = dt*1000;
 }
 
 void sensorMod__set_butter(sensorMod* self, float* ab){
     self->ab._float32[0] = ab[0];
-    xil_uio__write32(self->sensorMod_handler->virtAddr, OFFSET_a1, self->ab._uint32[0]);
+    xil_uio__write32(self->sensorMod_handler, OFFSET_a1, self->ab._uint32[0]);
     self->ab._float32[1] = ab[1];
-    xil_uio__write32(self->sensorMod_handler->virtAddr, OFFSET_b01, self->ab._uint32[1]);
+    xil_uio__write32(self->sensorMod_handler, OFFSET_b01, self->ab._uint32[1]);
 }
 
 //***********************************************  Variable Functions
-float sensorMod__get_centerCurr(sensorMod* self){return *self->center_current._float32;}
-float sensorMod__get_dt(sensorMod* self){return *self->dt._float32;};
-float sensorMod__get_R(sensorMod* self){return *self->R._float32;};
+float sensorMod__get_centerCurr(sensorMod* self){return self->center_current._float32[0];}
+float sensorMod__get_dt(sensorMod* self){return self->dt._float32[0];};
+float sensorMod__get_R(sensorMod* self){return self->R._float32[0];};
 float* sensorMod__get_Q(sensorMod* self){return self->Q._float32;};
 float* sensorMod__get_ab(sensorMod* self){return self->ab._float32;};
 
@@ -155,7 +174,7 @@ void sensorMod__printConfig(sensorMod*  self){
 	ab = sensorMod__get_ab(self);
 
 	printf("\n\nSensor Module Configuration Set \n");
-	printf("\tdt = %.10e \n", dt);
+	printf("\tdt = %.10e | %d millis \n", dt, self->SampleTime);
 	printf("\tR = %.10e \n", R);
 	printf("\tQ = { %.10e , %.10e , %.10e } \n", Q[0], Q[1], Q[2]);
 

@@ -4,6 +4,7 @@
 /****************** Include Files ********************/
 
 #include "xil_uio.h"
+#include "Time_Meas.h"
 
 #define SENMOD_SIZE		0x10000
 /*
@@ -62,31 +63,34 @@ typedef struct sensorMod_struct{
 	xil_uio *sensorMod_handler;
 
 	sensorMod_data_t filt_pos, filt_vel, filt_curr;
+	sensorMod_data_t posIn, currIn, voltIn;
 
 	sensorMod_data_t center_current;
 	sensorMod_data_t dt, R, Q;
 	sensorMod_data_t ab;
+
+	uint64_t lastTime;
+	uint64_t SampleTime;
 }sensorMod;
 
 /************************** Driver Class Definition ************************/
 
 //***********************************************  Constructor
-sensorMod* sensorMod__create(const char *_uio_dev,
-		const uint32_t _uio_size);
+sensorMod* sensorMod__create(const char *_uio_dev, const uint32_t _uio_size, 
+	float* posIn, float* currIn, float* voltIn,
+	float* pos_filt, float* vel_filt, float* curr_filt);
 void sensorMod__destroy(sensorMod* self);
 
 
 
 //***********************************************  Calculating Functions
-void sensorMod__start(sensorMod* self,
-		sensorMod_data_t posIn, sensorMod_data_t currIn, sensorMod_data_t voltIn);
-void sensorMod__start_float(sensorMod* self, 
-		float* posIn_f, float* currIn_f, float* voltIn_f);
-uint32_t sensorMod__isReady(sensorMod* self);
+void sensorMod__reset(sensorMod* self);
+void sensorMod__start(sensorMod* self);
+void sensorMod__wait(sensorMod* self);
 void sensorMod__get_modFilt_Data(sensorMod* self, uint32_t mod, float* mod_data);
 
 //***********************************************  Configuration Functions
-void sensorMod__set_centerCurr(sensorMod* self, float centerCurr);
+void sensorMod__set_centerCurr(sensorMod* self, const float centerCurr);
 void sensorMod__set_Kalman(sensorMod* self, float dt, float R, float Q);
 void sensorMod__set_butter(sensorMod* self, float* ab);
 
