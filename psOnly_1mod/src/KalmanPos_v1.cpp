@@ -1,16 +1,17 @@
 #include "KalmanPos_v1.hpp"
 
 //--------------------------------------------------------------------------//
-// Constructor that receives SampleTime, the pointer for the current estate and 
+// Constructor that receives SampleTime, the point32_ter for the current estate and 
 // the vector x[2] for the estimations
-KalmanPos::KalmanPos(int SampleTime, double* z, double* x) {
+KalmanPos::KalmanPos(int32_t SampleTime, _real* z, _real* x_pos, _real* x_vel) {
 	my_z = z;
 	Mode = OUTANPIN;
 
-	my_dt = (double)SampleTime*0.001;
-	my_SampleTime = SampleTime * 1000;
-	my_x = x;
+	my_dt = (_real)SampleTime*0.001;
+	my_SampleTime = SampleTime;
 
+	my_xPos = x_pos;
+	my_xVel = x_vel;
 }
 
 
@@ -20,8 +21,8 @@ bool KalmanPos::Estimate()
 {
 	if (!inAuto) return false;
 
-	unsigned long now = millis();
-	unsigned long timeChange = (now - lastTime);
+	uint64_t now = millis();
+	uint64_t timeChange = (now - lastTime);
 	if (timeChange >= my_SampleTime) {
 
 		if (Mode == OUTANPIN)
@@ -73,6 +74,8 @@ bool KalmanPos::Estimate()
 
 		/*  pos = x(1); */
 		/*  vel = x(2); */
+		*my_xPos = my_x[0];
+		*my_xVel = my_x[1];
 
 		/*Remember some variables for next time*/
 		lastTime = now;
@@ -87,7 +90,7 @@ bool KalmanPos::Estimate()
 //--------------------------------------------------------------------------//
 // Set mode to automatic or manual
 
-void KalmanPos::SetMode(int Mode)
+void KalmanPos::SetMode(int32_t Mode)
 {
 	bool newAuto = (Mode == AUTOMATIC);
 	if (newAuto == !inAuto)
@@ -102,11 +105,7 @@ void KalmanPos::SetMode(int Mode)
 
 void KalmanPos::Initialize() {
 
-	if (Mode == OUTANPIN)
-	{
-		my_x[0] = *my_z;
-	}
-
+	my_x[0] = *my_z;
 	my_x[1] = 0;
 
 	b_b[1] = my_dt;
@@ -115,10 +114,10 @@ void KalmanPos::Initialize() {
 	Q = nQ * [	(1 / 3)*dt ^ 3		(1 / 2)*dt ^ 2;
 				(1 / 2)*dt ^ 2				dt		];
 	*/
-	Q[0] = nQ*0.3333*my_dt*my_dt*my_dt;
-	Q[1] = nQ*0.5*my_dt*my_dt;
-	Q[2] = nQ*0.5*my_dt*my_dt;
-	Q[3] = nQ*my_dt;
+	Q[0] = nQ*my_dt*my_dt*my_dt*my_dt/4.0f;
+	Q[1] = nQ*my_dt*my_dt*my_dt/2.0f;
+	Q[2] = nQ*my_dt*my_dt*my_dt/2.0f;
+	Q[3] = nQ*my_dt*my_dt;
 
 	P[0] = R;
 	P[3] = R;
@@ -132,9 +131,9 @@ void KalmanPos::Initialize() {
 // factor of the Q matrix nQ, this are meant to be used at the start only. since the
 // calculation of the matrices Q and P initial are calculated only in the initialization
 // function and only there
-void KalmanPos::Set_R(double new_R) { R = new_R; }
-void KalmanPos::Set_nQ(double new_nQ) { nQ = new_nQ; }
+void KalmanPos::Set_R(_real new_R) { R = new_R; this->Initialize(); }
+void KalmanPos::Set_nQ(_real new_nQ) { nQ = new_nQ; this->Initialize(); }
 
 //--------------------------------------------------------------------------//
 // With this function you can access to the las raw value measured by the 
-double KalmanPos::GetLast() { return z; }
+_real KalmanPos::GetLast() { return z; }

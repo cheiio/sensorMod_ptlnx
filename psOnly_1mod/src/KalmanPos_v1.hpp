@@ -1,7 +1,10 @@
 #ifndef KALMANPOS_V1_H
 #define KALMANPOS_V1_H
 
+#include <stdint.h>
+
 #include "Time_Meas.h"
+#include "definitions.h"
 
 class KalmanPos
 {
@@ -12,64 +15,66 @@ public:
 #define INANPIN 1
 #define OUTANPIN 0
 
-	KalmanPos(int, double*, double*);	// Constructor
+	KalmanPos(int32_t, _real*, _real*, _real*);	// Constructor
 
 	bool Estimate();	// This funtion estimates the current estate
-	void SetMode(int);
+	void SetMode(int32_t);
 
 	// Functions to custom the filter... These are meant to be used rigth after the constructor
 	// I dont think the behavior will be correct if you set these in the middle of the filtering
-	void Set_R(double);
-	void Set_nQ(double);
+	void Set_R(_real);
+	void Set_nQ(_real);
 
 	// Display Functions
-	double GetLast();
+	_real GetLast();
 
 private:
 	void Initialize();
 
-	double xp[2];
-	double a[4];
-	int i0;
-	int i1;
-	int i2;
+	_real xp[2];
+	_real a[4];
+	int32_t i0;
+	int32_t i1;
+	int32_t i2;
 
-	int Mode;
-	int my_anPin;
-	unsigned int my_SampleTime;
-	unsigned long lastTime;
+	int32_t Mode;
+	int32_t my_anPin;
+	uint64_t my_SampleTime;
+	uint64_t lastTime;
 	bool inAuto;
 
-	double z;
-	double *my_z;
-	double my_dt;
-	double *my_x;
+	_real z;
+	_real *my_z;
+	_real my_dt;
+	_real my_x[2];
+	_real *my_xPos;
+	_real *my_xVel;
 	/*
 	A = [1 dt;
 	0 1]
 
 	dt = 0.01;
 	*/
-	double b_a[4] = { 1.0, 0.0, 0.01, 1.0 };
-	double b_b[4] = { 1.0, 0.01, 0.0, 1.0 };
+	_real b_a[4] = { 1.0, 0.0, 0.01, 1.0 };
+	_real b_b[4] = { 1.0, 0.01, 0.0, 1.0 };
 
-	double Pp[4];
-	double b;
+	_real Pp[4];
+	_real b;
 
-	double Q[4];
+	_real Q[4];
 
 	/*
 	P = 1*eye(2);
 	*/
-	double P[4] = { 222.2222, 0, 0, 222.2222 };
+	_real P[4] = { 222.2222, 0, 0, 222.2222 };
 
-	double R = 222.2222;
-	double nQ = 7.4074e+04;
+	_real R = 222.2222;
+	_real nQ = 7.4074e+04;
 
-	double K[2];
-	double b_K;
+	_real K[2];
+	_real b_K;
 
-	const double RAD_ADC = 0.0027;		// rad/ADC ->			(pi/2)/(upPos-lowPos)
+	const _real RAD_ADC = 0.0027;		// rad/ADC ->			(pi/2)/(upPos-lowPos)
 };
 
 #endif // !KALMANPOS_H

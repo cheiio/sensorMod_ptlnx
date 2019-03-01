@@ -1,0 +1,356 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+#include "Impedance_v1.hpp"
+#include "KalmanPos_v1.hpp"
+#include "butter.hpp"
+
+#include "definitions.h"
+#include "xil_uio.hpp"
+
+#define Nmodules 1
+
+//---------------------------- Some Constants definitions ---------------------------------//
+
+const uint32_t n_buff = 32;
+const uint32_t dt = 5;              	// Filter Period in uS
+
+const _real pi = 3.1416;
+const _real upPos = 60000, lowPos = 22000;
+										// 				(pi/2)/(	upPos	-	lowPos	)
+const _real RAD_ADC = 4.21e-5;			// rad/ADC -> 	(pi/2)/(	60000 	- 	22000	) (ant 0.0027)
+const _real PWM_V = 1023.0/8.0;			// PWM/V ->		(ant 1023/8)
+const _real DEG_RAD = 180/pi;
+
+const _real 	M = 0.528404343800586,
+				K = 88.6173474407601,
+				B = 9.58011226419688,
+				P = 0.04,
+				outMax = 8,
+				outMin = -8;
+
+const _real R = 4e-3;
+const _real nQ = 10000;
+const _real ab[] = {-0.9450, 0.0275};
+const _real cenCurr = 36486.206;
+
+//--------------------------- Some Variables Definition ----------------------------//
+
+// Define Input Variables for filters
+_real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+
+// Define Output Variables for filters
+_real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+
+// Define Variables to connect PID controller
+_real voltOut[Nmodules];
+
+// Variables to connect Impedance controller
+_real imp_sp[Nmodules], impOut[Nmodules];
+
+// Kalman Filters
+KalmanPos kalmanFilt[Nmodules];
+
+// Impedance COntrollers
+Impedance impCont[Nmodules];
+
+//////////////////////// Function Definition //////////////////////////
+
+int main()
+{
+
+	// Init motor in 0
+	setMotor(	pwmPinC,	0.0,	&antPid_Out_C);
+
+	// initialize serial communication at 9600 bits per second:
+	init_platform();
+
+	// initialize XADC
+	init_Xanalog();
+
+	/////////////////////////////////// Wait for Button ////////////////////////////////////
+
+	Xil_Out8(led,0xFF);
+
+	printf("Begin");
+
+	u8 swRawData;
+	global_flag = true;
+
+	while (global_flag) {
+		swRawData = Xil_In8(dipSw);
+		if (swRawData > 0)
+		{
+			global_flag = false;
+		}
+		delay(100);
+	}
+
+	Xil_Out8(led,(u8)1);
+
+	/////////////////////////////// Set to Initial position ////////////////////////////////
+
+	delay(Kalman_T);
+
+	int minError = (upPos - lowPos) * 0.05;
+
+	int sp = lowPos + minError*3;
+	int error = upPos;
+	int pos_tmp;
+
+	while ( error < -minError || minError < error ) {
+		wait_Xanalog();
+		pos_tmp = XanalogRead(anPinC_Pos);
+		error = (sp - pos_tmp);
+
+		printf("%d \n",pos_tmp);
+
+		if (error > 0)	setMotor(pwmPinC,  2.0, &antPid_Out_C);
+		else			setMotor(pwmPinC, -2.0, &antPid_Out_C);
+
+		delay(Kalman_T);
+	}
+
+
+	setMotor(pwmPinC,   2, &antPid_Out_C);
+	delay(200);
+	setMotor(pwmPinC, 0.0, &antPid_Out_C);
+	//delay(3000);
+
+	/////////////////////////////////// Wait for Button (Again) ////////////////////////////////////
+
+	Xil_Out8(led,(u8)1);
+	global_flag = true;
+
+	while (global_flag) {
+		swRawData = Xil_In8(dipSw);
+		if (swRawData < 1)
+		{
+			global_flag = false;
+		}
+		delay(100);
+	}
+
+	Xil_Out8(led,(u8)0);
+
+
+	////////////////////////////// Calibrate Current Center /////////////////////////////////
+	//double sum_1 = 0, sum_2 = 0, sum_3 = 0, sum_4 = 0, sum_5 = 0, sum_6 = 0, sum_7 = 0;
+	double sum_1 = 0;
+	int cont = 0;
+
+	setMotor(	pwmPinC,	0.0,	&antPid_Out_C);
+	/*setMotor(	pwmPinI1_0, pwmPinI1_1,	0.0,	&antPid_Out_I1);
+	setMotor(	pwmPinC_0,	pwmPinC_1,	0.0,	&antPid_Out_C);
+	setMotor(	pwmPinA_0,	pwmPinA_1,	0.0,	&antPid_Out_A);
+	setMotor(	pwmPinM_0,	pwmPinM_1,	0.0,	&antPid_Out_M);
+	setMotor(	pwmPinP2_0,	pwmPinP2_1, 0.0,	&antPid_Out_P2);
+	setMotor(	pwmPinI2_0,	pwmPinI2_1, 0.0,	&antPid_Out_I2);*/
+
+	while (cont < 500) {
+			cont++;
+			wait_Xanalog();
+			sum_1 += XanalogRead(anPinC_Curr);
+			usleep(20);
+/*			sum_2 += analogRead(anPinI1_Curr);
+			delayMicroseconds(20);
+			sum_3 += analogRead(anPinC_Curr);
+			delayMicroseconds(20);
+			sum_4 += analogRead(anPinA_Curr);
+			delayMicroseconds(20);
+			sum_5 += analogRead(anPinM_Curr);
+			delayMicroseconds(20);
+			sum_6 += analogRead(anPinP2_Curr);
+			delayMicroseconds(20);
+*/
+			delay(Kalman_T);
+	}
+	centerCurrentC =	sum_1 * 0.002;
+	/*centerCurrentI1 =	sum_2 * 0.002;
+	centerCurrentC =	sum_3 * 0.002;
+	centerCurrentA =	sum_4 * 0.002;
+	centerCurrentM =	sum_5 * 0.002;
+	centerCurrentP2 =	sum_6 * 0.002;*/
+
+//	printf("%.3f \n",centerCurrentC);
+	/*Serial.print(' ');
+	Serial.print(centerCurrentI1, DEC);
+	Serial.print(' ');
+	Serial.print(centerCurrentC, DEC);
+	Serial.print(' ');
+	Serial.print(centerCurrentA, DEC);
+	Serial.print(' ');
+	Serial.print(centerCurrentM, DEC);
+	Serial.print(' ');
+	Serial.print(centerCurrentP2, DEC);
+	Serial.println();*/
+
+	//------------------------------------------------------------------------------------//
+
+	//////////////////////////////// Configure Filters //////////////////////////////////////
+	posC_Kalman.Set_R(4);
+	posC_Kalman.Set_nQ(80);
+	currC_Kalman.Set_R(1.321);
+	currC_Kalman.Set_nQ(0.97656);
+	// potC_MovAvg.SetSampleTime(MovAvg_T);
+
+	wait_Xanalog();
+	pos_tmp = XanalogRead(anPinC_Pos);
+	double porR_tmp = (double)pos_tmp*RAD_ADC;
+
+	/////////////////////////// Configure PID Controllers /////////////////////////////////
+	pidC_In = porR_tmp;
+	pidC_sp = porR_tmp;
+	pidC.SetOutputLimits(minOutput, maxOutput);
+	pidC.SetSampleTime(pid_T);
+
+	/////////////////////////// Configure Torque Calculators ///////////////////////////////
+	tVelC_In = 0;
+	tVC_In = 0;
+	tCurrC_In = 0;
+	torqueC.SetCurrentCenter(centerCurrentC);
+
+	////////////////////////// Configure Impedance Controllers ////////////////////////////
+	impC_In = 0;
+	impC_sp = 0;
+	impC_x = porR_tmp;
+	impC_w = 0;
+	impC.SetSampleTime(imp_T);
+	//impC.SetControllerDirection(DIRECT);
+
+
+	//////////////////////// Initialize Controllers and Filters ///////////////////////////
+	posC_Kalman.SetMode(AUTOMATIC);
+	currC_Kalman.SetMode(AUTOMATIC);
+	usleep(20);
+	impC.SetMode(AUTOMATIC);
+	pidC.SetMode(AUTOMATIC);
+
+	t = millis();
+
+	//------------------ The loop routine runs over and over again forever: --------------------//
+	while (true){
+
+		/////////////////////////////// Update Sensor Reads ///////////////////////////////
+		usleep(20);
+		wait_Xanalog();
+		u32 currReadC_Raw = XanalogRead(anPinC_Curr);
+		usleep(20);
+		wait_Xanalog();
+		u32 posReadC_Raw = XanalogRead(anPinC_Pos);
+
+		currReadC = (double)currReadC_Raw;
+		posReadC = (float)posReadC_Raw*RAD_ADC;
+
+		/////////////////////////////// Update Sensors Filter Values //////////////////////////////////
+
+		fl_pos = fl_pos || posC_Kalman.Estimate();
+		fl_curr = fl_curr || currC_Kalman.Estimate();
+				//potC_MovAvg.Update();
+
+		///////////////////////// Compute torque generated by finger /////////////////////////////
+		// Torque is only computed when two new values of position and current are available
+
+		if (fl_pos && fl_curr) {
+			tVelC_In = posVelC[1];
+			tVC_In = pidC_Out;
+			tCurrC_In = currC;
+			fl_torque = torqueC.Compute();
+
+			fl_pos = false;
+			fl_curr = false;
+
+		}
+
+		///////////////////////////// Compute Impedance Controller ////////////////////////////////
+
+		impC_In = tValC_Out;
+		impC_sp = 0.5;
+		impC_x = posVelC[0];
+		impC_w = posVelC[1];
+		flagI_C = impC.Compute();
+
+		////////////////////////////// Compute PID controller /////////////////////////////////////
+
+		pidC_sp = impC_out;
+		pidC_In = posVelC[0];
+		flagM_C = pidC.Compute();
+		if (flagM_C)
+			setMotor(pwmPinC, pidC_Out, &antPid_Out_C);
+
+		////////////////////////////////////// Debug Data ////////////////////////////////////////
+		if (millis()-t > Kalman_T){
+
+//			printf("%ld, ",	posReadC_Raw ); 					// Position Sensor 				RAW
+//			printf("%ld, ",	currReadC_Raw ); 					// Current Sensor 				RAW
+
+//			printf( "%f, ",	posC_Kalman.GetLast()*DEG_RAD); 	// Position RAW 				[rad]
+//			printf( "%f, ",	posVelC[0]*DEG_RAD); 				// Position Filtered 			[rad]
+//			printf( "%f, ",	pidC_sp*DEG_RAD); 					// Position SetPoint 			[rad]
+
+//			printf(	"%f, ",	posVelC[1]); 						// Velocity Filtered 			[rad/s]
+//			printf(	"%f, ", impC.Get_xp()); 					// Velocity SetPoint 			[rad/s]
+
+//			printf(	"%f, ",	pidC_Out); 							// PID Output 					[V]
+
+			printf(	"%f, ",	torqueC.GetCurrent()*1000);			// Current estimation 			[mA]
+
+			printf(	"%f, ",	impC_sp*1000);						// Impedance Control SetPoint 	[mN.m]
+			printf(	"%f, ",	tValC_Out*1000);
+
+//			printf(	"%d, ",	(int)(posC_Kalman.GetLast()));		// Position
+//			printf(	"%d, ",	(int)currC_Kalman.GetLast());
+
+//			printf(	"%d, ",	(int)centerCurrentC);
+//			printf(	"%f, ", tCurrC_In);
+
+			printf(	" \n");
+
+			t = millis();
+		}
+
+		///////////////////////////// Security for max current /////////////////////////////////////
+		/*double i = torqueC.GetCurrent();
+		if (i > maxCurrent) {
+			cont_maxCurrent++;
+			if (cont_maxCurrent > 2) {
+				setMotor(pwmPinC, 0.0, &antPid_Out_C);
+				printf("ERROR: Current threshold reached, motor might burn. Everithing was disabled \n");
+				while (true) {
+					printf("\t Reboot arduino \n");
+					delay(1000);
+
+					return 0;
+				}
+			}
+			else {
+				cont_maxCurrent = 0;
+			}
+
+		}*/
+
+		usleep(100);
+	}
+
+	return 0;
+
+}
+
+// Function that sets the motors speed given the pins and the pwm from -255 to 255
+void setMotor(u32 pwmPin, double pid_Out, double* antPid_Out){
+
+	int16_t pwm_Out = PWM_V*pid_Out;
+
+	if (pid_Out != *antPid_Out) {
+    	Xil_Out32(pwmPin,	pwm_Out);
+	}
+	*antPid_Out = pid_Out;
+}
+
+// Fuction that usleep with ms
+void delay(u32 time_ms){
+	usleep(time_ms*1000);
+}

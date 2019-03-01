@@ -1,60 +1,50 @@
-20:44:53 **** Auto Build of configuration Debug for project sensorMod_test ****
+22:39:56 **** Auto Build of configuration Debug for project sensorMod_test ****
 make all 
-'Building file: ../src/Impedance_v1.c'
-'Invoking: ARM v7 Linux gcc compiler'
+Building file: ../src/Impedance_v1.c
+Invoking: ARM v7 Linux gcc compiler
 arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Impedance_v1.o" -MMD -MP -MF"src/Impedance_v1.d" -MT"src/Impedance_v1.o" -o "src/Impedance_v1.o" "../src/Impedance_v1.c"
-'Finished building: ../src/Impedance_v1.c'
-' '
-'Building file: ../src/MotorDriver.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MotorDriver.o" -MMD -MP -MF"src/MotorDriver.d" -MT"src/MotorDriver.o" -o "src/MotorDriver.o" "../src/MotorDriver.c"
-'Finished building: ../src/MotorDriver.c'
-' '
-'Building file: ../src/SensorMod.c'
-'Invoking: ARM v7 Linux gcc compiler'
+Finished building: ../src/Impedance_v1.c
+ 
+Building file: ../src/SensorMod.c
+Invoking: ARM v7 Linux gcc compiler
 arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/SensorMod.o" -MMD -MP -MF"src/SensorMod.d" -MT"src/SensorMod.o" -o "src/SensorMod.o" "../src/SensorMod.c"
-../src/SensorMod.c: In function 'sensorMod__printConfig':
-../src/SensorMod.c:177:26: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint64_t {aka long long unsigned int}' [-Wformat=]
+../src/SensorMod.c: In function ‘sensorMod__printConfig’:
+../src/SensorMod.c:177:26: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘uint64_t {aka long long unsigned int}’ [-Wformat=]
   printf("\tdt = %.10e | %d millis \n", dt, self->SampleTime);
                          ~^                 ~~~~~~~~~~~~~~~~
                          %lld
-'Finished building: ../src/SensorMod.c'
-' '
-'Building file: ../src/Time_Meas.c'
-'Invoking: ARM v7 Linux gcc compiler'
+Finished building: ../src/SensorMod.c
+ 
+Building file: ../src/Time_Meas.c
+Invoking: ARM v7 Linux gcc compiler
 arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Time_Meas.o" -MMD -MP -MF"src/Time_Meas.d" -MT"src/Time_Meas.o" -o "src/Time_Meas.o" "../src/Time_Meas.c"
-'Finished building: ../src/Time_Meas.c'
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 Linux gcc compiler'
+Finished building: ../src/Time_Meas.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 Linux gcc compiler
 arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:79:19: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint64_t {aka long long unsigned int}' [-Wformat=]
+../src/main.c: In function ‘main’:
+../src/main.c:79:19: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘uint64_t {aka long long unsigned int}’ [-Wformat=]
      printf("\n\t %d , %d\n", sensor_handler->lastTime, millis());
                   ~^          ~~~~~~~~~~~~~~~~~~~~~~~~
                   %lld
-../src/main.c:79:24: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint64_t {aka long long unsigned int}' [-Wformat=]
+../src/main.c:79:24: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘uint64_t {aka long long unsigned int}’ [-Wformat=]
      printf("\n\t %d , %d\n", sensor_handler->lastTime, millis());
                        ~^                               ~~~~~~~~
                        %lld
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/xil_uio.c'
-'Invoking: ARM v7 Linux gcc compiler'
-arm-linux-gnueabihf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xil_uio.o" -MMD -MP -MF"src/xil_uio.d" -MT"src/xil_uio.o" -o "src/xil_uio.o" "../src/xil_uio.c"
-'Finished building: ../src/xil_uio.c'
-' '
-'Building target: sensorMod_test.elf'
-'Invoking: ARM v7 Linux gcc linker'
+Finished building: ../src/main.c
+ 
+Building target: sensorMod_test.elf
+Invoking: ARM v7 Linux gcc linker
 arm-linux-gnueabihf-gcc  -o "sensorMod_test.elf"  ./src/Impedance_v1.o ./src/MotorDriver.o ./src/SensorMod.o ./src/Time_Meas.o ./src/main.o ./src/xil_uio.o   
-'Finished building target: sensorMod_test.elf'
-' '
-'Invoking: ARM v7 Linux Print Size'
+Finished building target: sensorMod_test.elf
+ 
+Invoking: ARM v7 Linux Print Size
 arm-linux-gnueabihf-size sensorMod_test.elf  |tee "sensorMod_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
   11209	    336	     12	  11557	   2d25	sensorMod_test.elf
-'Finished building: sensorMod_test.elf.size'
-' '
+Finished building: sensorMod_test.elf.size
+ 
 
-20:44:56 Build Finished (took 3s.570ms)
+22:39:58 Build Finished (took 1s.762ms)
 
