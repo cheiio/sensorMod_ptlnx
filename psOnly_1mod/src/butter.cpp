@@ -1,26 +1,35 @@
 #include "butter.hpp"
 
-butter::butter(_real *x, _real *y, _real a, _real b){
+butter::butter(_real* x, _real* y){
+	Initialize(x, y);
+}
+
+butter::butter(){
+	Initialize(NULL, NULL);
+}
+
+void butter::Initialize(_real* x,  _real* y){
 	this->my_x = x;
 	this->my_y = y;
 
-	this->a0 = a;
-	this->b01 = b;
-
-	this->y_ant = 0;
+	this->a0 = -0.945;
+	this->b01 = 0.0275;
 
 	this->SampleTime = 5;
-	this->lastTime = millis();
+
+	Reset();
+
 }
 
-bool butter::Filter(){
+bool butter::Compute(){
+
 	uint64_t now = millis();
 	uint64_t timeChange = (now - lastTime);
 	if (timeChange >= SampleTime) {
 		_real x, y;
 		x = *my_x;
 		y = x*b01 + x_ant*b01 - y_ant*a0;
-		my_y = &y;
+		*my_y = y;
 
 		x_ant = x;
 		y_ant = y;
@@ -32,6 +41,17 @@ bool butter::Filter(){
 	}
 }
 
-void butter::Set_dt(uint32_t dt){
+void butter::Configure(uint32_t dt, _real a, _real b){
 	SampleTime = dt;
+	a0 = a;
+	b01 = b;
+
+	Reset();
+}
+
+void butter::Reset(){
+	this->x_ant = 0;
+	this->y_ant = 0;
+
+	this->lastTime = millis();
 }

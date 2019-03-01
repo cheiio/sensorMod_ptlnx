@@ -1,17 +1,6 @@
-00:43:00 **** Auto Build of configuration Debug for project psOnly_1mod ****
+17:51:37 **** Incremental Build of configuration Debug for project psOnly_1mod ****
 make all 
-Building file: ../src/main.cpp
-Invoking: ARM v7 Linux g++ compiler
-arm-linux-gnueabihf-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-../src/main.cpp: In function ‘int main()’:
-../src/main.cpp:68:2: error: too many initializers for ‘KalmanPos [1]’
-  };
-  ^
-../src/main.cpp:60:12: warning: unused variable ‘kalmanFilt’ [-Wunused-variable]
-  KalmanPos kalmanFilt[Nmodules] = {
-            ^~~~~~~~~~
-src/subdir.mk:37: recipe for target 'src/main.o' failed
-make: *** [src/main.o] Error 1
+make: Nothing to be done for `all'.
 
-00:43:01 Build Finished (took 724ms)
+17:51:37 Build Finished (took 257ms)
 

@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+#include "Impedance_v1.hpp"
+#include "KalmanPos_v1.hpp"
+#include "butter.hpp"
+
+#include "definitions.h"
+#include "xil_uio.hpp"
+
+#define XIL_SIZE				0x10000
+
+#define XIL_GPIO_1_OFFSET		0x0
+#define XIL_GPIO_1_TRI_OFFSET	0x4
+#define XIL_GPIO_2_OFFSET		0x8
+#define XIL_GPIO_2_TRI_OFFSET	0xC
+
+//---------------------------- Some Constants definitions ---------------------------------//
+
+const uint32_t Nmodules = 1;
+const uint32_t dt = 5;              	// Filter Period in uS
+
+const _real pi = 3.1416;
+const _real upPos = 60000, lowPos = 22000;
+										// 				(pi/2)/(	upPos	-	lowPos	)
+const _real RAD_ADC = 4.21e-5;			// rad/ADC -> 	(pi/2)/(	60000 	- 	22000	) (ant 0.0027)
+const _real PWM_V = 1023.0/8.0;			// PWM/V ->		(ant 1023/8)
+const _real DEG_RAD = 180/pi;
+
+const _real 	M = 0.528404343800586,
+				K = 88.6173474407601,
+				B = 9.58011226419688,
+				P = 0.04,
+				outMax = 8,
+				outMin = -8;
+
+const _real R = 4e-3;
+const _real nQ = 10000;
+const _real ab[] = {-0.9450, 0.0275};
+const _real cenCurr = 36486.206;
+
+//--------------------------- Some Variables Definition ----------------------------//
+
+// Define Input Variables for filters
+_real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+
+// Define Output Variables for filters
+_real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+
+// Define Variables to connect PID controller
+_real voltOut[Nmodules];
+
+// Variables to connect Impedance controller
+_real imp_sp[Nmodules], impOut[Nmodules];
+
+const char *uio_motorMod 	= "/dev/uio0"; // motor mod
+const char *uio_sensorMod 	= "/dev/uio1"; // sensor mod
+const char *uio_dev_0 		= "/dev/uio2"; // switches
+const char *uio_dev_1 		= "/dev/uio3"; // shields leds
+
+int main()
+{
+	printf("\n Start PS Only Test \n");
+
+	// --------------------------------------------- Create handlers
+	xil_uio gpioSw_handler(uio_dev_0, XIL_SIZE);
+	xil_uio gpioLED_handler(uio_dev_1, XIL_SIZE);
+
+	// --------------------------------------------- Switch Read
+	gpioSw_handler.write32(XIL_GPIO_1_TRI_OFFSET, 0xFF); // set as input
+	gpioSw_handler.write32(XIL_GPIO_2_TRI_OFFSET, 0xFF); // set as input
+	unsigned data = gpioSw_handler.read32(XIL_GPIO_2_OFFSET);
+
+	// --------------------------------------------- LED write
+	gpioLED_handler.write32(XIL_GPIO_1_TRI_OFFSET, 0x00); // set as output
+	gpioLED_handler.write32(XIL_GPIO_2_TRI_OFFSET, 0x00); // set as output
+	gpioLED_handler.write32(XIL_GPIO_2_OFFSET, data);
+	printf("Value on Switch-LED : %d \n", data);
+
+	// --------------------------------------------- Set & Configure Sensor Handlers
+	KalmanPos *kalmanMod[Nmodules];
+	butter *buttCurr[Nmodules];
+	for (uint16_t i=0; i<Nmodules; i++){
+		kalmanMod[i] = new KalmanPos(dt, &posIn_f[i], &pos_filt[i], &vel_filt[i]);
+		kalmanMod[i]->Set_R(R);
+		kalmanMod[i]->Set_nQ(nQ);
+
+		buttCurr[i] = new butter(&currIn_f[i], &curr_filt[i], ab[0], ab[1]);
+	}
+
+	//
+
+	// -------------------------------------------------------
+	printf("\n End", data);
+
+	return 0;
+
+}

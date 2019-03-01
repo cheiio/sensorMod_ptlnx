@@ -20,8 +20,11 @@ class Impedance
 public:
 
 	//commonly used functions **************************************************************************
-	Impedance(_real*, _real*, _real*, _real*, _real*,	// * Constructor.  links the Impedance controller to the Input,
-		_real, _real, _real, int32_t);	//   Output, and Setpoint.  Initial tuning parameters M B and K*/
+	Impedance();
+	Impedance(_real*, _real*, _real*, _real*, _real*);	// * Constructor.  links the Impedance controller to the Input,
+														//   Output, and Setpoint.  Initial tuning parameters M B and K*/
+
+	void Initialize(_real*, _real*, _real*, _real*, _real*);
 
 	void SetMode(int32_t Mode);					// * Sets Impedance Controller to either Manual (0) or Auto (non-0)
 
@@ -31,16 +34,17 @@ public:
 											//   SetSampleTime respectively
 
 	//available but not commonly used functions ********************************************************
-	void SetTunings(_real, _real,			// * While most users will set the tunings once in the 
-		_real);         					//   constructor, this function gives the user the option
+	void Configure(uint32_t, _real, _real, _real, uint32_t);
+											// * While most users will set the tunings once in the
+		         							//   constructor, this function gives the user the option
 											//   of changing tunings during runtime for Adaptive control
 
-	void SetControllerDirection(int32_t);		// * Sets the Direction, or "Action" of the controller. DIRECT
+//	void SetControllerDirection(int32_t);	// * Sets the Direction, or "Action" of the controller. DIRECT
 											//   means the output will increase when error is positive. REVERSE
 											//   means the opposite.  it's very unlikely that this will be needed
 											//   once it is set in the constructor.
 	
-	void SetSampleTime(int32_t);				// * Sets the frequency, in Milliseconds, with which 
+//	void SetSampleTime(int32_t);				// * Sets the frequency, in Milliseconds, with which
 											//   the PID calculation is performed.  default is 100
 
 	//Display functions ****************************************************************
@@ -52,7 +56,8 @@ public:
 	int32_t GetDirection();						
 
 private:
-	void Initialize();
+
+	void Reset();
 
 	_real dispM;				// * we'll hold on to the tuning parameters in user-entered 
 	_real dispB;				//   format for display purposes

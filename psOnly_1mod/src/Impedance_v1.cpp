@@ -9,8 +9,19 @@
 /*Constructor (...)*********************************************************
 *    The Controller parameters are specified in here.
 ***************************************************************************/
-Impedance::Impedance(_real* Input, _real* x_e, _real* x_ep, _real* Output, _real* Setpoint,
-	_real M, _real B, _real K, int32_t ControllerDirection){
+Impedance::Impedance(_real* Input, _real* x_e, _real* x_ep, _real* Output, _real* Setpoint){
+	Initialize(Input, x_e, x_ep, Output, Setpoint);
+}
+
+Impedance::Impedance(){
+	Initialize(NULL, NULL, NULL, NULL, NULL);
+}
+
+/* Initialize()****************************************************************
+*	does all the things that need to happen to ensure a bumpless transfer
+*  from manual to automatic mode.
+******************************************************************************/
+void Impedance::Initialize(_real* Input, _real* x_e, _real* x_ep, _real* Output, _real* Setpoint){
 
 	myOutput = Output;
 	myInput = Input;
@@ -21,23 +32,17 @@ Impedance::Impedance(_real* Input, _real* x_e, _real* x_ep, _real* Output, _real
 
 	inAuto = false;
 
-	SampleTime = 5;							//default Controller Sample Time is 0.005 seconds
-	SampleTimeInSec = ((_real)SampleTime) * 0.001;
+	_real M = 1, B = 1, K = 1;
+	int32_t ControllerDirection = DIRECT;
 
-	xpp = 0;
-	xp = 0;
-	x = *my_x;
+	Reset();
 
-	last_xpp = 0;
-	last_xp = 0;
-	last_x = *my_x;
-
-	this->SetControllerDirection(ControllerDirection);
-	this->SetTunings(M, B, K);
+	uint32_t sampTime = 5;
+	Configure(sampTime, M, B, K, ControllerDirection);
 
 	lastTime = millis() - SampleTime;
-}
 
+}
 
 /* Compute() **********************************************************************
 *   This function should be called every time "void loop()" executes.  the function will 
@@ -89,63 +94,45 @@ bool Impedance::Compute(){
 * it's called automatically from the constructor, but tunings can also
 * be adjusted on the fly during normal operation
 ******************************************************************************/
-void Impedance::SetTunings(_real M, _real B, _real K){
+void Impedance::Configure(uint32_t NewSampleTime, _real M, _real B, _real K, uint32_t Direction){
 
-	if (M<0 || B<0 || K<0) return;
+	if (M<0 || B<0 || K<0) {
+		return;
+	}else{
+		dispM = M; dispB = B; dispK = K;
+		myM = 1/M;
+		myB = B;
+		myK = K;
+	}
 
-	dispM = M; dispB = B; dispK = K;
-
-	myM = 1/M;
-	myB = B;
-	myK = K;
-
-}
-
-/* SetSampleTime(...) *********************************************************
-* sets the period, in Milliseconds, at which the calculation is performed
-******************************************************************************/
-void Impedance::SetSampleTime(int32_t NewSampleTime){
 
 	if (NewSampleTime > 0){
 		SampleTime = (unsigned long)NewSampleTime;
 		SampleTimeInSec = ((_real)SampleTime) / 1000;
+	}else{
+		return;
 	}
+
+	controllerDirection = Direction;
+
 }
 
-/* SetMode(...)****************************************************************
-* Allows the controller Mode to be set to manual (0) or Automatic (non-zero)
-* when the transition from manual to auto occurs, the controller is
-* automatically initialized
-******************************************************************************/
 void Impedance::SetMode(int32_t Mode){
-
 	bool newAuto = (Mode == AUTOMATIC);
 	if (newAuto == !inAuto){  /*we just went from manual to auto*/
-		Impedance::Initialize();
+		Reset();
 	}
 	inAuto = newAuto;
 }
 
-/* Initialize()****************************************************************
-*	does all the things that need to happen to ensure a bumpless transfer
-*  from manual to automatic mode.
-******************************************************************************/
-void Impedance::Initialize(){
-
+void Impedance::Reset(){
 	xpp = 0;
 	xp = 0;
-	x = *my_x;
+	x = 0;
 
 	last_xpp = 0;
 	last_xp = 0;
-	last_x = *my_x;
-}
-
-/* SetControllerDirection(...)*************************************************
-******************************************************************************/
-void Impedance::SetControllerDirection(int32_t Direction){
-
-	controllerDirection = Direction;
+	last_x = 0;
 }
 
 /* Status Funcions*************************************************************

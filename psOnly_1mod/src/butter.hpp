@@ -10,18 +10,24 @@
 
 class butter{
 public:
-	butter(_real*, _real*, const _real, const _real);
+	butter();
+	butter(_real*, _real*);
 
-	bool Filter();
+	void Initialize(_real*, _real*);
+	bool Compute();
 
-	void Set_dt(uint32_t);
+	void Configure(const uint32_t, const _real, const _real);
+
+	uint64_t lastTime, SampleTime;
 private:
+
+	void Reset();
 
 	_real a0, b01;
 	_real y_ant, x_ant;
 	_real *my_y, *my_x;
 
-	uint64_t lastTime, SampleTime;
+
 
 };
 

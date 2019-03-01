@@ -2,6 +2,7 @@
 #define KALMANPOS_V1_H
 
 #include <stdint.h>
+#include <stdio.h>
 
 #include "Time_Meas.h"
 #include "definitions.h"
@@ -15,21 +16,20 @@ public:
 #define INANPIN 1
 #define OUTANPIN 0
 
-	KalmanPos(int32_t, _real*, _real*, _real*);	// Constructor
+	KalmanPos(_real*, _real*, _real*);	// Constructor
+	KalmanPos();	// Constructor
 
+	void Initialize(_real*, _real*, _real*);
 	bool Estimate();	// This funtion estimates the current estate
 	void SetMode(int32_t);
 
 	// Functions to custom the filter... These are meant to be used rigth after the constructor
 	// I dont think the behavior will be correct if you set these in the middle of the filtering
-	void Set_R(_real);
-	void Set_nQ(_real);
-
-	// Display Functions
-	_real GetLast();
+	void Configure(int32_t, _real, _real);
+	void PrintConfig();
 
 private:
-	void Initialize();
+	void Reset();
 
 	_real xp[2];
 	_real a[4];

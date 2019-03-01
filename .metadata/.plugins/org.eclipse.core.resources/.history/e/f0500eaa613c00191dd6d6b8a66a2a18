@@ -1,0 +1,189 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+#include "Impedance_v1.hpp"
+#include "KalmanPos_v1.hpp"
+#include "butter.hpp"
+
+#include "Time_Meas.h"
+#include "data_mem.h"
+
+#include "definitions.h"
+#include "xil_uio.hpp"
+
+#define XIL_SIZE				0x10000
+
+#define XIL_GPIO_1_OFFSET		0x0
+#define XIL_GPIO_1_TRI_OFFSET	0x4
+#define XIL_GPIO_2_OFFSET		0x8
+#define XIL_GPIO_2_TRI_OFFSET	0xC
+
+//---------------------------- Some Constants definitions ---------------------------------//
+const uint32_t  nInd = 0, nInd2 = 5, nThumb = 4, nThumb2 = 6,
+                nMid = 1, nRing = 2, nLit = 3;
+
+const uint32_t Nmodules = 7;
+const uint32_t dt = 5;              	// Filter Period in uS
+
+const _real pi = 3.1416;
+const _real upPos = 60000, lowPos = 22000;
+										// 				(pi/2)/(	upPos	-	lowPos	)
+const _real RAD_ADC = 4.21e-5;			// rad/ADC -> 	(pi/2)/(	60000 	- 	22000	) (ant 0.0027)
+const _real PWM_V = 1023.0/8.0;			// PWM/V ->		(ant 1023/8)
+const _real DEG_RAD = 180/pi;
+const _real mA_ADC = 1.8656;
+const _real DEG_ADC = 0.0024;
+
+const _real 	M = 0.528404343800586,
+				K = 88.6173474407601,
+				B = 9.58011226419688,
+				P = 0.04,
+				outMax = 8,
+				outMin = -8;
+
+const _real R = 4e-3;
+const _real nQ = 10000;
+const _real ab[] = {-0.9450, 0.0275};
+const _real cenCurr = 36486.206;
+
+
+//--------------------------- Some Variables Definition ----------------------------//
+
+// Define Input Variables for filters
+_real posIn_f[Nmodules], currIn_f[Nmodules], voltIn_f[Nmodules];
+
+// Define Output Variables for filters
+_real pos_filt[Nmodules], vel_filt[Nmodules], curr_filt[Nmodules];
+
+// Define Variables to connect PID controller
+_real voltOut[Nmodules];
+
+// Variables to connect Impedance controller
+_real imp_sp[Nmodules], impOut[Nmodules];
+
+const char *uio_motorMod 	= "/dev/uio0"; // motor mod
+const char *uio_sensorMod 	= "/dev/uio1"; // sensor mod
+const char *uio_dev_0 		= "/dev/uio2"; // switches
+const char *uio_dev_1 		= "/dev/uio3"; // shields leds
+
+int main()
+{
+	printf("\n Start PS Only Test \n");
+
+	// --------------------------------------------- Create handlers
+	xil_uio gpioSw_handler(uio_dev_0, XIL_SIZE);
+	xil_uio gpioLED_handler(uio_dev_1, XIL_SIZE);
+
+	// --------------------------------------------- Switch Read
+	gpioSw_handler.write32(XIL_GPIO_1_TRI_OFFSET, 0xFF); // set as input
+	gpioSw_handler.write32(XIL_GPIO_2_TRI_OFFSET, 0xFF); // set as input
+	unsigned data = gpioSw_handler.read32(XIL_GPIO_2_OFFSET);
+
+	// --------------------------------------------- LED write
+	gpioLED_handler.write32(XIL_GPIO_1_TRI_OFFSET, 0x00); // set as output
+	gpioLED_handler.write32(XIL_GPIO_2_TRI_OFFSET, 0x00); // set as output
+	gpioLED_handler.write32(XIL_GPIO_2_OFFSET, data);
+	printf("Value on Switch-LED : %d \n", data);
+
+	// ---------------------------------------------
+	data  = millis();
+	//printf("Time : %d \n", data);
+	// --------------------------------------------- Set & Configure Sensor Handlers
+	KalmanPos kalmanMod[Nmodules];
+	butter buttCurr[Nmodules];
+
+
+	for (uint16_t nMod=0; nMod<Nmodules; nMod++){
+		kalmanMod[nMod].Initialize(&posIn_f[nMod], &pos_filt[nMod], &vel_filt[nMod]);
+		kalmanMod[nMod].Configure(dt, R, nQ);
+
+		buttCurr[nMod].Initialize(&currIn_f[nMod], &curr_filt[nMod]);
+		buttCurr[nMod].Configure(dt, ab[0], ab[1]);
+	}
+
+	// --------------------------------------------- Create & Configure Impedance Controllers
+	Impedance impControllers[Nmodules];
+	for(uint32_t nMod=0; nMod<Nmodules; nMod++){
+		impControllers[nMod].Initialize(&curr_filt[nMod], &pos_filt[nMod],
+				&vel_filt[nMod], &impOut[nMod], &imp_sp[nMod]);
+		impControllers[nMod].Configure(dt, M, B, K, DIRECT);
+	}
+
+	// --------------------------------------------- Start Modules
+	for(uint32_t nMod=0; nMod<Nmodules; nMod++){
+		kalmanMod[nMod].SetMode(AUTOMATIC);
+		impControllers[nMod].SetMode(AUTOMATIC);
+	}
+
+	// --------------------------------------------- Test Controller
+	size_t n_data = sizeof(rawPos)/sizeof(*rawPos);
+	printf("\nStart Filtering\n");
+	printf("  |     Raw Data    ||        Filtered Data       ||       Control       |\n");
+	printf("# |  Pos   |  Curr  ||   Pos   |   Vel   |  Curr  ||   pos^   |   Volt   |\n");
+
+	while(1){
+	    for (uint32_t i=0; i<n_data; i++){
+
+			// flag timing
+			gpioLED_handler.write32(XIL_GPIO_1_OFFSET, 0xFF);
+
+			// get sensors
+	    	for (uint32_t j=0; j<Nmodules; j++){
+	    		voltIn_f[j]=rawVolt[i];
+
+	    		posIn_f[j]=rawPos[i]*DEG_ADC;
+
+	    		currIn_f[j]=rawCurr[i];
+	    		currIn_f[j] = (currIn_f[j] - cenCurr)*mA_ADC;
+	    		currIn_f[j] = (currIn_f[j])*(voltIn_f[j]/voltIn_f[j]);
+
+	    	}
+
+
+	    	for(uint32_t nMod=0; nMod<Nmodules; nMod++){
+	    		// start filtering
+	    		kalmanMod[nMod].Estimate();
+				buttCurr[nMod].Compute();
+
+				// start impedance control
+				imp_sp[nMod]=200;
+	    		impControllers[nMod].Compute();
+			}
+
+
+	    	for (uint32_t nMod=0; nMod<Nmodules; nMod++){
+	    		imp_sp[nMod]=200;
+	    		impControllers[nMod].Compute();
+			}
+/*
+	    	// start proportional control
+	    	for (uint32_t j=0; j<Nmodules; j++){
+	    		voltOut[j] = (impOut[j] - pos_filt[j])*P;
+				if (voltOut[j] > outMax) voltOut[j] = outMax;
+				if (voltOut[j] < outMin) voltOut[j] = outMin;
+			}
+
+	    	// flag timing
+			gpioLED_handler.write32(XIL_GPIO_1_OFFSET, 0);
+
+	    	// print index
+//	    	printf("%d | %.2f | %.2f || %.2f | %.2f | %.2f || %.2f | %.2f | %d\n ",
+//			printf("%d , %.2f , %.2f , %.2f , %.2f , %.2f , %.2f , %.2f ; \n",
+//	    			i, posIn_f[nInd],currIn_f[nInd], pos_filt[nInd],vel_filt[nInd],curr_filt[nInd],
+//					impOut[nInd],voltOut[nInd], buttCurr[0].lastTime);
+*/
+
+	    	usleep(5000);
+	        //
+	    }
+	}
+
+	// -------------------------------------------------------
+	printf("\n End");
+
+	return 0;
+
+}
